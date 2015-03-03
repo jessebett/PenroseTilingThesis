@@ -101,4 +101,7 @@ NicePurple = RGBColor[
   0.6941176470588235, 0.050980392156862744`, 0.788235294117647];
 
 
+Kites[{{A_, B_, C_}, t_}] := If[t == "fat", Line[Coor[{A, B}]], Line[Coor[{B, C}]]]
+
+
 EndPackage[]
