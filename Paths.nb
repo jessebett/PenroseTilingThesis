@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     17557,        507]
-NotebookOptionsPosition[     16027,        452]
-NotebookOutlinePosition[     16755,        479]
-CellTagsIndexPosition[     16629,        473]
+NotebookDataLength[     20672,        590]
+NotebookOptionsPosition[     18909,        528]
+NotebookOutlinePosition[     19637,        555]
+CellTagsIndexPosition[     19511,        549]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -207,10 +207,7 @@ Cell[BoxData[
  RowBox[{
   RowBox[{"Midpoints", "[", 
    RowBox[{"{", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{"A_", ",", "B_", ",", "C_"}], "}"}], ",", "t_"}], "}"}], "]"}], 
-  ":=", 
+    RowBox[{"A_", ",", "B_", ",", "C_"}], "}"}], "]"}], ":=", 
   RowBox[{
    RowBox[{"1", "/", "2"}], 
    RowBox[{"{", 
@@ -220,7 +217,8 @@ Cell[BoxData[
      RowBox[{"A", "+", "C"}]}], "}"}]}]}]], "Input",
  CellChangeTimes->{{3.6347653439608693`*^9, 3.6347653973549232`*^9}, {
   3.634765444648628*^9, 3.634765450689974*^9}, {3.634765510149375*^9, 
-  3.634765514486623*^9}, {3.6347659738478966`*^9, 3.6347659977122617`*^9}}],
+  3.634765514486623*^9}, {3.6347659738478966`*^9, 3.6347659977122617`*^9}, {
+  3.634769077858436*^9, 3.634769079569534*^9}}],
 
 Cell[CellGroupData[{
 
@@ -409,46 +407,124 @@ Cell[BoxData[
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"TestPoints", "/@", 
-  RowBox[{"(", 
-   RowBox[{"PathTriangles", "@", 
-    RowBox[{"Rhomb", "@", "unitfat"}]}], ")"}]}]], "Input",
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"TestPoints", "/@", 
+    RowBox[{"(", 
+     RowBox[{"PathTriangles", "@", 
+      RowBox[{"Rhomb", "@", "unitskinny"}]}], ")"}]}], ",", 
+   RowBox[{"TestPoints", "/@", 
+    RowBox[{"(", 
+     RowBox[{"Midpoints", "/@", 
+      RowBox[{"PathTriangles", "@", 
+       RowBox[{"Rhomb", "@", "unitskinny"}]}]}], ")"}]}]}], "]"}]], "Input",
  CellChangeTimes->{{3.6347686687180347`*^9, 3.634768752328817*^9}, {
-  3.6347688812371902`*^9, 3.634768882375255*^9}}],
+   3.6347688812371902`*^9, 3.634768882375255*^9}, {3.634769052274973*^9, 
+   3.6347691278182936`*^9}, {3.6347692944068217`*^9, 3.634769302889307*^9}, 
+   3.6347705656755342`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {RGBColor[1, 1, 0], EdgeForm[GrayLevel[0]], 
+    TagBox[PolygonBox[{{-0.5, 0}, {0.5, 0}, {0., 1.5388417685876268`}}],
+     "Triangle"], 
+    {PointSize[Large], 
+     {RGBColor[1, 0, 0], PointBox[{-0.5, 0}]}, 
+     {RGBColor[0, 1, 0], PointBox[{0.5, 0}]}, 
+     {RGBColor[0, 0, 1], PointBox[{0., 1.5388417685876268`}]}}}, 
+   {RGBColor[1, 1, 0], EdgeForm[GrayLevel[0]], 
+    TagBox[PolygonBox[{{-0.5, 0}, {0., -1.5388417685876268`}, {0.5, 0}}],
+     "Triangle"], 
+    {PointSize[Large], 
+     {RGBColor[1, 0, 0], PointBox[{-0.5, 0}]}, 
+     {RGBColor[0, 1, 0], PointBox[{0., -1.5388417685876268`}]}, 
+     {RGBColor[0, 0, 1], PointBox[{0.5, 0}]}}}, 
+   {RGBColor[1, 1, 0], EdgeForm[GrayLevel[0]], 
+    TagBox[
+     PolygonBox[{{0., 0}, {0.25, 0.7694208842938134}, {-0.25, 
+       0.7694208842938134}}],
+     "Triangle"], 
+    {PointSize[Large], 
+     {RGBColor[1, 0, 0], PointBox[{0., 0}]}, 
+     {RGBColor[0, 1, 0], PointBox[{0.25, 0.7694208842938134}]}, 
+     {RGBColor[0, 0, 1], PointBox[{-0.25, 0.7694208842938134}]}}}, 
+   {RGBColor[1, 1, 0], EdgeForm[GrayLevel[0]], 
+    TagBox[
+     PolygonBox[{{-0.25, -0.7694208842938134}, {0.25, -0.7694208842938134}, {
+       0., 0}}],
+     "Triangle"], 
+    {PointSize[Large], 
+     {RGBColor[1, 0, 0], PointBox[{-0.25, -0.7694208842938134}]}, 
+     {RGBColor[0, 1, 0], PointBox[{0.25, -0.7694208842938134}]}, 
+     {RGBColor[0, 0, 1], PointBox[{0., 0}]}}}}]], "Output",
+ CellChangeTimes->{{3.634769121305921*^9, 3.634769128427328*^9}, 
+   3.634769303135321*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Midpoints", "/@", 
+  RowBox[{"PathTriangles", "@", 
+   RowBox[{"Rhomb", "@", "unitskinny"}]}]}]], "Input"],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
-   GraphicsBox[
-    {RGBColor[1, 1, 0], EdgeForm[GrayLevel[0]], 
-     TagBox[
-      PolygonBox[{{-0.8090169943749475, 
-         0}, {-1.1102230246251565`*^-16, -0.5877852522924732}, {
-        1.1102230246251565`*^-16, 0.5877852522924732}}],
-      "Triangle"], 
-     {PointSize[Large], 
-      {RGBColor[1, 0, 0], PointBox[{-0.8090169943749475, 0}]}, 
-      {RGBColor[0, 1, 0], 
-       PointBox[{-1.1102230246251565`*^-16, -0.5877852522924732}]}, 
-      {RGBColor[0, 0, 1], 
-       PointBox[{1.1102230246251565`*^-16, 0.5877852522924732}]}}}], ",", 
-   GraphicsBox[
-    {RGBColor[1, 1, 0], EdgeForm[GrayLevel[0]], 
-     TagBox[
-      PolygonBox[{{0.8090169943749475, 0}, {1.1102230246251565`*^-16, 
-        0.5877852522924732}, {-1.1102230246251565`*^-16, \
--0.5877852522924732}}],
-      "Triangle"], 
-     {PointSize[Large], 
-      {RGBColor[1, 0, 0], PointBox[{0.8090169943749475, 0}]}, 
-      {RGBColor[0, 1, 0], 
-       PointBox[{1.1102230246251565`*^-16, 0.5877852522924732}]}, 
-      {RGBColor[0, 0, 1], 
-       PointBox[{-1.1102230246251565`*^-16, -0.5877852522924732}]}}}]}], 
-  "}"}]], "Output",
- CellChangeTimes->{{3.63476869643462*^9, 3.63476876235139*^9}, 
-   3.634768843070007*^9, {3.6347688826342697`*^9, 3.634768907964719*^9}}]
-}, Open  ]]
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", 
+     RowBox[{"0.25`", "\[VeryThinSpace]", "+", 
+      RowBox[{"0.7694208842938134`", " ", "\[ImaginaryI]"}]}], ",", 
+     RowBox[{
+      RowBox[{"-", "0.25`"}], "+", 
+      RowBox[{"0.7694208842938134`", " ", "\[ImaginaryI]"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "0.25`"}], "-", 
+      RowBox[{"0.7694208842938134`", " ", "\[ImaginaryI]"}]}], ",", 
+     RowBox[{"0.25`", "\[VeryThinSpace]", "-", 
+      RowBox[{"0.7694208842938134`", " ", "\[ImaginaryI]"}]}], ",", "0.`"}], 
+    "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.6347705692327375`*^9}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SharedSide", "[", 
+   RowBox[{"list_", ",", "element_"}], "]"}], ":=", 
+  RowBox[{"Select", "[", 
+   RowBox[{"list", ",", 
+    RowBox[{"MemberQ", "[", "element", "]"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"FindNextTriangle", "[", 
+   RowBox[{"list_", ",", "prev_", ",", "midpoint_"}], "]"}], ":=", 
+  RowBox[{"DeleteCases", "[", 
+   RowBox[{
+    RowBox[{"SharedSide", "[", 
+     RowBox[{"list", ",", "midpoint"}], "]"}], ",", "prev"}], 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.634770760330668*^9, 3.634770783484992*^9}, {
+  3.634770973948886*^9, 3.634770984019462*^9}, {3.634771095017811*^9, 
+  3.6347710957578535`*^9}, {3.6347733800105047`*^9, 3.6347733995156207`*^9}, {
+  3.634774073778186*^9, 3.634774074282215*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6347734911758633`*^9, 3.634773587904396*^9}, {
+   3.634773725272253*^9, 3.6347737350668135`*^9}, 3.6347740717190685`*^9}],
+
+Cell[BoxData[{
+ RowBox[{"Midpoints", "/@", 
+  RowBox[{"PathTriangles", "@", 
+   RowBox[{"Rhomb", "@", "unitskinny"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"FindNextTriangle", "[", 
+  RowBox[{"%", ",", 
+   RowBox[{"%", "[", 
+    RowBox[{"[", "1", "]"}], "]"}], ",", "0."}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6347737652095375`*^9, 3.634773813954325*^9}, {
+  3.63477384796327*^9, 3.634773850981443*^9}, {3.6347738940679073`*^9, 
+  3.634773894778948*^9}}]
 },
 WindowSize->{944, 1022},
 WindowMargins->{{Automatic, 0}, {Automatic, 0}},
@@ -460,20 +536,20 @@ StyleDefinitions->"Default.nb"
 (* Internal cache information *)
 (*CellTagsOutline
 CellTagsIndex->{
- "Info3634749674-3952013"->{
-  Cell[10482, 289, 185, 4, 40, "Print",
-   CellTags->"Info3634749674-3952013"],
-  Cell[10670, 295, 1021, 28, 23, "Print",
-   CellTags->"Info3634749674-3952013"]},
  "Info3634749373-3952013"->{
-  Cell[11694, 325, 1256, 36, 23, "Print",
-   CellTags->"Info3634749373-3952013"]}
+  Cell[11686, 323, 1256, 36, 23, "Print",
+   CellTags->"Info3634749373-3952013"]},
+ "Info3634749674-3952013"->{
+  Cell[10474, 287, 185, 4, 40, "Print",
+   CellTags->"Info3634749674-3952013"],
+  Cell[10662, 293, 1021, 28, 23, "Print",
+   CellTags->"Info3634749674-3952013"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"Info3634749674-3952013", 16331, 462},
- {"Info3634749373-3952013", 16523, 467}
+ {"Info3634749373-3952013", 19213, 538},
+ {"Info3634749674-3952013", 19325, 541}
  }
 *)
 (*NotebookFileOutline
@@ -483,32 +559,39 @@ Cell[CellGroupData[{
 Cell[895, 31, 156, 3, 31, "Input"],
 Cell[1054, 36, 6513, 166, 252, "Output"]
 }, Open  ]],
-Cell[7582, 205, 602, 17, 31, "Input"],
+Cell[7582, 205, 594, 15, 31, "Input"],
 Cell[CellGroupData[{
-Cell[8209, 226, 448, 11, 31, "Input"],
-Cell[8660, 239, 526, 9, 155, "Output"]
+Cell[8201, 224, 448, 11, 31, "Input"],
+Cell[8652, 237, 526, 9, 155, "Output"]
 }, Open  ]],
-Cell[9201, 251, 1063, 27, 64, "Input"],
+Cell[9193, 249, 1063, 27, 31, "Input"],
 Cell[CellGroupData[{
-Cell[10289, 282, 168, 3, 31, "Input"],
+Cell[10281, 280, 168, 3, 31, "Input"],
 Cell[CellGroupData[{
-Cell[10482, 289, 185, 4, 40, "Print",
+Cell[10474, 287, 185, 4, 40, "Print",
  CellTags->"Info3634749674-3952013"],
-Cell[10670, 295, 1021, 28, 23, "Print",
+Cell[10662, 293, 1021, 28, 23, "Print",
  CellTags->"Info3634749674-3952013"],
-Cell[11694, 325, 1256, 36, 23, "Print",
+Cell[11686, 323, 1256, 36, 23, "Print",
  CellTags->"Info3634749373-3952013"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[12999, 367, 396, 9, 31, "Input"],
-Cell[13398, 378, 213, 3, 447, "Output"]
+Cell[12991, 365, 396, 9, 31, "Input"],
+Cell[13390, 376, 213, 3, 447, "Output"]
 }, Open  ]],
-Cell[13626, 384, 805, 22, 72, "Input"],
+Cell[13618, 382, 805, 22, 72, "Input"],
 Cell[CellGroupData[{
-Cell[14456, 410, 272, 6, 31, "Input"],
-Cell[14731, 418, 1280, 31, 266, "Output"]
-}, Open  ]]
+Cell[14448, 408, 639, 15, 52, "Input"],
+Cell[15090, 425, 1538, 35, 447, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16665, 465, 130, 3, 31, "Input"],
+Cell[16798, 470, 676, 18, 31, "Output"]
+}, Open  ]],
+Cell[17489, 491, 783, 19, 52, "Input"],
+Cell[18275, 512, 170, 2, 31, "Input"],
+Cell[18448, 516, 457, 10, 52, "Input"]
 }
 ]
 *)
