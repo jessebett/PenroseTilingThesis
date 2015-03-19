@@ -1,0 +1,15 @@
+\frametitle{Protosets Admit Tessellations}
+\begin{mydef}
+If $\mathcal{T}$ is a tessellation with protoset $\mathcal{P}$, then we say that $\mathcal{P}$ admits $\mathcal{T}$.
+\end{mydef}
+\pause
+
+\begin{ex}
+\flushleft We say\\
+\centering\huge \raisebox{0pt}{$\mathcal{P}=$ \{}
+                  \raisebox{0pt}{\includegraphics[width=0.05\textwidth]{tealproto}}\raisebox{0pt}{ ,}
+                   \raisebox{0pt}{\includegraphics[width=0.05\textwidth]{whiteproto}}
+          \huge\raisebox{0pt}{\}}\\
+\flushleft\normalsize \raisebox{15pt}{admits}\\
+\centering\includegraphics[width=0.2\textwidth]{Checkerboard}
+\end{ex}
