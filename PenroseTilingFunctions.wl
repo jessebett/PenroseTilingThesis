@@ -36,6 +36,7 @@ Cull[l_]:=DeleteDuplicatesBy[l,Cent];
 Rhomb[{{a_,b_,c_},f_}]:={{a,a-c+b,b,c},f};
 \[CapitalDelta][{t_,fs_}]:=t;
 See:=Graphics[{Transpose[{Map[IfFat[#,NicePurple,NiceYellow]&,#]&@#,Polygon/@Coor/@\[CapitalDelta]/@#}]}]&
+SeeEdges:=Graphics[{EdgeForm[Black],Opacity[0.8],{Transpose[{((IfFat[#1,White,White]&)/@#1&)[#1],Polygon/@Coor/@\[CapitalDelta]/@#1}]}}]&
 
 
  
@@ -102,6 +103,39 @@ NicePurple = RGBColor[
 
 
 Kites[{{A_, B_, C_}, t_}] := If[t == "fat", Line[Coor[{A, B}]], Line[Coor[{B, C}]]]
+
+
+SeeTri[points_]:=Graphics@Polygon@Coor@points
+
+Midpoints[{A_,B_,C_}]:=1/2{B+A,B+C,A+C}
+
+Orientation[{A_,B_,C_}]:=Sign@Det[{Flatten@Coor@{B-A},Flatten@Coor@{((C-B))}}]
+
+OrientTriangle[{A_,B_,C_}]:=If[Orientation[{A,B,C}]==1,{A,B,C},{A,C,B}]
+
+PathTriangles[{{A_,P_,B_,C_},t_}]:=If[t=="fat",{{A,P,C},{B,C,P}},{{A,B,C},{A,P,B}}]
+
+MakePathTriangles[list_]:=OrientTriangle/@Flatten[PathTriangles/@list,1]
+
+EqualQ[list_,element_]:=Equal[#,element]&/@list
+
+SharedSide[list_,element_]:=Select[list,MemberQ[n_/;Abs[n-element]<10^-10]]
+
+FindNextTriangle[list_,prev_,midpoint_]:=DeleteCases[SharedSide[list,midpoint],prev]
+
+ChangeTriangle[list_,prev_,midpoint_]:=Flatten@FindNextTriangle[list,prev,midpoint]
+
+Go[{starttriangle_,startside_},dir_]:=Part[starttriangle,Mod[startside+dir,3,1]]
+
+PathStep[list_,{starttriangle_,startmidpoint_,dir_}]:=
+Module[{nexttriangle,nextmidpoint,startside=First@Flatten@Position[starttriangle,n_/;Abs[n-startmidpoint]<10^-10],nextdir=-1*dir},nextmidpoint=Go[{starttriangle,startside},dir];
+{ChangeTriangle[list,starttriangle,nextmidpoint],nextmidpoint,nextdir}]
+
+MakePath[list_,{starttriangle_,startmidpoint_,dir_}]:=DeleteCases[NestWhileList[PathStep[list,#]&,{starttriangle,startmidpoint,dir},UnsameQ,All],{{},{}[[_]],_}]
+
+PathPoints[list_]:=Line/@Partition[Coor@list[[All,2]],2,1]
+
+GeneratePath[{tiling_,starttri_,startside_,direction_}]:=PathPoints@MakePath[tiling,{tiling[[starttri]],tiling[[starttri,startside]],direction}]
 
 
 EndPackage[]
