@@ -102,7 +102,10 @@ NicePurple = RGBColor[
   0.6941176470588235, 0.050980392156862744`, 0.788235294117647];
 
 
-Kites[{{A_, B_, C_}, t_}] := If[t == "fat", Line[Coor[{A, B}]], Line[Coor[{B, C}]]]
+KitesEdges[{{A_, B_, C_}, t_}] := If[t == "fat", Line[Coor[{A, B}]], Line[Coor[{B, C}]]]
+KiteBreak[{{A_,B_,C_},t_}]:=If[t=="fat",{{{A,C,A+(A-B)(1-\[Phi])},"kite"},{{B,C,A+(A-B)(1-\[Phi])},"dart"}},{{{A,B,C},"kite"}}]
+KiteFill:=If[Last@#=="kite",{NiceOrange,Triangle@Coor@First@#},{NiceBlue,Triangle@Coor@First@#}]&
+SeeKitesDatrts[list_]:= Graphics[Triangle/@Coor/@Flatten[KiteFill/@list,1]]
 
 
 SeeTri[points_]:=Graphics@Polygon@Coor@points
