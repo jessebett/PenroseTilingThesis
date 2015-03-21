@@ -141,4 +141,40 @@ PathPoints[list_]:=Line/@Partition[Coor@list[[All,2]],2,1]
 GeneratePath[{tiling_,starttri_,startside_,direction_}]:=PathPoints@MakePath[tiling,{tiling[[starttri]],tiling[[starttri,startside]],direction}]
 
 
+CCW[{\[Theta]_,\[Alpha]_}]:=If[\[Theta]<\[Alpha],{\[Theta],\[Alpha]},{\[Theta],\[Alpha]+2Pi}]
+
+CW[{\[Theta]_,\[Alpha]_}]:=If[\[Theta]<\[Alpha],{\[Alpha],\[Theta]+2Pi},{\[Alpha],\[Theta]}]
+
+MakeCurveRules[{{A_,B_,C_},t_}]:=Module[
+{coors=Coor@{A,B,C},
+littlelength=If[t=="fat",Abs[C-A],Abs[B-C]],
+biglength=If[t=="fat",Abs[B-A],Abs[C-A]],
+A\[Theta]1=Arg[B-A],
+A\[Theta]2=Arg[C-A],
+B\[Theta]1=Arg[A-B],
+B\[Theta]2=Arg[C-B]},
+littleradius=littlelength/(1+\[Phi]);
+bigradius=littlelength-littleradius;
+
+coorA=coors[[1]];
+coorB=coors[[2]];
+coorC=coors[[3]];
+orientation=Sign@Det[Transpose@{(coorA-coorB),(coorC-coorB)}];
+
+{A\[Theta]1,A\[Theta]2}=If[orientation==1,
+CW[#],
+CCW[#]]&@{A\[Theta]1,A\[Theta]2};
+
+{B\[Theta]1,B\[Theta]2}=If[orientation==1,
+CCW[#],
+CW[#]]&@{B\[Theta]1,B\[Theta]2};
+
+Color1=NiceOrange;
+Color2=NiceBlue;
+
+If[t=="fat",
+{{Thick,Color1,Circle[coorA,bigradius,{A\[Theta]1,A\[Theta]2}]},{Thick,Color2,Circle[coorB,littleradius,{B\[Theta]1,B\[Theta]2}]}},
+{{Thick, Color1,Circle[coorA,littleradius,{A\[Theta]1,A\[Theta]2}]},{Thick,Color2,Circle[coorB,littleradius,{B\[Theta]1,B\[Theta]2}]}}]]
+
+
 EndPackage[]
