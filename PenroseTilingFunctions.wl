@@ -4,7 +4,7 @@ BeginPackage["PenroseTilingFunctions`"];
 
 
 \[Phi]::usage="Gives Golden Ratio to Numerical Precision";
-\[Phi]=GoldenRatio//N;
+\[Phi]=GoldenRatio;
 
 \[CapitalPsi]::usage="Gives -\!\(\*SuperscriptBox[\(\[Phi]\), \(-1\)]\), Inverse of Golden Ratio, to Numerical Precision";
 \[CapitalPsi]=1-\[Phi]//N;
@@ -39,6 +39,9 @@ AddRhombTris[list_]:=Union[list,RhombTri/@list];
 \[CapitalDelta][{t_,fs_}]:=t;
 See:=Graphics[{Transpose[{Map[IfFat[#,NicePurple,NiceYellow]&,#]&@#,Polygon/@Coor/@\[CapitalDelta]/@#}]}]&
 SeeEdges:=Graphics[{EdgeForm[Black],Opacity[0.8],{Transpose[{((IfFat[#1,White,White]&)/@#1&)[#1],Polygon/@Coor/@\[CapitalDelta]/@#1}]}}]&
+
+
+ 
 
 
 FatInflate::usage="Inflation Rules for fat triangles";
