@@ -34,12 +34,11 @@ Conj[{{a_,b_,c_},f_}]:={Conjugate/@{a,b,c},f};
 AddConj[list_]:=Union[list,Conj/@list];
 Cull[l_]:=DeleteDuplicatesBy[l,Cent];
 Rhomb[{{a_,b_,c_},f_}]:={{a,a-c+b,b,c},f};
+RhombTri[{{a_,b_,c_},f_}]:={{a,b,a-c+b},f};
+AddRhombTris[list_]:=Union[list,RhombTri/@list];
 \[CapitalDelta][{t_,fs_}]:=t;
 See:=Graphics[{Transpose[{Map[IfFat[#,NicePurple,NiceYellow]&,#]&@#,Polygon/@Coor/@\[CapitalDelta]/@#}]}]&
 SeeEdges:=Graphics[{EdgeForm[Black],Opacity[0.8],{Transpose[{((IfFat[#1,White,White]&)/@#1&)[#1],Polygon/@Coor/@\[CapitalDelta]/@#1}]}}]&
-
-
- 
 
 
 FatInflate::usage="Inflation Rules for fat triangles";
