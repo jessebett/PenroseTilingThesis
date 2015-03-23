@@ -1,6 +1,49 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: ThesisDraft.aux
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: ThesisDraft.aux
 The style file: plain.bst
 Database file #1: bibliography.bib
 Warning--can't use both volume and number fields in DeBruijn1981
 Warning--there's a number but no volume in Ogawa1999
+You've used 10 entries,
+            2118 wiz_defined-function locations,
+            571 strings with 5573 characters,
+and the built_in function-call counts, 3186 in all, are:
+= -- 307
+> -- 143
+< -- 2
++ -- 58
+- -- 48
+* -- 232
+:= -- 546
+add.period$ -- 31
+call.type$ -- 10
+change.case$ -- 51
+chr.to.int$ -- 0
+cite$ -- 12
+duplicate$ -- 122
+empty$ -- 254
+format.name$ -- 48
+if$ -- 650
+int.to.chr$ -- 0
+int.to.str$ -- 10
+missing$ -- 13
+newline$ -- 53
+num.names$ -- 20
+pop$ -- 55
+preamble$ -- 1
+purify$ -- 44
+quote$ -- 0
+skip$ -- 77
+stack$ -- 0
+substring$ -- 186
+swap$ -- 20
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 34
+warning$ -- 2
+while$ -- 32
+width$ -- 12
+write$ -- 111
 (There were 2 warnings)
