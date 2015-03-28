@@ -1,0 +1,377 @@
+\documentclass[10pt, compress]{beamer}
+
+\usetheme[usetitleprogressbar]{m}
+
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+\usepackage{minted}
+\usepackage{pgfplots}
+\usepackage{graphicx, float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{textpos}
+
+\newcommand<>{\fullsizegraphic}[1]{
+  \begin{textblock*}{0cm}(-1cm,-3.78cm)
+  \includegraphics[width=\paperwidth]{#1}
+  \end{textblock*}
+}
+
+
+\graphicspath{{./images/}}
+
+%\usepgfplotslibrary{dateplot}
+
+\usepackage{amsthm}
+\newtheorem{mydef}{\alert{Definition:}}
+\newtheorem{ex}{\alert{Example:}}
+
+\usemintedstyle{trac}
+
+\title{\huge The Beautiful Geometry of Aperiodic Tessellations}
+\subtitle{}
+\date{\today}
+\author{Jesse Bettencourt}
+\institute{Supervised by Miroslav Lovric}
+
+\begin{document}
+
+\maketitle
+\section{What is a Tessellation?}
+
+\begin{frame}[fragile]
+  \frametitle{What is a Tessellation?}
+\begin{mydef}
+A \textbf{tessellation} $\mathcal{T}$ of the space $\mathbb{E}^n$ is a countable family of closed sets, $T$, called \emph{tiles}:
+\begin{equation*}
+\mathcal{T}=\{T_1,T_2,\mathellipsis\}
+\end{equation*}
+such that
+\begin{enumerate}
+\item $\mathcal{T}$ has \textbf{no overlaps}: $\mathring{T_i} \cap \mathring{T_j}=\emptyset$ if $i\neq j$
+\item $\mathcal{T}$ has \textbf{no gaps}: $\bigcup_{i=1}^\infty T_i = \mathbb{E}^n$
+\end{enumerate}
+\end{mydef}
+\end{frame}
+
+\begin{frame}{Figures}
+  \frametitle{A Simple Tessellation}
+  
+  \begin{figure}
+	\includegraphics[width=0.5\textwidth]{Checkerboard}
+    \caption{Checkerboard Tessellation}
+    \label{fig:checkerboard}
+  \end{figure}
+  
+  
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Components of a Tessellation}
+
+\begin{mydef}
+Let $\{T_1,T_2,\mathellipsis\}$ be the set of tiles of tessellation $\mathcal{T}$, partitioned into a set of equivalence classes by \textbf{criterion} $\mathcal{M}$. The set, $\mathcal{P}$, of representatives of these equivalence classes is called the \textbf{protoset} for $\mathcal{T}$ with respect to $\mathcal{M}$.
+\end{mydef}
+
+\pause
+\begin{ex}
+\begin{table}
+\begin{tabular}{l c}
+  \textbf{Criterion:} & $\mathcal{M}=$ \{\emph{Colour of the tile. Only opposite colours may touch.}\}\\[10pt]
+  \textbf{Protoset:} &  
+     \huge  \raisebox{0pt}{$\mathcal{P}=$ \{} 
+                  \raisebox{-10pt}{\includegraphics[width=0.1\textwidth]{tealproto}}\raisebox{0pt}{ ,}
+                   \raisebox{-10pt}{\includegraphics[width=0.1\textwidth]{whiteproto}}
+          \huge\raisebox{0pt}{\}}\\
+\end{tabular}
+\end{table}
+\end{ex}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Protosets Admit Tessellations}
+\begin{mydef}
+If $\mathcal{T}$ is a tessellation with protoset $\mathcal{P}$, then we say that $\mathcal{P}$ admits $\mathcal{T}$.
+\end{mydef}
+\pause
+
+\begin{ex}
+\flushleft We say\\
+\centering\huge \raisebox{0pt}{$\mathcal{P}=$ \{} 
+                  \raisebox{0pt}{\includegraphics[width=0.05\textwidth]{tealproto}}\raisebox{0pt}{ ,}
+                   \raisebox{0pt}{\includegraphics[width=0.05\textwidth]{whiteproto}}
+          \huge\raisebox{0pt}{\}}\\
+\flushleft\normalsize \raisebox{15pt}{admits}\\
+\centering\includegraphics[width=0.2\textwidth]{Checkerboard}
+\end{ex}
+\end{frame}
+
+\begin{frame}{Figures}
+\frametitle{Protosets Can Admit Multiple Tessellations}
+\begin{figure}
+\begin{subfigure}[b]{0.4\textwidth}
+\includegraphics[width=\textwidth]{Checkerboard}
+\end{subfigure}\hfill
+\begin{subfigure}[b]{0.4\textwidth}
+\includegraphics[width=\textwidth]{CheckerboardOther}
+\end{subfigure}
+\end{figure}
+\end{frame}
+
+\section{Describing Tessellations}
+
+\begin{frame}
+\frametitle{Symmetries}
+
+\begin{mydef}
+A tessellation is said to be \textbf{symmetric} under a transformation if that transformation maps the tiling to itself identically.
+\end{mydef}
+
+\alert{Rotational Symmetry:} $\mathcal{T}$ can be rotated a non-trivial angle about a point and overlap itself identically\\[10pt]
+\alert{Translational Symmetry:} $\mathcal{T}$ can be shifted by some non-trivial distance in a direction and overlap itself identically.
+\end{frame}
+
+\begin{frame}{Figures}
+\frametitle{Checkerboard Symmetries}
+\begin{figure}
+\begin{subfigure}[b]{0.45\textwidth}
+\includegraphics[width=\textwidth]{Checkerboard}
+\caption*{Translation Symmetry: 2 Squares\\ Rotational Symmetry: $\frac{\pi}{2}$}
+\end{subfigure}\hfill
+\begin{subfigure}[b]{0.45\textwidth}
+\includegraphics[width=\textwidth]{CheckerboardOther}
+\caption*{Translation Symmetry: 3 Squares\\ Rotational Symmetry: $\pi$}
+\end{subfigure}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Periodicity}
+\begin{mydef}
+A tessellation is said to be \textbf{periodic} if it admits translational symmetry in two directions.
+\end{mydef}
+\begin{mydef}
+A tessellation is said to be \textbf{non-periodic} if it admits no translational symmetries.
+\end{mydef}
+\end{frame}
+
+\begin{frame}{Figures}
+\frametitle{Checkerboard Periodicity}
+\begin{figure}
+\begin{subfigure}[b]{0.45\textwidth}
+\includegraphics[width=\textwidth]{Checkerboard}
+\caption*{Periodic}
+\end{subfigure}\hfill
+\begin{subfigure}[b]{0.45\textwidth}
+\includegraphics[width=\textwidth]{CheckerboardAperiodic}
+\caption*{Non-Periodic}
+\end{subfigure}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{The Aperiodic Question}
+
+\centering
+Checkerboard protoset,\\
+\huge \raisebox{0pt}{$\mathcal{P}=$ \{} 
+                  \raisebox{0pt}{\includegraphics[width=0.05\textwidth]{tealproto}}\raisebox{0pt}{ ,}
+                   \raisebox{0pt}{\includegraphics[width=0.05\textwidth]{whiteproto}}
+          \huge\raisebox{0pt}{\}}\\ \normalsize admits \alert{both} \textbf{periodic} and \textbf{non-periodic} tessellations.\\[15pt]
+
+
+\begin{figure}
+\begin{subfigure}[b]{0.35\textwidth}
+\includegraphics[width=\textwidth]{Checkerboard}
+\caption*{Periodic}
+\end{subfigure}\hfill
+\begin{subfigure}[b]{0.35\textwidth}
+\includegraphics[width=\textwidth]{CheckerboardAperiodic}
+\caption*{Non-Periodic}
+\end{subfigure}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{The Aperiodic Question}
+
+\centering
+Checkerboard protoset,\\
+\huge \raisebox{0pt}{$\mathcal{P}=$ \{} 
+                  \raisebox{0pt}{\includegraphics[width=0.05\textwidth]{tealproto}}\raisebox{0pt}{ ,}
+                   \raisebox{0pt}{\includegraphics[width=0.05\textwidth]{whiteproto}}
+          \huge\raisebox{0pt}{\}}\\ \normalsize admits \alert{both} \textbf{periodic} and \textbf{non-periodic} tessellations.\\[15pt]
+
+Some protosets,\\
+\huge \raisebox{0pt}{$\mathcal{P}=$ \{} 
+                  \raisebox{0pt}{\includegraphics[width=0.08\textwidth]{HexagonProto}}\raisebox{0pt}
+          \huge\raisebox{0pt}{\}}\\ \normalsize admits \alert{only} \textbf{periodic} tessellations.\\[15pt]
+
+\begin{figure}
+\includegraphics[width=0.2\textwidth]{Hexagons}
+\end{figure}
+
+\invisible{
+\begin{figure}
+\begin{subfigure}[b]{0.35\textwidth}
+\includegraphics[width=\textwidth]{Checkerboard}
+\caption*{Periodic}
+\end{subfigure}\hfill
+\begin{subfigure}[b]{0.35\textwidth}
+\includegraphics[width=\textwidth]{CheckerboardAperiodic}
+\caption*{Non-Periodic}
+\end{subfigure}
+\end{figure}
+}
+\end{frame}
+
+\begin{frame}
+\frametitle{The Aperiodic Question}
+
+\centering
+Checkerboard protoset,\\
+\huge \raisebox{0pt}{$\mathcal{P}=$ \{} 
+                  \raisebox{0pt}{\includegraphics[width=0.05\textwidth]{tealproto}}\raisebox{0pt}{ ,}
+                   \raisebox{0pt}{\includegraphics[width=0.05\textwidth]{whiteproto}}
+          \huge\raisebox{0pt}{\}}\\ \normalsize admits \alert{both} \textbf{periodic} and \textbf{non-periodic} tessellations.\\[15pt]
+
+Some protosets,\\
+\huge \raisebox{0pt}{$\mathcal{P}=$ \{} 
+                  \raisebox{0pt}{\includegraphics[width=0.08\textwidth]{HexagonProto}}\raisebox{0pt}
+          \huge\raisebox{0pt}{\}}\\ \normalsize admits \alert{only} \textbf{periodic} tessellations.\\[15pt]
+          
+Are there any protosets,\\
+\huge \raisebox{0pt}{$\mathcal{P}=$ \{?\}}\\ 
+\normalsize that admit \alert{only} \textbf{non-periodic} tessellations?
+\invisible{
+\begin{figure}
+\includegraphics[width=0.2\textwidth]{Hexagons}
+\end{figure}
+}
+
+\invisible{
+\begin{figure}
+\begin{subfigure}[b]{0.35\textwidth}
+\includegraphics[width=\textwidth]{Checkerboard}
+\caption*{Periodic}
+\end{subfigure}\hfill
+\begin{subfigure}[b]{0.35\textwidth}
+\includegraphics[width=\textwidth]{CheckerboardAperiodic}
+\caption*{Non-Periodic}
+\end{subfigure}
+\end{figure}
+}
+
+
+\begin{figure}
+\includegraphics[width=0.2\textwidth]{Hexagons}
+\end{figure}
+
+\invisible{
+\begin{figure}
+\begin{subfigure}[b]{0.35\textwidth}
+\includegraphics[width=\textwidth]{Checkerboard}
+\caption*{Periodic}
+\end{subfigure}\hfill
+\begin{subfigure}[b]{0.35\textwidth}
+\includegraphics[width=\textwidth]{CheckerboardAperiodic}
+\caption*{Non-Periodic}
+\end{subfigure}
+\end{figure}
+}
+\end{frame}
+
+\section{The Penrose Tessellation}
+
+\begin{frame}
+\frametitle{The Penrose Rhombs Protoset}
+\centering
+\huge \raisebox{25pt}{$\mathcal{P}=$ \{} 
+                  \raisebox{0pt}{\includegraphics[width=0.3\textwidth]{FatProto}}\raisebox{20pt}{ ,}
+                   \raisebox{-10pt}{\includegraphics[width=0.1\textwidth]{SkinnyProto}}
+          \huge\raisebox{25pt}{\}*}
+          
+\vfill \raisebox{-7pt}{*} \normalsize With complicated matching rules
+\end{frame}
+
+\begin{frame}
+\frametitle{Constructing the Penrose Tessellation}
+The Penrose Tessellation cannot be constructed \textbf{locally}, instead we use \textbf{substitution rules}:
+
+\begin{table}
+\begin{tabular}{lcr}
+\raisebox{15pt}{\includegraphics[width=0.2\textwidth]{FatProto}} & \Huge \raisebox{30pt}{$\rightarrow$} & \includegraphics[width=0.2\textwidth]{FatSub} \\
+\raisebox{10pt}{\includegraphics[width=0.08\textwidth]{SkinnyProto}} & \Huge \raisebox{40pt}{$\rightarrow$} & \includegraphics[width=0.2\textwidth]{SkinnySub} \\
+\end{tabular}
+\end{table}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Start with a Seed: Fat Rhombus}
+\begin{figure}
+\includegraphics[width=0.6\textwidth]{FatProto}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Apply Substitution Rules}
+\begin{figure}
+\includegraphics[width=0.6\textwidth]{Inflate1}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Apply Substitution Rules Again}
+\begin{figure}
+\includegraphics[width=0.6\textwidth]{Inflate2}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Apply Substitution Rules Again and Again}
+\begin{figure}
+\includegraphics[width=0.6\textwidth]{Inflate3}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Apply Substitution Rules Again and Again and Again}
+\begin{figure}
+\includegraphics[width=0.6\textwidth]{Inflate4}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Apply Substitution Rules Again and Again and Again and Again}
+\begin{figure}
+\includegraphics[width=0.6\textwidth]{Inflate5}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Apply Substitution Rules 10 times}
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{Inflate10}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Apply Substitution Rules 11 times}
+
+  \fullsizegraphic{Inflate11}
+
+
+\end{frame}
+
+\end{document}

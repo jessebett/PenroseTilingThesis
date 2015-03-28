@@ -4,7 +4,7 @@ BeginPackage["PenroseTilingFunctions`"];
 
 
 \[Phi]::usage="Gives Golden Ratio to Numerical Precision";
-\[Phi]=GoldenRatio;
+\[Phi]=GoldenRatio//N;
 
 \[CapitalPsi]::usage="Gives -\!\(\*SuperscriptBox[\(\[Phi]\), \(-1\)]\), Inverse of Golden Ratio, to Numerical Precision";
 \[CapitalPsi]=1-\[Phi]//N;
