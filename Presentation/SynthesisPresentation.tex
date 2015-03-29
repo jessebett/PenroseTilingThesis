@@ -39,21 +39,6 @@
 \maketitle
 \section{What is a Tessellation?}
 
-\begin{frame}[fragile]
-  \frametitle{What is a Tessellation?}
-\begin{mydef}
-A \textbf{tessellation} $\mathcal{T}$ of the space $\mathbb{E}^n$ is a countable family of closed sets, $T$, called \emph{tiles}:
-\begin{equation*}
-\mathcal{T}=\{T_1,T_2,\mathellipsis\}
-\end{equation*}
-such that
-\begin{enumerate}
-\item $\mathcal{T}$ has \textbf{no overlaps}: $\mathring{T_i} \cap \mathring{T_j}=\emptyset$ if $i\neq j$
-\item $\mathcal{T}$ has \textbf{no gaps}: $\bigcup_{i=1}^\infty T_i = \mathbb{E}^n$
-\end{enumerate}
-\end{mydef}
-\end{frame}
-
 \begin{frame}{Figures}
   \frametitle{A Simple Tessellation}
   
@@ -67,13 +52,33 @@ such that
 \end{frame}
 
 \begin{frame}[fragile]
+  \frametitle{What is a Tessellation?}
+\begin{mydef}
+A \textbf{tessellation} $\mathcal{T}$ of the space $\mathbb{E}^n$ is a countable family of closed sets, $T$, called \emph{tiles}:
+\begin{equation*}
+\mathcal{T}=\{T_1,T_2,\mathellipsis\}
+\end{equation*}
+such that
+\begin{enumerate}
+\item $\mathcal{T}$ has \textbf{no overlaps}: $\mathring{T_i} \cap \mathring{T_j}=\emptyset$ if $i\neq j$
+\item $\mathcal{T}$ has \textbf{no gaps}: $\bigcup_{i=1}^\infty T_i = \mathbb{E}^n$
+\end{enumerate}
+\end{mydef}
+
+\begin{center}
+\includegraphics[width=0.2\textwidth]{Checkerboard}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
 \frametitle{Components of a Tessellation}
 
 \begin{mydef}
 Let $\{T_1,T_2,\mathellipsis\}$ be the set of tiles of tessellation $\mathcal{T}$, partitioned into a set of equivalence classes by \textbf{criterion} $\mathcal{M}$. The set, $\mathcal{P}$, of representatives of these equivalence classes is called the \textbf{protoset} for $\mathcal{T}$ with respect to $\mathcal{M}$.
 \end{mydef}
 
-\pause
 \begin{ex}
 \begin{table}
 \begin{tabular}{l c}
@@ -95,7 +100,7 @@ Let $\{T_1,T_2,\mathellipsis\}$ be the set of tiles of tessellation $\mathcal{T}
 \begin{mydef}
 If $\mathcal{T}$ is a tessellation with protoset $\mathcal{P}$, then we say that $\mathcal{P}$ admits $\mathcal{T}$.
 \end{mydef}
-\pause
+
 
 \begin{ex}
 \flushleft We say\\
@@ -110,14 +115,45 @@ If $\mathcal{T}$ is a tessellation with protoset $\mathcal{P}$, then we say that
 
 \begin{frame}{Figures}
 \frametitle{Protosets Can Admit Multiple Tessellations}
+\centering\huge \raisebox{0pt}{$\mathcal{P}=$ \{} 
+                  \raisebox{0pt}{\includegraphics[width=0.05\textwidth]{tealproto}}\raisebox{0pt}{ ,}
+                   \raisebox{0pt}{\includegraphics[width=0.05\textwidth]{whiteproto}}
+          \huge\raisebox{0pt}{\}}\\
+\flushleft\normalsize \raisebox{15pt}{admits both}\\
+
 \begin{figure}
 \begin{subfigure}[b]{0.4\textwidth}
 \includegraphics[width=\textwidth]{Checkerboard}
-\end{subfigure}\hfill
+\end{subfigure}\hfill \raisebox{60pt}{and} \hfill
 \begin{subfigure}[b]{0.4\textwidth}
 \includegraphics[width=\textwidth]{CheckerboardOther}
 \end{subfigure}
 \end{figure}
+\end{frame}
+
+\begin{frame}{Figures}
+\frametitle{Matching Rules Correspond to Deformed Protosets}
+\centering
+Edge deformations can force matching rules.
+
+\centering\huge \raisebox{0pt}{$\mathcal{P}=$ \{} 
+                  \raisebox{0pt}{\includegraphics[width=0.05\textwidth]{tealproto}}\raisebox{0pt}{ ,}
+                   \raisebox{0pt}{\includegraphics[width=0.05\textwidth]{whiteproto}}
+          \huge\raisebox{0pt}{\}}\hfill
+          \huge \raisebox{0pt}{$\mathcal{P}=$ \{} 
+                            \raisebox{0pt}{\includegraphics[width=0.05\textwidth]{protodisk}}\raisebox{0pt}{ ,}
+                             \raisebox{0pt}{\includegraphics[width=0.05\textwidth]{protosquare}}
+                    \huge\raisebox{0pt}{\}}\\
+\begin{figure}
+\begin{subfigure}[b]{0.3\textwidth}
+\includegraphics[width=\textwidth]{Checkerboard}
+\end{subfigure} \raisebox{40pt}{ $\rightarrow$} 
+\begin{subfigure}[b]{0.3\textwidth}
+\includegraphics[width=\textwidth]{CheckerboardCircles}
+\end{subfigure}
+\end{figure}
+
+\normalsize Matching Rules $\implies$ Deformed Protoset
 \end{frame}
 
 \section{Describing Tessellations}

@@ -2,7 +2,7 @@
 \begin{mydef}
 If $\mathcal{T}$ is a tessellation with protoset $\mathcal{P}$, then we say that $\mathcal{P}$ admits $\mathcal{T}$.
 \end{mydef}
-\pause
+
 
 \begin{ex}
 \flushleft We say\\

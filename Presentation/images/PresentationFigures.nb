@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    104830,       2216]
-NotebookOptionsPosition[    102484,       2138]
-NotebookOutlinePosition[    102824,       2153]
-CellTagsIndexPosition[    102781,       2150]
+NotebookDataLength[     95680,       2066]
+NotebookOptionsPosition[     93519,       1993]
+NotebookOutlinePosition[     93859,       2008]
+CellTagsIndexPosition[     93816,       2005]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -244,7 +244,7 @@ Cell[BoxData[
     GeometricTransformationBox[RectangleBox[{0, 0}], {6, 4}], 
     GeometricTransformationBox[RectangleBox[{0, 0}], {6, 6}]}}]], "Output",
  CellChangeTimes->{{3.635536489577775*^9, 3.635536501040431*^9}, 
-   3.6355368568347807`*^9}]
+   3.6355368568347807`*^9, 3.636638142421522*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -266,7 +266,8 @@ Cell[BoxData["\<\"Checkerboard.png\"\>"], "Output",
  CellChangeTimes->{
   3.6353714470558825`*^9, 3.6353715564841413`*^9, 3.6353755853945823`*^9, 
    3.6353757176591473`*^9, 3.6355362008852625`*^9, 3.6355362516041636`*^9, 
-   3.635536506754758*^9, {3.635536858530878*^9, 3.6355368782140036`*^9}}]
+   3.635536506754758*^9, {3.635536858530878*^9, 3.6355368782140036`*^9}, 
+   3.6366381452276826`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -293,12 +294,14 @@ Cell[BoxData[{
 
 Cell[BoxData["\<\"tealproto.png\"\>"], "Output",
  CellChangeTimes->{{3.635537330464871*^9, 3.6355373801067104`*^9}, {
-  3.6355374130865965`*^9, 3.6355374548639865`*^9}}],
+   3.6355374130865965`*^9, 3.6355374548639865`*^9}, 3.636638147003784*^9}],
 
 Cell[BoxData["\<\"whiteproto.png\"\>"], "Output",
  CellChangeTimes->{{3.635537330464871*^9, 3.6355373801067104`*^9}, {
-  3.6355374130865965`*^9, 3.6355374549529915`*^9}}]
+   3.6355374130865965`*^9, 3.6355374548639865`*^9}, 3.6366381470727882`*^9}]
 }, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"Export", "[", 
@@ -318,6 +321,10 @@ Cell[BoxData[
         RowBox[{"Rectangle", "[", "]"}]}], "}"}], "]"}]}], "}"}], ",", 
    RowBox[{"Background", "\[Rule]", "None"}]}], "]"}]], "Input",
  CellChangeTimes->{{3.635538084126978*^9, 3.6355381334027967`*^9}}],
+
+Cell[BoxData["\<\"protoset.png\"\>"], "Output",
+ CellChangeTimes->{3.636638148809888*^9}]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -353,12 +360,9 @@ Cell[BoxData[
         Rational[55, 256], 
         Rational[59, 256]}, {0.13671875, 0.21484375, 0.23046875}]]], FaceForm[
      None], RectangleBox[{0, 0}]}]}], "}"}]], "Output",
- CellChangeTimes->{{3.6355381339678288`*^9, 3.6355381582122154`*^9}}]
+ CellChangeTimes->{{3.6355381339678288`*^9, 3.6355381582122154`*^9}, 
+   3.6366381504399805`*^9}]
 }, Open  ]],
-
-Cell[BoxData[
- RowBox[{"SystemOpen", "[", "\"\<Checkerboard.png\>\"", "]"}]], "Input",
- NumberMarks->False],
 
 Cell[CellGroupData[{
 
@@ -390,8 +394,9 @@ Cell[BoxData[{
                
                ImageSize->
                 Dynamic[{
-                 Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                  AbsoluteCurrentValue[Magnification]}],
+                 Automatic, 
+                  1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                   Magnification])}],
                PlotRangePadding->None], "\[InvisibleSpace]"}],
              "GrayLevel[0, 0]"],
             Appearance->None,
@@ -600,7 +605,7 @@ Cell[BoxData[
    3.6353748430331216`*^9, 3.635374883819454*^9}, 3.6353749262358804`*^9, {
    3.635375337679414*^9, 3.635375371310337*^9}, {3.635375401397058*^9, 
    3.6353754295476685`*^9}, 3.635375622377698*^9, {3.6355556345078025`*^9, 
-   3.635555648418598*^9}}],
+   3.635555648418598*^9}, 3.6366381577493987`*^9}],
 
 Cell[BoxData["\<\"CheckerboardAperiodic.png\"\>"], "Output",
  CellChangeTimes->{{3.6353716169496*^9, 3.635371632774505*^9}, {
@@ -612,7 +617,7 @@ Cell[BoxData["\<\"CheckerboardAperiodic.png\"\>"], "Output",
    3.6353748430331216`*^9, 3.635374883819454*^9}, 3.6353749262358804`*^9, {
    3.635375337679414*^9, 3.635375371310337*^9}, {3.635375401397058*^9, 
    3.6353754295476685`*^9}, 3.635375622377698*^9, {3.6355556345078025`*^9, 
-   3.6355556485156035`*^9}}]
+   3.635555648418598*^9}, 3.636638157853405*^9}]
 }, Open  ]],
 
 Cell[BoxData[""], "Input",
@@ -782,12 +787,12 @@ Cell[BoxData[
     GeometricTransformationBox[RectangleBox[{0, 0}], {6, 6}]}}]], "Output",
  CellChangeTimes->{{3.635374529305177*^9, 3.635374541131854*^9}, {
    3.635374938586587*^9, 3.635374958107703*^9}, 3.6353750342820606`*^9, {
-   3.6355541169830046`*^9, 3.6355541260785255`*^9}}],
+   3.6355541169830046`*^9, 3.6355541260785255`*^9}, 3.6366381627686863`*^9}],
 
 Cell[BoxData["\<\"CheckerboardOther.png\"\>"], "Output",
  CellChangeTimes->{{3.635374529305177*^9, 3.635374541131854*^9}, {
    3.635374938586587*^9, 3.635374958107703*^9}, 3.6353750342820606`*^9, {
-   3.6355541169830046`*^9, 3.6355541261875315`*^9}}]
+   3.6355541169830046`*^9, 3.6355541260785255`*^9}, 3.6366381628706913`*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -822,26 +827,33 @@ Cell[BoxData[{
       RowBox[{
        RowBox[{"{", 
         RowBox[{
-         RowBox[{"FaceForm", "[", "Black", "]"}], ",", "#"}], "}"}], "&"}], "/@",
-       "circles"}], "]"}], ",", 
+         RowBox[{"FaceForm", "[", "darkteal", "]"}], ",", "#"}], "}"}], "&"}],
+       "/@", "circles"}], "]"}], ",", 
     RowBox[{"Pi", "/", "4"}]}], "]"}], ";"}], "\[IndentingNewLine]", 
- RowBox[{"Graphics", "[", 
-  RowBox[{"Rotate", "[", 
-   RowBox[{"circles", ",", 
-    RowBox[{"Pi", "/", "4"}]}], "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Graphics", "[", 
+   RowBox[{"{", 
+    RowBox[{"darkteal", ",", 
+     RowBox[{"Rotate", "[", 
+      RowBox[{"circles", ",", 
+       RowBox[{"Pi", "/", "4"}]}], "]"}]}], "}"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"Table", "[", 
    RowBox[{
     RowBox[{"Graphics", "[", 
-     RowBox[{"Translate", "[", 
-      RowBox[{
-       RowBox[{"Rotate", "[", 
-        RowBox[{"circles", ",", 
-         RowBox[{"Pi", "/", "4"}]}], "]"}], ",", 
-       RowBox[{"{", 
-        RowBox[{"0", ",", 
-         RowBox[{"i", "*", "2", 
-          RowBox[{"Sqrt", "[", "2", "]"}]}]}], "}"}]}], "]"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"darkteal", ",", 
+       RowBox[{"Translate", "[", 
+        RowBox[{
+         RowBox[{"Rotate", "[", 
+          RowBox[{"circles", ",", 
+           RowBox[{"Pi", "/", "4"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", 
+           RowBox[{"i", "*", "2", 
+            RowBox[{"Sqrt", "[", "2", "]"}]}]}], "}"}]}], "]"}]}], "}"}], 
+     "]"}], ",", 
     RowBox[{"{", 
      RowBox[{"i", ",", 
       RowBox[{"-", "2"}], ",", "1"}], "}"}]}], "]"}], 
@@ -862,40 +874,145 @@ Cell[BoxData[{
   "]"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{"\"\<CheckerboardCircles.png\>\"", ",", "%"}], "]"}]}], "Input",
- CellChangeTimes->{{3.6353767153542123`*^9, 3.6353767220485954`*^9}, {
-  3.635376779163862*^9, 3.6353768388922777`*^9}, {3.635376898512688*^9, 
-  3.635376914747617*^9}, {3.635378878133916*^9, 3.635378899478137*^9}, {
-  3.6353795409968295`*^9, 3.635379600377226*^9}, {3.6353796740644407`*^9, 
-  3.635379750912836*^9}, {3.635379784091734*^9, 3.6353798219749007`*^9}, {
-  3.6353798592650337`*^9, 3.635379951849329*^9}, {3.6353799886194324`*^9, 
-  3.6353799991390343`*^9}, {3.6353800730362606`*^9, 3.635380105915141*^9}, {
-  3.635380240412834*^9, 3.6353802784520097`*^9}, {3.6353803398635225`*^9, 
-  3.6353803823539524`*^9}, {3.6353804256744304`*^9, 3.635380468868901*^9}, {
-  3.6353805002726974`*^9, 3.635380524124061*^9}, {3.635380560044116*^9, 
-  3.635380561493199*^9}, {3.6353805938220477`*^9, 3.6353805997453866`*^9}, {
-  3.635380644514947*^9, 3.6353808294175234`*^9}}],
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQAWIQvTU02/Od6GtHiT5HLxAdY5caCKK7eu9EgOiP6QEJ
+ILrqTXgSiObyPBL+Hkg/88mPAtHsz+avAtE2QjybwOL8TrtB9BfTu0dAdM17
+ppMgOtlo/1kQrVGdcQlEb9H9fRdEp1ya/AhE/yh68hhE82gqvgXR1zxsP4Lo
+D6a8TB+A9N2yc2wg+tfCaj4QPSX4tDCIfj/FVBJEc56bLQeiP+zsUALR/j+a
+VUF0WiajFoj2PKEPps39rPRAtOmt72C6qGqCCYiOilnrDaJ1lvfbhkm8diyc
+vRVMR1yIdgPRs5WjPUD0lscFASD6gdKuEBANAM9noS4=
+  "]],
 
 Cell[BoxData[
- GraphicsBox[
-  GeometricTransformationBox[{
-    GeometricTransformationBox[DiskBox[{0, 0}], {0, 0}], 
-    GeometricTransformationBox[DiskBox[{0, 0}], {0, 2}], 
-    GeometricTransformationBox[DiskBox[{0, 0}], {0, 4}], 
-    GeometricTransformationBox[DiskBox[{0, 0}], {0, 6}], 
-    GeometricTransformationBox[DiskBox[{0, 0}], {2, 0}], 
-    GeometricTransformationBox[DiskBox[{0, 0}], {2, 2}], 
-    GeometricTransformationBox[DiskBox[{0, 0}], {2, 4}], 
-    GeometricTransformationBox[DiskBox[{0, 0}], {2, 6}], 
-    GeometricTransformationBox[DiskBox[{0, 0}], {4, 0}], 
-    GeometricTransformationBox[DiskBox[{0, 0}], {4, 2}], 
-    GeometricTransformationBox[DiskBox[{0, 0}], {4, 4}], 
-    GeometricTransformationBox[DiskBox[{0, 0}], {4, 6}], 
-    GeometricTransformationBox[DiskBox[{0, 0}], {6, 0}], 
-    GeometricTransformationBox[DiskBox[{0, 0}], {6, 2}], 
-    GeometricTransformationBox[DiskBox[{0, 0}], {6, 4}], 
-    GeometricTransformationBox[DiskBox[{0, 0}], {6, 6}]}, {{{
-    0.7071067811865475, -0.7071067811865475}, {0.7071067811865475, 
-    0.7071067811865475}}, Center}]]], "Output",
+ GraphicsBox[{
+   {RGBColor[
+     NCache[{
+       Rational[35, 256], 
+       Rational[55, 256], 
+       Rational[59, 256]}, {0.13671875, 0.21484375, 0.23046875}]], 
+    GeometricTransformationBox[
+     GeometricTransformationBox[{
+       GeometricTransformationBox[DiskBox[{0, 0}], {0, 0}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {0, 2}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {0, 4}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {0, 6}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {2, 0}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {2, 2}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {2, 4}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {2, 6}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {4, 0}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {4, 2}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {4, 4}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {4, 6}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {6, 0}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {6, 2}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {6, 4}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {6, 6}]}, {{{
+       0.7071067811865475, -0.7071067811865475}, {0.7071067811865475, 
+       0.7071067811865475}}, Center}], 
+     NCache[{0, (-4) 2^Rational[1, 2]}, {0, -5.656854249492381}]]}, 
+   {RGBColor[
+     NCache[{
+       Rational[35, 256], 
+       Rational[55, 256], 
+       Rational[59, 256]}, {0.13671875, 0.21484375, 0.23046875}]], 
+    GeometricTransformationBox[
+     GeometricTransformationBox[{
+       GeometricTransformationBox[DiskBox[{0, 0}], {0, 0}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {0, 2}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {0, 4}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {0, 6}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {2, 0}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {2, 2}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {2, 4}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {2, 6}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {4, 0}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {4, 2}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {4, 4}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {4, 6}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {6, 0}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {6, 2}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {6, 4}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {6, 6}]}, {{{
+       0.7071067811865475, -0.7071067811865475}, {0.7071067811865475, 
+       0.7071067811865475}}, Center}], 
+     NCache[{0, (-2) 2^Rational[1, 2]}, {0, -2.8284271247461903`}]]}, 
+   {RGBColor[
+     NCache[{
+       Rational[35, 256], 
+       Rational[55, 256], 
+       Rational[59, 256]}, {0.13671875, 0.21484375, 0.23046875}]], 
+    GeometricTransformationBox[
+     GeometricTransformationBox[{
+       GeometricTransformationBox[DiskBox[{0, 0}], {0, 0}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {0, 2}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {0, 4}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {0, 6}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {2, 0}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {2, 2}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {2, 4}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {2, 6}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {4, 0}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {4, 2}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {4, 4}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {4, 6}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {6, 0}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {6, 2}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {6, 4}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {6, 6}]}, {{{
+       0.7071067811865475, -0.7071067811865475}, {0.7071067811865475, 
+       0.7071067811865475}}, Center}], {0, 0}]}, 
+   {RGBColor[
+     NCache[{
+       Rational[35, 256], 
+       Rational[55, 256], 
+       Rational[59, 256]}, {0.13671875, 0.21484375, 0.23046875}]], 
+    GeometricTransformationBox[
+     GeometricTransformationBox[{
+       GeometricTransformationBox[DiskBox[{0, 0}], {0, 0}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {0, 2}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {0, 4}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {0, 6}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {2, 0}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {2, 2}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {2, 4}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {2, 6}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {4, 0}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {4, 2}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {4, 4}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {4, 6}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {6, 0}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {6, 2}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {6, 4}], 
+       GeometricTransformationBox[DiskBox[{0, 0}], {6, 6}]}, {{{
+       0.7071067811865475, -0.7071067811865475}, {0.7071067811865475, 
+       0.7071067811865475}}, Center}], 
+     NCache[{0, 2 2^Rational[1, 2]}, {0, 2.8284271247461903`}]]}, 
+   {RGBColor[
+     NCache[{
+       Rational[35, 256], 
+       Rational[55, 256], 
+       Rational[59, 256]}, {0.13671875, 0.21484375, 0.23046875}]], 
+    GeometricTransformationBox[{
+      GeometricTransformationBox[DiskBox[{0, 0}], {0, 0}], 
+      GeometricTransformationBox[DiskBox[{0, 0}], {0, 2}], 
+      GeometricTransformationBox[DiskBox[{0, 0}], {0, 4}], 
+      GeometricTransformationBox[DiskBox[{0, 0}], {0, 6}], 
+      GeometricTransformationBox[DiskBox[{0, 0}], {2, 0}], 
+      GeometricTransformationBox[DiskBox[{0, 0}], {2, 2}], 
+      GeometricTransformationBox[DiskBox[{0, 0}], {2, 4}], 
+      GeometricTransformationBox[DiskBox[{0, 0}], {2, 6}], 
+      GeometricTransformationBox[DiskBox[{0, 0}], {4, 0}], 
+      GeometricTransformationBox[DiskBox[{0, 0}], {4, 2}], 
+      GeometricTransformationBox[DiskBox[{0, 0}], {4, 4}], 
+      GeometricTransformationBox[DiskBox[{0, 0}], {4, 6}], 
+      GeometricTransformationBox[DiskBox[{0, 0}], {6, 0}], 
+      GeometricTransformationBox[DiskBox[{0, 0}], {6, 2}], 
+      GeometricTransformationBox[DiskBox[{0, 0}], {6, 4}], 
+      GeometricTransformationBox[DiskBox[{0, 0}], {6, 6}]}, {{{
+      0.7071067811865475, -0.7071067811865475}, {0.7071067811865475, 
+      0.7071067811865475}}, Center}]}},
+  PlotRange->{{-2.3, 8.3}, {-3.75, 6.85}}]], "Output",
  CellChangeTimes->{{3.6353767223616133`*^9, 3.635376757712635*^9}, {
    3.6353767943347297`*^9, 3.635376839296301*^9}, {3.635376900046776*^9, 
    3.6353769150416336`*^9}, 3.6353789005361977`*^9, {3.635379549337307*^9, 
@@ -906,115 +1023,9 @@ Cell[BoxData[
    3.63537999976607*^9}, {3.63538024454007*^9, 3.6353802788890347`*^9}, {
    3.6353803419166393`*^9, 3.6353803877772627`*^9}, 3.6353804694189324`*^9, {
    3.635380501635775*^9, 3.635380524785099*^9}, 3.6353805621112337`*^9, {
-   3.635380594594092*^9, 3.635380830019558*^9}}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- GraphicsBox[{
-   GeometricTransformationBox[
-    GeometricTransformationBox[{
-      GeometricTransformationBox[DiskBox[{0, 0}], {0, 0}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {0, 2}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {0, 4}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {0, 6}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {2, 0}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {2, 2}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {2, 4}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {2, 6}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {4, 0}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {4, 2}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {4, 4}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {4, 6}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {6, 0}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {6, 2}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {6, 4}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {6, 6}]}, {{{
-      0.7071067811865475, -0.7071067811865475}, {0.7071067811865475, 
-      0.7071067811865475}}, Center}], 
-    NCache[{0, (-4) 2^Rational[1, 2]}, {0, -5.656854249492381}]], 
-   GeometricTransformationBox[
-    GeometricTransformationBox[{
-      GeometricTransformationBox[DiskBox[{0, 0}], {0, 0}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {0, 2}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {0, 4}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {0, 6}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {2, 0}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {2, 2}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {2, 4}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {2, 6}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {4, 0}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {4, 2}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {4, 4}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {4, 6}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {6, 0}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {6, 2}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {6, 4}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {6, 6}]}, {{{
-      0.7071067811865475, -0.7071067811865475}, {0.7071067811865475, 
-      0.7071067811865475}}, Center}], 
-    NCache[{0, (-2) 2^Rational[1, 2]}, {0, -2.8284271247461903`}]], 
-   GeometricTransformationBox[
-    GeometricTransformationBox[{
-      GeometricTransformationBox[DiskBox[{0, 0}], {0, 0}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {0, 2}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {0, 4}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {0, 6}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {2, 0}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {2, 2}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {2, 4}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {2, 6}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {4, 0}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {4, 2}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {4, 4}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {4, 6}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {6, 0}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {6, 2}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {6, 4}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {6, 6}]}, {{{
-      0.7071067811865475, -0.7071067811865475}, {0.7071067811865475, 
-      0.7071067811865475}}, Center}], {0, 0}], 
-   GeometricTransformationBox[
-    GeometricTransformationBox[{
-      GeometricTransformationBox[DiskBox[{0, 0}], {0, 0}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {0, 2}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {0, 4}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {0, 6}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {2, 0}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {2, 2}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {2, 4}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {4, 0}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {4, 2}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {4, 4}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {4, 6}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {6, 0}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {6, 2}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {6, 4}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {6, 6}]}, {{{
-      0.7071067811865475, -0.7071067811865475}, {0.7071067811865475, 
-      0.7071067811865475}}, Center}], 
-    NCache[{0, 2 2^Rational[1, 2]}, {0, 2.8284271247461903`}]], 
-   GeometricTransformationBox[{
-     GeometricTransformationBox[DiskBox[{0, 0}], {0, 0}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {0, 2}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {0, 4}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {0, 6}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {2, 0}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {2, 2}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {2, 4}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {2, 6}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {4, 0}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {4, 2}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {4, 4}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {4, 6}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {6, 0}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {6, 2}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {6, 4}]}, {{{
-     0.7071067811865475, -0.7071067811865475}, {0.7071067811865475, 
-     0.7071067811865475}}, Center}]},
-  PlotRange->{{-2.3, 8.3}, {-3.75, 6.85}}]], "Input",
- CellChangeTimes->{{3.635380858419182*^9, 3.6353808603562927`*^9}}],
+   3.635380594594092*^9, 3.635380830019558*^9}, {3.636638167093933*^9, 
+   3.636638194778517*^9}, {3.636638254960959*^9, 3.636638275404128*^9}, {
+   3.6366383455831423`*^9, 3.6366383745838013`*^9}}],
 
 Cell[BoxData["\<\"CheckerboardCircles.png\"\>"], "Output",
  CellChangeTimes->{{3.6353767223616133`*^9, 3.635376757712635*^9}, {
@@ -1027,165 +1038,9 @@ Cell[BoxData["\<\"CheckerboardCircles.png\"\>"], "Output",
    3.63537999976607*^9}, {3.63538024454007*^9, 3.6353802788890347`*^9}, {
    3.6353803419166393`*^9, 3.6353803877772627`*^9}, 3.6353804694189324`*^9, {
    3.635380501635775*^9, 3.635380524785099*^9}, 3.6353805621112337`*^9, {
-   3.635380594594092*^9, 3.6353808301155634`*^9}}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- GraphicsBox[{
-   GeometricTransformationBox[
-    GeometricTransformationBox[{
-      GeometricTransformationBox[DiskBox[{0, 0}], {0, 0}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {0, 2}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {0, 4}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {0, 6}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {0, 8}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {0, 10}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {0, 12}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {0, 14}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {2, 0}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {2, 2}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {2, 4}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {2, 6}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {2, 8}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {2, 10}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {2, 12}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {2, 14}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {4, 0}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {4, 2}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {4, 4}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {4, 6}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {4, 8}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {4, 10}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {4, 12}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {4, 14}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {6, 0}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {6, 2}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {6, 4}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {6, 6}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {6, 8}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {6, 10}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {6, 12}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {6, 14}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {8, 0}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {8, 2}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {8, 4}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {8, 6}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {8, 8}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {8, 10}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {8, 12}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {8, 14}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {10, 0}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {10, 2}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {10, 4}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {10, 6}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {10, 8}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {10, 10}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {10, 12}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {10, 14}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {12, 0}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {12, 2}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {12, 4}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {12, 6}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {12, 8}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {12, 10}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {12, 12}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {12, 14}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {14, 0}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {14, 2}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {14, 4}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {14, 6}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {14, 8}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {14, 10}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {14, 12}], 
-      GeometricTransformationBox[DiskBox[{0, 0}], {14, 14}]}, {{{
-      0.7071067811865475, -0.7071067811865475}, {0.7071067811865475, 
-      0.7071067811865475}}, Center}], {0, 3}], 
-   GeometricTransformationBox[{
-     GeometricTransformationBox[DiskBox[{0, 0}], {0, 0}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {0, 2}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {0, 4}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {0, 6}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {0, 8}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {0, 10}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {0, 12}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {0, 14}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {2, 0}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {2, 2}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {2, 4}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {2, 6}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {2, 8}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {2, 10}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {2, 12}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {2, 14}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {4, 0}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {4, 2}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {4, 4}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {4, 6}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {4, 8}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {4, 10}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {4, 12}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {4, 14}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {6, 0}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {6, 2}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {6, 4}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {6, 6}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {6, 8}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {6, 10}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {6, 12}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {6, 14}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {8, 0}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {8, 2}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {8, 4}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {8, 6}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {8, 8}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {8, 10}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {8, 12}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {8, 14}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {10, 0}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {10, 2}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {10, 4}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {10, 6}], 
-     GeometricTransformationBox[
-      DiskBox[{0.2683533001805962, 0.3578044002407843}, \
-{0.7316466998195814, 0.6421955997593187}], {10, 8}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {10, 10}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {10, 12}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {10, 14}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {12, 0}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {12, 2}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {12, 4}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {12, 6}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {12, 8}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {12, 10}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {12, 12}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {12, 14}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {14, 0}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {14, 2}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {14, 4}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {14, 6}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {14, 8}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {14, 10}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {14, 12}], 
-     GeometricTransformationBox[DiskBox[{0, 0}], {14, 14}]}, {{{
-     0.7071067811865475, -0.7071067811865475}, {0.7071067811865475, 
-     0.7071067811865475}}, Center}]},
-  ImagePadding->{{0., 1.}, {1., 0.}},
-  PlotRange->{{-4.353640558970483, 18.353640558970483`}, {-4.33547473407613, 
-   21.33547473407613}},
-  PlotRangePadding->Automatic]], "Input",
- CellChangeTimes->{3.635380033112977*^9}],
-
-Cell[BoxData["\<\"CheckerboardCircles.png\"\>"], "Output",
- CellChangeTimes->{{3.6353767223616133`*^9, 3.635376757712635*^9}, {
-   3.6353767943347297`*^9, 3.635376839296301*^9}, {3.635376900046776*^9, 
-   3.6353769150416336`*^9}, 3.6353789005361977`*^9, {3.635379549337307*^9, 
-   3.6353795629020824`*^9}, {3.6353796016342983`*^9, 
-   3.6353796160131207`*^9}, {3.6353796905933857`*^9, 
-   3.6353797513888636`*^9}, {3.6353797857768307`*^9, 3.635379822957957*^9}, {
-   3.635379870170657*^9, 3.635379952514367*^9}, {3.635379990270527*^9, 
-   3.635379999862075*^9}}]
+   3.635380594594092*^9, 3.635380830019558*^9}, {3.636638167093933*^9, 
+   3.636638194778517*^9}, {3.636638254960959*^9, 3.636638275404128*^9}, {
+   3.6366383455831423`*^9, 3.6366383746638055`*^9}}]
 }, Open  ]],
 
 Cell[BoxData[{
@@ -2153,70 +2008,65 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 486, 12, 72, "Input"],
-Cell[1047, 34, 589, 18, 109, "Input"],
+Cell[1047, 34, 589, 18, 52, "Input"],
 Cell[1639, 54, 1835, 51, 92, "Input"],
 Cell[CellGroupData[{
 Cell[3499, 109, 196, 4, 31, "Input"],
-Cell[3698, 115, 8521, 131, 374, "Output"]
+Cell[3698, 115, 8543, 131, 374, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[12256, 251, 590, 11, 31, "Input"],
-Cell[12849, 264, 296, 4, 31, "Output"]
+Cell[12278, 251, 590, 11, 31, "Input"],
+Cell[12871, 264, 324, 5, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[13182, 273, 706, 18, 72, "Input"],
-Cell[13891, 293, 169, 2, 31, "Output"],
-Cell[14063, 297, 170, 2, 31, "Output"]
-}, Open  ]],
-Cell[14248, 302, 669, 17, 52, "Input"],
-Cell[CellGroupData[{
-Cell[14942, 323, 449, 13, 31, "Input"],
-Cell[15394, 338, 561, 17, 197, "Output"]
-}, Open  ]],
-Cell[15970, 358, 107, 2, 31, "Input"],
-Cell[CellGroupData[{
-Cell[16102, 364, 4289, 107, 157, "Input"],
-Cell[20394, 473, 8337, 129, 399, "Output"],
-Cell[28734, 604, 746, 10, 31, "Output"]
-}, Open  ]],
-Cell[29495, 617, 94, 1, 31, "Input"],
-Cell[29592, 620, 809, 24, 52, "Input"],
-Cell[CellGroupData[{
-Cell[30426, 648, 518, 10, 52, "Input"],
-Cell[30947, 660, 8117, 124, 374, "Output"],
-Cell[39067, 786, 250, 3, 31, "Output"]
-}, Open  ]],
-Cell[39332, 792, 697, 19, 31, "Input"],
-Cell[CellGroupData[{
-Cell[40054, 815, 2382, 60, 112, "Input"],
-Cell[42439, 877, 1858, 31, 374, "Output"]
+Cell[13232, 274, 706, 18, 72, "Input"],
+Cell[13941, 294, 192, 2, 31, "Output"],
+Cell[14136, 298, 195, 2, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[44334, 913, 5876, 103, 375, InheritFromParent],
-Cell[50213, 1018, 812, 11, 31, "Output"]
+Cell[14368, 305, 669, 17, 52, "Input"],
+Cell[15040, 324, 89, 1, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[51062, 1034, 8378, 143, 422, InheritFromParent],
-Cell[59443, 1179, 562, 8, 31, "Output"]
-}, Open  ]],
-Cell[60020, 1190, 1514, 48, 112, "Input"],
-Cell[CellGroupData[{
-Cell[61559, 1242, 798, 23, 72, "Input"],
-Cell[62360, 1267, 35280, 746, 375, "Output"],
-Cell[97643, 2015, 245, 3, 31, "Output"]
+Cell[15166, 330, 449, 13, 31, "Input"],
+Cell[15618, 345, 589, 18, 197, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[97925, 2023, 393, 8, 52, "Input"],
-Cell[98321, 2033, 718, 15, 328, "Output"],
-Cell[99042, 2050, 117, 1, 31, "Output"]
+Cell[16244, 368, 4311, 108, 157, "Input"],
+Cell[20558, 478, 8361, 129, 399, "Output"],
+Cell[28922, 609, 766, 10, 31, "Output"]
 }, Open  ]],
-Cell[99174, 2054, 778, 22, 52, "Input"],
+Cell[29703, 622, 94, 1, 31, "Input"],
+Cell[29800, 625, 809, 24, 52, "Input"],
 Cell[CellGroupData[{
-Cell[99977, 2080, 832, 18, 92, "Input"],
-Cell[100812, 2100, 589, 12, 280, "Output"],
-Cell[101404, 2114, 273, 3, 31, "Output"],
-Cell[101680, 2119, 512, 11, 447, "Output"],
-Cell[102195, 2132, 273, 3, 31, "Output"]
+Cell[30634, 653, 518, 10, 52, "Input"],
+Cell[31155, 665, 8141, 124, 374, "Output"],
+Cell[39299, 791, 274, 3, 31, "Output"]
+}, Open  ]],
+Cell[39588, 797, 697, 19, 31, "Input"],
+Cell[CellGroupData[{
+Cell[40310, 820, 2077, 63, 112, "Input"],
+Cell[42390, 885, 7687, 142, 375, "Output"],
+Cell[50080, 1029, 960, 13, 31, "Output"]
+}, Open  ]],
+Cell[51055, 1045, 1514, 48, 112, "Input"],
+Cell[CellGroupData[{
+Cell[52594, 1097, 798, 23, 72, "Input"],
+Cell[53395, 1122, 35280, 746, 375, "Output"],
+Cell[88678, 1870, 245, 3, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[88960, 1878, 393, 8, 52, "Input"],
+Cell[89356, 1888, 718, 15, 328, "Output"],
+Cell[90077, 1905, 117, 1, 31, "Output"]
+}, Open  ]],
+Cell[90209, 1909, 778, 22, 52, "Input"],
+Cell[CellGroupData[{
+Cell[91012, 1935, 832, 18, 92, "Input"],
+Cell[91847, 1955, 589, 12, 280, "Output"],
+Cell[92439, 1969, 273, 3, 31, "Output"],
+Cell[92715, 1974, 512, 11, 447, "Output"],
+Cell[93230, 1987, 273, 3, 31, "Output"]
 }, Open  ]]
 }
 ]
