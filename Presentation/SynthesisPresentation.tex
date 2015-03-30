@@ -12,11 +12,13 @@
 \usepackage{textpos}
 \usepackage{fontawesome}
 
+
 \newcommand<>{\fullsizegraphic}[1]{
   \begin{textblock*}{0cm}(-1cm,-3.78cm)
   \includegraphics[width=\paperwidth]{#1}
   \end{textblock*}
 }
+
 
 
 \graphicspath{{./images/}}
@@ -45,7 +47,7 @@
   
   \begin{figure}
 	\includegraphics[width=0.5\textwidth]{Checkerboard}
-    \caption{Checkerboard Tessellation}
+    \caption*{Checkerboard Tessellation}
     \label{fig:checkerboard}
   \end{figure}
   
@@ -570,4 +572,13 @@ Questions?
 \faGithub \space \space \space \small \url{github.com/jessebett/PenroseTilingThesis}
 \end{frame}
 
+\begin{frame}
+\frametitle{Bibliography}
+\nocite{Conway1986,DeBruijn1981,DeBruijn1990,Gardner1997,Ogawa1999,Penrose1979,Senechal1996}
+\tiny
+
+\setbeamertemplate{bibliography item}{\large \faBook}
+\bibliographystyle{plain}
+\bibliography{bibliography}
+\end{frame}
 \end{document}
