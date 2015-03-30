@@ -147,7 +147,7 @@ Edge deformations can force matching rules.
 \begin{figure}
 \begin{subfigure}[b]{0.3\textwidth}
 \includegraphics[width=\textwidth]{Checkerboard}
-\end{subfigure} \raisebox{40pt}{ $\rightarrow$} 
+\end{subfigure}\hfill \raisebox{40pt}{$\rightarrow$} \hfill
 \begin{subfigure}[b]{0.3\textwidth}
 \includegraphics[width=\textwidth]{CheckerboardCircles}
 \end{subfigure}
@@ -158,30 +158,30 @@ Edge deformations can force matching rules.
 
 \section{Describing Tessellations}
 
-\begin{frame}
-\frametitle{Symmetries}
-
-\begin{mydef}
-A tessellation is said to be \textbf{symmetric} under a transformation if that transformation maps the tiling to itself identically.
-\end{mydef}
-
-\alert{Rotational Symmetry:} $\mathcal{T}$ can be rotated a non-trivial angle about a point and overlap itself identically\\[10pt]
-\alert{Translational Symmetry:} $\mathcal{T}$ can be shifted by some non-trivial distance in a direction and overlap itself identically.
-\end{frame}
-
-\begin{frame}{Figures}
-\frametitle{Checkerboard Symmetries}
-\begin{figure}
-\begin{subfigure}[b]{0.45\textwidth}
-\includegraphics[width=\textwidth]{Checkerboard}
-\caption*{Translation Symmetry: 2 Squares\\ Rotational Symmetry: $\frac{\pi}{2}$}
-\end{subfigure}\hfill
-\begin{subfigure}[b]{0.45\textwidth}
-\includegraphics[width=\textwidth]{CheckerboardOther}
-\caption*{Translation Symmetry: 3 Squares\\ Rotational Symmetry: $\pi$}
-\end{subfigure}
-\end{figure}
-\end{frame}
+%\begin{frame}
+%\frametitle{Symmetries}
+%
+%\begin{mydef}
+%A tessellation is said to be \textbf{symmetric} under a transformation if that transformation maps the tiling to itself identically.
+%\end{mydef}
+%
+%\alert{Rotational Symmetry:} $\mathcal{T}$ can be rotated a non-trivial angle about a point and overlap itself identically\\[10pt]
+%\alert{Translational Symmetry:} $\mathcal{T}$ can be shifted by some non-trivial distance in a direction and overlap itself identically.
+%\end{frame}
+%
+%\begin{frame}{Figures}
+%\frametitle{Checkerboard Symmetries}
+%\begin{figure}
+%\begin{subfigure}[b]{0.45\textwidth}
+%\includegraphics[width=\textwidth]{Checkerboard}
+%\caption*{Translation Symmetry: 2 Squares\\ Rotational Symmetry: $\frac{\pi}{2}$}
+%\end{subfigure}\hfill
+%\begin{subfigure}[b]{0.45\textwidth}
+%\includegraphics[width=\textwidth]{CheckerboardOther}
+%\caption*{Translation Symmetry: 3 Squares\\ Rotational Symmetry: $\pi$}
+%\end{subfigure}
+%\end{figure}
+%\end{frame}
 
 \begin{frame}
 \frametitle{Periodicity}
@@ -191,21 +191,21 @@ A tessellation is said to be \textbf{periodic} if it admits translational symmet
 \begin{mydef}
 A tessellation is said to be \textbf{non-periodic} if it admits no translational symmetries.
 \end{mydef}
-\end{frame}
 
-\begin{frame}{Figures}
-\frametitle{Checkerboard Periodicity}
 \begin{figure}
-\begin{subfigure}[b]{0.45\textwidth}
+\begin{subfigure}[b]{0.25\textwidth}
 \includegraphics[width=\textwidth]{Checkerboard}
 \caption*{Periodic}
 \end{subfigure}\hfill
-\begin{subfigure}[b]{0.45\textwidth}
+\begin{subfigure}[b]{0.25\textwidth}
 \includegraphics[width=\textwidth]{CheckerboardAperiodic}
 \caption*{Non-Periodic}
 \end{subfigure}
 \end{figure}
+
 \end{frame}
+
+
 
 \begin{frame}
 \frametitle{The Aperiodic Question}
@@ -243,11 +243,12 @@ Checkerboard protoset,\\
 
 Some protosets,\\
 \huge \raisebox{0pt}{$\mathcal{P}=$ \{} 
-                  \raisebox{0pt}{\includegraphics[width=0.08\textwidth]{HexagonProto}}\raisebox{0pt}
-          \huge\raisebox{0pt}{\}}\\ \normalsize admits \alert{only} \textbf{periodic} tessellations.\\[15pt]
+                            \raisebox{0pt}{\includegraphics[width=0.05\textwidth]{protodisk}}\raisebox{0pt}{ ,}
+                             \raisebox{0pt}{\includegraphics[width=0.05\textwidth]{protosquare}}
+                    \huge\raisebox{0pt}{\}}\\ \normalsize admit \alert{only} \textbf{periodic} tessellations.\\[15pt]
 
 \begin{figure}
-\includegraphics[width=0.2\textwidth]{Hexagons}
+\includegraphics[width=0.2\textwidth]{CheckerboardCircles}
 \end{figure}
 
 \invisible{
@@ -276,8 +277,9 @@ Checkerboard protoset,\\
 
 Some protosets,\\
 \huge \raisebox{0pt}{$\mathcal{P}=$ \{} 
-                  \raisebox{0pt}{\includegraphics[width=0.08\textwidth]{HexagonProto}}\raisebox{0pt}
-          \huge\raisebox{0pt}{\}}\\ \normalsize admits \alert{only} \textbf{periodic} tessellations.\\[15pt]
+                            \raisebox{0pt}{\includegraphics[width=0.05\textwidth]{protodisk}}\raisebox{0pt}{ ,}
+                             \raisebox{0pt}{\includegraphics[width=0.05\textwidth]{protosquare}}
+                    \huge\raisebox{0pt}{\}}\\ \normalsize admit \alert{only} \textbf{periodic} tessellations.\\[15pt]
           
 Are there any protosets,\\
 \huge \raisebox{0pt}{$\mathcal{P}=$ \{?\}}\\ 
@@ -320,7 +322,9 @@ Are there any protosets,\\
 }
 \end{frame}
 
-\section{The Penrose Tessellation}
+
+
+\section{An Aperiodic Tessellation}
 
 \begin{frame}
 \frametitle{The Penrose Rhombs Protoset}
@@ -330,26 +334,112 @@ Are there any protosets,\\
                    \raisebox{-10pt}{\includegraphics[width=0.1\textwidth]{SkinnyProto}}
           \huge\raisebox{25pt}{\}*}
           
-\vfill \raisebox{-7pt}{*} \normalsize With complicated matching rules
+\vfill \raisebox{-7pt}{*} \normalsize With matching rules
 \end{frame}
 
 \begin{frame}
-\frametitle{Constructing the Penrose Tessellation}
-The Penrose Tessellation cannot be constructed \textbf{locally}, instead we use \textbf{substitution rules}:
+\frametitle{The Penrose Rhombs Protoset}
+\centering
+\huge \raisebox{25pt}{$\mathcal{P}=$ \{} 
+                  \raisebox{0pt}{\includegraphics[width=0.3\textwidth]{FatProtoRules}}\raisebox{20pt}{ ,}
+                   \raisebox{-10pt}{\includegraphics[width=0.1\textwidth]{SkinnyProtoRules}}
+          \huge\raisebox{25pt}{\}}
+          
+\normalsize admits \alert{only} \textbf{non-periodic} tessellations, called Penrose Tessellations.
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Non-Locality of the Penrose Tessellations}
+Cannot be constructed through \alert{local} procedures.
+
+\begin{ex}
+This arrangement
+
+\begin{figure}
+\includegraphics[width=0.6\textwidth]{Mistake}
+\end{figure}
+
+follows the matching rules.
+\end{ex}
+\end{frame}
+
+\begin{frame}
+\frametitle{Non-Locality of the Penrose Tessellations}
+Cannot be constructed through \alert{local} procedures.
+\begin{ex}
+This arrangement
+
+\begin{figure}
+\includegraphics[width=0.6\textwidth]{MistakeNext}
+\end{figure}
+
+follows the matching rules, but is a \alert{mistake}!
+\end{ex}
+\end{frame}
+
+
+\section{Construction by Substitution}
+
+
+
+
+\begin{frame}
+\frametitle{Substitution Rules on Robinson Triangles}
+First, consider the Rhombs as joined triangles:
 
 \begin{table}
-\begin{tabular}{lcr}
-\raisebox{15pt}{\includegraphics[width=0.2\textwidth]{FatProto}} & \Huge \raisebox{30pt}{$\rightarrow$} & \includegraphics[width=0.2\textwidth]{FatSub} \\
-\raisebox{10pt}{\includegraphics[width=0.08\textwidth]{SkinnyProto}} & \Huge \raisebox{40pt}{$\rightarrow$} & \includegraphics[width=0.2\textwidth]{SkinnySub} \\
+\begin{tabular}{cccr}
+\raisebox{18pt}{\includegraphics[width=0.4\textwidth]{FatRob}} &
+ \huge\raisebox{30pt}{$\rightarrow$} &
+\raisebox{10pt}{\includegraphics[width=0.4\textwidth]{RobFatSub}} & \\
+\raisebox{10pt}{\includegraphics[width=0.2\textwidth]{SkinnyRob}} &
+ \huge\raisebox{30pt}{$\rightarrow$} &
+\raisebox{10pt}{\includegraphics[width=0.2\textwidth]{RobSkinnySub}} & \\
 \end{tabular}
 \end{table}
 
 \end{frame}
 
 \begin{frame}
-\frametitle{Start with a Seed: Fat Rhombus}
+\frametitle{Substitution Rules on Penrose Rhombs}
+
+
+\begin{table}
+\begin{tabular}{cccr}
+\raisebox{25pt}{\includegraphics[width=0.25\textwidth]{FatRhomb}} &
+ \huge\raisebox{50pt}{$\rightarrow$} &
+\raisebox{10pt}{\includegraphics[width=0.25\textwidth]{RhombFatSubEdge}} & \\
+\raisebox{20pt}{\includegraphics[width=0.1\textwidth]{SkinnyRhomb}} &
+ \huge\raisebox{60pt}{$\rightarrow$} &
+\raisebox{10pt}{\includegraphics[width=0.25\textwidth]{RhombSkinnySubEdge}} & \\
+\end{tabular}
+\end{table}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Substitution Rules on Penrose Rhombs}
+
+
+\begin{table}
+\begin{tabular}{cccr}
+\raisebox{25pt}{\includegraphics[width=0.25\textwidth]{FatRhomb}} &
+ \huge\raisebox{50pt}{$\rightarrow$} &
+\raisebox{10pt}{\includegraphics[width=0.25\textwidth]{RhombFatSub}} & \\
+\raisebox{20pt}{\includegraphics[width=0.1\textwidth]{SkinnyRhomb}} &
+ \huge\raisebox{60pt}{$\rightarrow$} &
+\raisebox{10pt}{\includegraphics[width=0.25\textwidth]{RhombSkinnySub}} & \\
+\end{tabular}
+\end{table}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Start with a Seed: Thick Rhombus}
 \begin{figure}
-\includegraphics[width=0.6\textwidth]{FatProto}
+\includegraphics[width=0.6\textwidth]{Inflate0}
 \end{figure}
 
 \end{frame}
@@ -406,8 +496,56 @@ The Penrose Tessellation cannot be constructed \textbf{locally}, instead we use 
 \frametitle{Apply Substitution Rules 11 times}
 
   \fullsizegraphic{Inflate11}
+  
+\end{frame}
 
 
+
+
+\section{Penrose Tessellation Features}
+
+\begin{frame}
+\frametitle{Density of Patterns}
+
+Any pattern with diameter $d$ will begin repeating within $2d\phi$ from the perimeter.
+  
+\end{frame}
+
+\begin{frame}
+\frametitle{Density of Patterns}
+
+  \fullsizegraphic{PatternFind1}
+  
+\end{frame}
+
+\begin{frame}
+\frametitle{Density of Patterns}
+
+  \fullsizegraphic{PatternFind2}
+  
+\end{frame}
+
+\begin{frame}
+\frametitle{Density of Patterns}
+
+  \fullsizegraphic{PatternFind3}
+  
+\end{frame}
+
+\begin{frame}
+\frametitle{Density of Patterns}
+
+  \fullsizegraphic{PatternFind5}
+  
+\end{frame}
+
+\begin{frame}
+\frametitle{Surprising Rotational Symmetry}
+
+Penrose Tessellations can admit \alert{five-fold} rotational symmetry. 
+\centering
+(Impossible for periodic tessellations)
+  
 \end{frame}
 
 \end{document}

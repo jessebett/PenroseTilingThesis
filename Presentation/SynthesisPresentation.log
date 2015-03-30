@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.4-0.9998 (MiKTeX 2.9) (preloaded format=xelatex 2015.3.16)  29 MAR 2015 14:17
+This is XeTeX, Version 3.1415926-2.4-0.9998 (MiKTeX 2.9) (preloaded format=xelatex 2015.3.16)  29 MAR 2015 22:36
 entering extended mode
 **SynthesisPresentation.tex
 
@@ -2255,62 +2255,20 @@ File: ./images/CheckerboardCircles.png Graphic file (type QTm)
 
 ] [9
 
-] [10
-
 ]
 File: ./images/Checkerboard.png Graphic file (type QTm)
  <use  "./images/Checkerboard.png" >
-Requested font "cmss9" at 9.0pt
- -> cmss9
-Requested font "cmss8" at 6.0pt
- -> cmss8
-Requested font "cmmi9" at 9.0pt
- -> cmmi9
-Requested font "cmmi6" at 6.0pt
- -> cmmi6
-Requested font "cmsy9" at 9.0pt
- -> cmsy9
-Requested font "cmsy6" at 6.0pt
- -> cmsy6
-Requested font "cmex9" at 9.0pt
- -> cmex9
-Requested font "cmex7" at 6.0pt
- -> cmex7
-Requested font "msam10" at 9.0pt
- -> msam10
-Requested font "msam7" at 6.0pt
- -> msam7
-Requested font "msbm10" at 9.0pt
- -> msbm10
-Requested font "msbm7" at 6.0pt
- -> msbm7
-Requested font "Fira Sans Light/ICU:script=latn;language=DFLT;mapping=tex-text;
-" at 6.0pt
- -> C:/Windows/Fonts/FiraSans-Light.otf
-Requested font "Fira Sans Light/I/ICU:script=latn;language=DFLT;mapping=tex-tex
-t;" at 9.0pt
- -> C:/Windows/Fonts/FiraSans-LightItalic.otf
-Requested font "Fira Sans Light/I/ICU:script=latn;language=DFLT;mapping=tex-tex
-t;" at 6.0pt
- -> C:/Windows/Fonts/FiraSans-LightItalic.otf
-File: ./images/CheckerboardOther.png Graphic file (type QTm)
-
-<use  "./images/CheckerboardOther.png" > [11
-
-] [12
-
-]
-File: ./images/Checkerboard.png Graphic file (type QTm)
-
-<use  "./images/Checkerboard.png" >
 File: ./images/CheckerboardAperiodic.png Graphic file (type QTm)
 
-<use  "./images/CheckerboardAperiodic.png" > [13
+<use  "./images/CheckerboardAperiodic.png" >
+Overfull \vbox (22.03528pt too high) detected at line 206
+ []
+
+[10
 
 ]
 File: ./images/tealproto.png Graphic file (type QTm)
-
-<use  "./images/tealproto.png" >
+ <use  "./images/tealproto.png" >
 File: ./images/whiteproto.png Graphic file (type QTm)
  <use  "./images/whiteproto.png" >
 File: ./images/Checkerboard.png Graphic file (type QTm)
@@ -2322,42 +2280,46 @@ File: ./images/CheckerboardAperiodic.png Graphic file (type QTm)
 Overfull \vbox (19.78491pt too high) detected at line 232
  []
 
-[14
+[11
 
 ]
 File: ./images/tealproto.png Graphic file (type QTm)
  <use  "./images/tealproto.png" >
 File: ./images/whiteproto.png Graphic file (type QTm)
  <use  "./images/whiteproto.png" >
-File: ./images/HexagonProto.png Graphic file (type QTm)
+File: ./images/protodisk.png Graphic file (type QTm)
 
-<use  "./images/HexagonProto.png" >
-File: ./images/Hexagons.png Graphic file (type QTm)
- <use  "./images/Hexagons.png" >
+<use  "./images/protodisk.png" >
+File: ./images/protosquare.png Graphic file (type QTm)
+ <use  "./images/protosquare.png" >
+File: ./images/CheckerboardCircles.png Graphic file (type QTm)
+
+<use  "./images/CheckerboardCircles.png" >
 File: ./images/Checkerboard.png Graphic file (type QTm)
-
-<use  "./images/Checkerboard.png" >
+ <use  "./images/Checkerboard.png" >
 File: ./images/CheckerboardAperiodic.png Graphic file (type QTm)
 
 <use  "./images/CheckerboardAperiodic.png" >
-Overfull \vbox (168.59193pt too high) detected at line 265
+Overfull \vbox (168.59193pt too high) detected at line 266
  []
 
-[15
+[12
 
 ]
 File: ./images/tealproto.png Graphic file (type QTm)
  <use  "./images/tealproto.png" >
 File: ./images/whiteproto.png Graphic file (type QTm)
  <use  "./images/whiteproto.png" >
-File: ./images/HexagonProto.png Graphic file (type QTm)
+File: ./images/protodisk.png Graphic file (type QTm)
 
-<use  "./images/HexagonProto.png" >
+<use  "./images/protodisk.png" >
+File: ./images/protosquare.png Graphic file (type QTm)
+ <use  "./images/protosquare.png" >
 File: ./images/Hexagons.png Graphic file (type QTm)
- <use  "./images/Hexagons.png" >
-File: ./images/Checkerboard.png Graphic file (type QTm)
 
-<use  "./images/Checkerboard.png" >
+<use  "./images/Hexagons.png" >
+File: ./images/Checkerboard.png Graphic file (type QTm)
+ <use  "./images/Checkerboard.png" >
 File: ./images/CheckerboardAperiodic.png Graphic file (type QTm)
 
 <use  "./images/CheckerboardAperiodic.png" >
@@ -2369,19 +2331,37 @@ File: ./images/Checkerboard.png Graphic file (type QTm)
 File: ./images/CheckerboardAperiodic.png Graphic file (type QTm)
 
 <use  "./images/CheckerboardAperiodic.png" >
-Overfull \vbox (463.75081pt too high) detected at line 321
+Overfull \vbox (463.75081pt too high) detected at line 323
  []
 
-[16
+[13
 
-] [17
+] [14
 
 ]
 File: ./images/FatProto.png Graphic file (type QTm)
  <use  "./images/FatProto.png" >
 File: ./images/SkinnyProto.png Graphic file (type QTm)
  <use  "./images/SkinnyProto.png" >
-[18
+[15
+
+]
+File: ./images/FatProtoRules.png Graphic file (type QTm)
+ <use  "./images/FatProtoRules.png" >
+File: ./images/SkinnyProtoRules.png Graphic file (type QTm)
+
+<use  "./images/SkinnyProtoRules.png" > [16
+
+]
+File: ./images/Mistake.png Graphic file (type QTm)
+ <use  "./images/Mistake.png" >
+[17
+
+]
+File: ./images/MistakeNext.png Graphic file (type QTm)
+ <use  "./images/MistakeNext.png" > [18
+
+] [19
 
 ]
 .................................................
@@ -2392,131 +2372,186 @@ File: ./images/SkinnyProto.png Graphic file (type QTm)
 . 
 . This font family consists of the following shapes:
 .................................................
-File: ./images/FatProto.png Graphic file (type QTm)
- <use  "./images/FatProto.png" >
-Requested font "Fira Sans Light/ICU:script=latn;language=DFLT;mapping=tex-text;
-+tnum;" at 24.88pt
- -> C:/Windows/Fonts/FiraSans-Light.otf
-Requested font "cmss17" at 24.88pt
- -> cmss17
-Requested font "cmss17" at 17.28pt
- -> cmss17
-Requested font "cmmi12" at 24.88pt
- -> cmmi12
-Requested font "cmmi12" at 17.28pt
- -> cmmi12
-Requested font "cmsy10" at 24.88pt
- -> cmsy10
-Requested font "cmsy10" at 17.28pt
- -> cmsy10
-Requested font "cmex10" at 24.88pt
- -> cmex10
-Requested font "cmex10" at 17.28pt
- -> cmex10
-Requested font "msam10" at 24.88pt
- -> msam10
-Requested font "msam10" at 17.28pt
- -> msam10
-Requested font "msbm10" at 24.88pt
- -> msbm10
-Requested font "msbm10" at 17.28pt
- -> msbm10
-Requested font "Fira Sans Light/ICU:script=latn;language=DFLT;mapping=tex-text;
-" at 24.88pt
- -> C:/Windows/Fonts/FiraSans-Light.otf
-Requested font "Fira Sans Light/ICU:script=latn;language=DFLT;mapping=tex-text;
-" at 17.28pt
- -> C:/Windows/Fonts/FiraSans-Light.otf
-Requested font "Fira Sans Light/I/ICU:script=latn;language=DFLT;mapping=tex-tex
-t;" at 24.88pt
- -> C:/Windows/Fonts/FiraSans-LightItalic.otf
-Requested font "Fira Sans Light/I/ICU:script=latn;language=DFLT;mapping=tex-tex
-t;" at 17.28pt
- -> C:/Windows/Fonts/FiraSans-LightItalic.otf
-File: ./images/FatSub.png Graphic file (type QTm)
- <use  "./images/FatSub.png" >
-File: ./images/SkinnyProto.png Graphic file (type QTm)
+File: ./images/FatRob.png Graphic file (type QTm)
 
-<use  "./images/SkinnyProto.png" >
-File: ./images/SkinnySub.png Graphic file (type QTm)
- <use  "./images/SkinnySub.png" >
-Overfull \vbox (6.44583pt too high) detected at line 347
+<use  "./images/FatRob.png" >
+File: ./images/RobFatSub.png Graphic file (type QTm)
+ <use  "./images/RobFatSub.png" >
+File: ./images/SkinnyRob.png Graphic file (type QTm)
+
+<use  "./images/SkinnyRob.png" >
+File: ./images/RobSkinnySub.png Graphic file (type QTm)
+ <use  "./images/RobSkinnySub.png" >
+Overfull \hbox (7.2783pt too wide) in paragraph at lines 402--402
+ [] 
  []
 
-[19
+
+Overfull \vbox (15.7129pt too high) detected at line 402
+ []
+
+[20
 
 ]
-File: ./images/FatProto.png Graphic file (type QTm)
- <use  "./images/FatProto.png" > [20
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'FiraSansLight(2)' created for font 'Fira Sans Light' with
+. options [Mapping=tex-text,BoldFont={Fira Sans}, Numbers={Monospaced}].
+. 
+. This font family consists of the following shapes:
+.................................................
+File: ./images/FatRhomb.png Graphic file (type QTm)
+ <use  "./images/FatRhomb.png" >
+File: ./images/RhombFatSubEdge.png Graphic file (type QTm)
+ <use  "./images/RhombFatSubEdge.png" >
+File: ./images/SkinnyRhomb.png Graphic file (type QTm)
 
-]
-File: ./images/Inflate1.png Graphic file (type QTm)
- <use  "./images/Inflate1.png" >
-Overfull \vbox (21.2677pt too high) detected at line 363
+<use  "./images/SkinnyRhomb.png" >
+File: ./images/RhombSkinnySubEdge.png Graphic file (type QTm)
+ <use  "./images/RhombSkinnySubEdge.png" >
+Overfull \vbox (34.18033pt too high) detected at line 419
  []
 
 [21
 
 ]
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'FiraSansLight(2)' created for font 'Fira Sans Light' with
+. options [Mapping=tex-text,BoldFont={Fira Sans}, Numbers={Monospaced}].
+. 
+. This font family consists of the following shapes:
+.................................................
+File: ./images/FatRhomb.png Graphic file (type QTm)
+ <use  "./images/FatRhomb.png" >
+File: ./images/RhombFatSub.png Graphic file (type QTm)
+ <use  "./images/RhombFatSub.png" >
+File: ./images/SkinnyRhomb.png Graphic file (type QTm)
+
+<use  "./images/SkinnyRhomb.png" >
+File: ./images/RhombSkinnySub.png Graphic file (type QTm)
+ <use  "./images/RhombSkinnySub.png" >
+Overfull \vbox (34.18033pt too high) detected at line 436
+ []
+
+[22
+
+]
+File: ./images/Inflate0.png Graphic file (type QTm)
+ <use  "./images/Inflate0.png" > [23
+
+]
+File: ./images/Inflate1.png Graphic file (type QTm)
+ <use  "./images/Inflate1.png" >
+Overfull \vbox (21.49248pt too high) detected at line 453
+ []
+
+[24
+
+]
 File: ./images/Inflate2.png Graphic file (type QTm)
- <use  "./images/Inflate2.png" > [22
+ <use  "./images/Inflate2.png" > [25
 
 ]
 File: ./images/Inflate3.png Graphic file (type QTm)
  <use  "./images/Inflate3.png" >
-[23
+[26
 
 ]
 File: ./images/Inflate4.png Graphic file (type QTm)
- <use  "./images/Inflate4.png" > [24
+ <use  "./images/Inflate4.png" > [27
 
 ]
 File: ./images/Inflate5.png Graphic file (type QTm)
  <use  "./images/Inflate5.png" >
-[25
+[28
 
 ]
 File: ./images/Inflate10.png Graphic file (type QTm)
  <use  "./images/Inflate10.png" >
-Overfull \vbox (9.31552pt too high) detected at line 403
+Overfull \vbox (9.74712pt too high) detected at line 493
  []
 
-[26
+[29
 
 ]
 File: ./images/Inflate11.png Graphic file (type QTm)
  <use  "./images/Inflate11.png" >
-Overfull \hbox (364.19536pt too wide) in paragraph at lines 411--411
+Overfull \hbox (364.19536pt too wide) in paragraph at lines 500--500
 [][]  
  []
 
+[30
 
-Overfull \hbox (0.39989pt too wide) in paragraph at lines 411--411
+] [31
+
+] [32
+
+]
+File: ./images/PatternFind1.png Graphic file (type QTm)
+ <use  "./images/PatternFind1.png" >
+Overfull \hbox (364.19536pt too wide) in paragraph at lines 519--519
 [][]  
  []
 
-[27
+[33
+
+]
+File: ./images/PatternFind2.png Graphic file (type QTm)
+ <use  "./images/PatternFind2.png" >
+Overfull \hbox (364.19536pt too wide) in paragraph at lines 526--526
+[][]  
+ []
+
+[34
+
+]
+File: ./images/PatternFind3.png Graphic file (type QTm)
+ <use  "./images/PatternFind3.png" >
+Overfull \hbox (364.19536pt too wide) in paragraph at lines 533--533
+[][]  
+ []
+
+[35
+
+]
+File: ./images/PatternFind5.png Graphic file (type QTm)
+ <use  "./images/PatternFind5.png" >
+Overfull \hbox (364.19536pt too wide) in paragraph at lines 540--540
+[][]  
+ []
+
+[36
+
+]
+Overfull \hbox (0.39989pt too wide) in paragraph at lines 549--549
+[][]  
+ []
+
+[37
 
 ]
 \tf@nav=\write9
 \tf@toc=\write10
 \tf@snm=\write11
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 413.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 413.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 551.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 551.
 
 ("E:\Google Drive\4A12\PenroseTilingThesis\Presentation\SynthesisPresentation.a
 ux")
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 413.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 413.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 413.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 551.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 551.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 551.
  ) 
 Here is how much of TeX's memory you used:
- 45393 strings out of 429035
- 986895 string characters out of 3166907
- 1090374 words of memory out of 3000000
- 47798 multiletter control sequences out of 15000+200000
- 17975 words of font info for 130 fonts, out of 3000000 for 9000
+ 45405 strings out of 429035
+ 986593 string characters out of 3166907
+ 1090796 words of memory out of 3000000
+ 47808 multiletter control sequences out of 15000+200000
+ 11697 words of font info for 98 fonts, out of 3000000 for 9000
  912 hyphenation exceptions out of 8191
  63i,14n,92p,957b,846s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on SynthesisPresentation.pdf (27 pages).
+Output written on SynthesisPresentation.pdf (37 pages).
