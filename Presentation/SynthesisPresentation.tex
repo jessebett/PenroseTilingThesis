@@ -10,6 +10,7 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{textpos}
+\usepackage{fontawesome}
 
 \newcommand<>{\fullsizegraphic}[1]{
   \begin{textblock*}{0cm}(-1cm,-3.78cm)
@@ -506,8 +507,9 @@ First, consider the Rhombs as joined triangles:
 
 \begin{frame}
 \frametitle{Density of Patterns}
-
-Any pattern with diameter $d$ will begin repeating within $2d\phi$ from the perimeter.
+\centering
+\large
+Any pattern with diameter \alert{$d$} will begin repeating within \alert{$2\phi d$} from the perimeter.
   
 \end{frame}
 
@@ -541,11 +543,31 @@ Any pattern with diameter $d$ will begin repeating within $2d\phi$ from the peri
 
 \begin{frame}
 \frametitle{Surprising Rotational Symmetry}
-
-Penrose Tessellations can admit \alert{five-fold} rotational symmetry. 
 \centering
+\large
+Penrose Tessellations can admit \alert{five-fold} rotational symmetry. 
+
+
 (Impossible for periodic tessellations)
   
+\end{frame}
+
+\begin{frame}
+\frametitle{Ratio of Thick to Thin Rhombs}
+\centering
+$\frac{\raisebox{25pt}{\text{\# of }}\raisebox{0pt}{\includegraphics[width=0.25\textwidth]{FatRhomb}}}{\raisebox{70pt}{\text{\# of }}\raisebox{25pt}{\includegraphics[width=0.1\textwidth]{SkinnyRhomb}}}=$ \huge $\phi$
+
+  
+\end{frame}
+
+\begin{frame}
+\frametitle{Conclusion}
+\centering
+\Large
+Questions?
+
+\vfill
+\faGithub \space \space \space \small \url{github.com/jessebett/PenroseTilingThesis}
 \end{frame}
 
 \end{document}
