@@ -109,6 +109,19 @@ KiteBreak[{{A_,B_,C_},t_}]:=If[t=="fat",{{{A,C,A+(A-B)(1-\[Phi])},"kite"},{{B,C,
 KiteFill:=If[Last@#=="kite",{NiceOrange,Triangle@Coor@First@#},{NiceBlue,Triangle@Coor@First@#}]&
 SeeKitesDatrts[list_]:= Graphics[Triangle/@Coor/@Flatten[KiteFill/@list,1]]
 
+ArrowEdges[{{A_,B_,C_},T_}]:=
+If[T=="fat",
+Graphics[{
+{Arrowheads[{{Automatic,0.5,a1}}],Arrow[{#[[1]],#[[3]]}]},
+{Arrowheads[{{Automatic,0.5,a2}}],Arrow[{#[[3]],#[[2]]}]},
+{Arrowheads[{{Automatic,0.5,a3}}],Arrow[{#[[1]],#[[2]]}]}
+}]&@Coor@{A,B,C},
+Graphics[{
+{Arrowheads[{{Automatic,0.5,a1}}],Arrow[{#[[3]],#[[1]]}]},
+{Arrowheads[{{Automatic,0.5,a2}}],Arrow[{#[[3]],#[[2]]}]},
+{Arrowheads[{{Automatic,0.5,a3}}],Arrow[{#[[1]],#[[2]]}]}
+}]&@Coor@{A,B,C}]
+
 
 SeeTri[points_]:=Graphics@Polygon@Coor@points
 
