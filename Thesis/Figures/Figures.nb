@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1422806,      33936]
-NotebookOptionsPosition[   1412128,      33637]
-NotebookOutlinePosition[   1412498,      33653]
-CellTagsIndexPosition[   1412455,      33650]
+NotebookDataLength[   1456872,      34808]
+NotebookOptionsPosition[   1445138,      34477]
+NotebookOutlinePosition[   1445755,      34501]
+CellTagsIndexPosition[   1445666,      34496]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -17135,17 +17135,910 @@ Cell[BoxData[
    RowBox[{"See", "@", 
     RowBox[{"Inflate", "[", 
      RowBox[{
-      RowBox[{"{", "unitfat", "}"}], ",", "3"}], "]"}]}], ",", 
+      RowBox[{"{", "unitfat", "}"}], ",", "2"}], "]"}]}], ",", 
    RowBox[{"ArrowEdges", "/@", 
     RowBox[{"Inflate", "[", 
      RowBox[{
-      RowBox[{"{", "unitfat", "}"}], ",", "3"}], "]"}]}]}], "]"}]], "Input",
+      RowBox[{"{", "unitfat", "}"}], ",", "2"}], "]"}]}]}], "]"}]], "Input",
  CellChangeTimes->{{3.6380620813350906`*^9, 3.638062145627768*^9}, {
   3.6380622050651674`*^9, 3.6380622080073357`*^9}, {3.6380622871618633`*^9, 
   3.638062324154979*^9}, {3.6380623649353113`*^9, 3.6380623692945614`*^9}, {
   3.638062634606736*^9, 3.6380626360468187`*^9}, {3.638062848750984*^9, 
   3.6380628503020735`*^9}, {3.638063054580757*^9, 3.638063088570701*^9}, {
-  3.6380634547286444`*^9, 3.6380634771979294`*^9}}],
+  3.6380634547286444`*^9, 3.6380634771979294`*^9}, {3.6381000957063885`*^9, 
+  3.63810010447689*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ TagBox[
+  StyleBox[
+   RowBox[{"Graphics", "[", 
+    RowBox[{"List", "[", 
+     RowBox[{
+      RowBox[{"List", "[", 
+       RowBox[{
+        RowBox[{"RGBColor", "[", 
+         RowBox[{
+         "0.6941176470588235`", ",", "0.050980392156862744`", ",", 
+          "0.788235294117647`"}], "]"}], ",", 
+        RowBox[{"Polygon", "[", 
+         RowBox[{"List", "[", 
+          RowBox[{
+           RowBox[{"List", "[", 
+            RowBox[{"0.30901699437494756`", ",", "0.3632712640026805`"}], 
+            "]"}], ",", 
+           RowBox[{"List", "[", 
+            RowBox[{"0.8090169943749475`", ",", "0"}], "]"}], ",", 
+           RowBox[{"List", "[", 
+            RowBox[{"0.42705098312484224`", ",", "0"}], "]"}]}], "]"}], 
+         "]"}]}], "]"}], ",", 
+      RowBox[{"List", "[", 
+       RowBox[{
+        RowBox[{"Arrowheads", "[", 
+         RowBox[{"List", "[", 
+          RowBox[{"List", "[", 
+           RowBox[{"Automatic", ",", "0.5`", ",", 
+            RowBox[{"GraphicsBox", "[", 
+             RowBox[{"LineBox", "[", 
+              RowBox[{"NCache", "[", 
+               RowBox[{
+                RowBox[{"List", "[", 
+                 RowBox[{
+                  RowBox[{"List", "[", 
+                   RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}], 
+                  ",", 
+                  RowBox[{"List", "[", 
+                   RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}], 
+                  ",", 
+                  RowBox[{"List", "[", 
+                   RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"2", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}]}],
+                  "]"}], ",", 
+                RowBox[{"List", "[", 
+                 RowBox[{
+                  RowBox[{"List", "[", 
+                   RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "0.5`"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", 
+                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}], ",", 
+                  RowBox[{"List", "[", 
+                   RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", "0.5`"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}], ",", 
+                  RowBox[{"List", "[", 
+                   RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", "0.5`"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"2", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}],
+               "]"}], "]"}]}], "]"}], "]"}], "]"}], ",", 
+        RowBox[{"Arrow", "[", 
+         RowBox[{"List", "[", 
+          RowBox[{
+           RowBox[{"List", "[", 
+            RowBox[{"1.1102230246251565`*^-16", ",", "0.5877852522924732`"}], 
+            "]"}], ",", 
+           RowBox[{"List", "[", 
+            RowBox[{"0.19098300562505244`", ",", "0"}], "]"}]}], "]"}], 
+         "]"}]}], "]"}], ",", 
+      RowBox[{"List", "[", 
+       RowBox[{
+        RowBox[{"List", "[", 
+         RowBox[{
+          RowBox[{"Arrowheads", "[", 
+           RowBox[{"List", "[", 
+            RowBox[{"List", "[", 
+             RowBox[{"Automatic", ",", "0.5`", ",", 
+              RowBox[{"GraphicsBox", "[", 
+               RowBox[{"LineBox", "[", 
+                RowBox[{"NCache", "[", 
+                 RowBox[{
+                  RowBox[{"List", "[", 
+                   RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"2", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}], 
+                   "]"}], ",", 
+                  RowBox[{"List", "[", 
+                   RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", "0.5`"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"2", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}], "]"}]}], "]"}], 
+                "]"}], "]"}]}], "]"}], "]"}], "]"}], ",", 
+          RowBox[{"Arrow", "[", 
+           RowBox[{"List", "[", 
+            RowBox[{
+             RowBox[{"List", "[", 
+              RowBox[{"0.30901699437494756`", ",", "0.3632712640026805`"}], 
+              "]"}], ",", 
+             RowBox[{"List", "[", 
+              RowBox[{"0.42705098312484224`", ",", "0"}], "]"}]}], "]"}], 
+           "]"}]}], "]"}], ",", 
+        RowBox[{"List", "[", 
+         RowBox[{
+          RowBox[{"Arrowheads", "[", 
+           RowBox[{"List", "[", 
+            RowBox[{"List", "[", 
+             RowBox[{"Automatic", ",", "0.5`", ",", 
+              RowBox[{"GraphicsBox", "[", 
+               RowBox[{"LineBox", "[", 
+                RowBox[{"NCache", "[", 
+                 RowBox[{
+                  RowBox[{"List", "[", 
+                   RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}], 
+                    ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"2", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}]}],
+                    "]"}], ",", 
+                  RowBox[{"List", "[", 
+                   RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", "0.5`"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", "0.5`"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"2", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}],
+                 "]"}], "]"}]}], "]"}], "]"}], "]"}], ",", 
+          RowBox[{"Arrow", "[", 
+           RowBox[{"List", "[", 
+            RowBox[{
+             RowBox[{"List", "[", 
+              RowBox[{"0.42705098312484224`", ",", "0"}], "]"}], ",", 
+             RowBox[{"List", "[", 
+              RowBox[{"0.8090169943749475`", ",", "0"}], "]"}]}], "]"}], 
+           "]"}]}], "]"}], ",", 
+        RowBox[{"List", "[", 
+         RowBox[{
+          RowBox[{"Arrowheads", "[", 
+           RowBox[{"List", "[", 
+            RowBox[{"List", "[", 
+             RowBox[{"Automatic", ",", "0.5`", ",", 
+              RowBox[{"GraphicsBox", "[", 
+               RowBox[{"LineBox", "[", 
+                RowBox[{"NCache", "[", 
+                 RowBox[{
+                  RowBox[{"List", "[", 
+                   RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}], 
+                    ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}], 
+                    ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"2", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}]}],
+                    "]"}], ",", 
+                  RowBox[{"List", "[", 
+                   RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "0.5`"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", 
+                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", "0.5`"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", "0.5`"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"2", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}],
+                 "]"}], "]"}]}], "]"}], "]"}], "]"}], ",", 
+          RowBox[{"Arrow", "[", 
+           RowBox[{"List", "[", 
+            RowBox[{
+             RowBox[{"List", "[", 
+              RowBox[{"0.30901699437494756`", ",", "0.3632712640026805`"}], 
+              "]"}], ",", 
+             RowBox[{"List", "[", 
+              RowBox[{"0.8090169943749475`", ",", "0"}], "]"}]}], "]"}], 
+           "]"}]}], "]"}]}], "]"}], ",", 
+      RowBox[{"List", "[", 
+       RowBox[{
+        RowBox[{"List", "[", 
+         RowBox[{
+          RowBox[{"Arrowheads", "[", 
+           RowBox[{"List", "[", 
+            RowBox[{"List", "[", 
+             RowBox[{"Automatic", ",", "0.5`", ",", 
+              RowBox[{"GraphicsBox", "[", 
+               RowBox[{"LineBox", "[", 
+                RowBox[{"NCache", "[", 
+                 RowBox[{
+                  RowBox[{"List", "[", 
+                   RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"2", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}], 
+                   "]"}], ",", 
+                  RowBox[{"List", "[", 
+                   RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", "0.5`"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"2", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}], "]"}]}], "]"}], 
+                "]"}], "]"}]}], "]"}], "]"}], "]"}], ",", 
+          RowBox[{"Arrow", "[", 
+           RowBox[{"List", "[", 
+            RowBox[{
+             RowBox[{"List", "[", 
+              RowBox[{"0.30901699437494756`", ",", "0.3632712640026805`"}], 
+              "]"}], ",", 
+             RowBox[{"List", "[", 
+              RowBox[{"0.42705098312484224`", ",", "0"}], "]"}]}], "]"}], 
+           "]"}]}], "]"}], ",", 
+        RowBox[{"List", "[", 
+         RowBox[{
+          RowBox[{"Arrowheads", "[", 
+           RowBox[{"List", "[", 
+            RowBox[{"List", "[", 
+             RowBox[{"Automatic", ",", "0.5`", ",", 
+              RowBox[{"GraphicsBox", "[", 
+               RowBox[{"LineBox", "[", 
+                RowBox[{"NCache", "[", 
+                 RowBox[{
+                  RowBox[{"List", "[", 
+                   RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}], 
+                    ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"2", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}]}],
+                    "]"}], ",", 
+                  RowBox[{"List", "[", 
+                   RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", "0.5`"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", "0.5`"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"2", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}],
+                 "]"}], "]"}]}], "]"}], "]"}], "]"}], ",", 
+          RowBox[{"Arrow", "[", 
+           RowBox[{"List", "[", 
+            RowBox[{
+             RowBox[{"List", "[", 
+              RowBox[{"0.30901699437494756`", ",", "0.3632712640026805`"}], 
+              "]"}], ",", 
+             RowBox[{"List", "[", 
+              RowBox[{"0.19098300562505244`", ",", "0"}], "]"}]}], "]"}], 
+           "]"}]}], "]"}], ",", 
+        RowBox[{"List", "[", 
+         RowBox[{
+          RowBox[{"Arrowheads", "[", 
+           RowBox[{"List", "[", 
+            RowBox[{"List", "[", 
+             RowBox[{"Automatic", ",", "0.5`", ",", 
+              RowBox[{"GraphicsBox", "[", 
+               RowBox[{"LineBox", "[", 
+                RowBox[{"NCache", "[", 
+                 RowBox[{
+                  RowBox[{"List", "[", 
+                   RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}], 
+                    ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}], 
+                    ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"2", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}]}],
+                    "]"}], ",", 
+                  RowBox[{"List", "[", 
+                   RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "0.5`"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", 
+                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", "0.5`"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", "0.5`"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"2", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}],
+                 "]"}], "]"}]}], "]"}], "]"}], "]"}], ",", 
+          RowBox[{"Arrow", "[", 
+           RowBox[{"List", "[", 
+            RowBox[{
+             RowBox[{"List", "[", 
+              RowBox[{"0.42705098312484224`", ",", "0"}], "]"}], ",", 
+             RowBox[{"List", "[", 
+              RowBox[{"0.19098300562505244`", ",", "0"}], "]"}]}], "]"}], 
+           "]"}]}], "]"}]}], "]"}], ",", 
+      RowBox[{"List", "[", 
+       RowBox[{
+        RowBox[{"List", "[", 
+         RowBox[{
+          RowBox[{"Arrowheads", "[", 
+           RowBox[{"List", "[", 
+            RowBox[{"List", "[", 
+             RowBox[{"Automatic", ",", "0.5`", ",", 
+              RowBox[{"GraphicsBox", "[", 
+               RowBox[{"LineBox", "[", 
+                RowBox[{"NCache", "[", 
+                 RowBox[{
+                  RowBox[{"List", "[", 
+                   RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"2", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}], 
+                   "]"}], ",", 
+                  RowBox[{"List", "[", 
+                   RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", "0.5`"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"2", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}], "]"}]}], "]"}], 
+                "]"}], "]"}]}], "]"}], "]"}], "]"}], ",", 
+          RowBox[{"Arrow", "[", 
+           RowBox[{"List", "[", 
+            RowBox[{
+             RowBox[{"List", "[", 
+              RowBox[{
+              "1.1102230246251565`*^-16", ",", "0.5877852522924732`"}], "]"}],
+              ",", 
+             RowBox[{"List", "[", 
+              RowBox[{"0.30901699437494756`", ",", "0.3632712640026805`"}], 
+              "]"}]}], "]"}], "]"}]}], "]"}], ",", 
+        RowBox[{"List", "[", 
+         RowBox[{
+          RowBox[{"Arrowheads", "[", 
+           RowBox[{"List", "[", 
+            RowBox[{"List", "[", 
+             RowBox[{"Automatic", ",", "0.5`", ",", 
+              RowBox[{"GraphicsBox", "[", 
+               RowBox[{"LineBox", "[", 
+                RowBox[{"NCache", "[", 
+                 RowBox[{
+                  RowBox[{"List", "[", 
+                   RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}], 
+                    ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"2", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}]}],
+                    "]"}], ",", 
+                  RowBox[{"List", "[", 
+                   RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", "0.5`"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", "0.5`"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"2", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}],
+                 "]"}], "]"}]}], "]"}], "]"}], "]"}], ",", 
+          RowBox[{"Arrow", "[", 
+           RowBox[{"List", "[", 
+            RowBox[{
+             RowBox[{"List", "[", 
+              RowBox[{"0.30901699437494756`", ",", "0.3632712640026805`"}], 
+              "]"}], ",", 
+             RowBox[{"List", "[", 
+              RowBox[{"0.19098300562505244`", ",", "0"}], "]"}]}], "]"}], 
+           "]"}]}], "]"}], ",", 
+        RowBox[{"List", "[", 
+         RowBox[{
+          RowBox[{"Arrowheads", "[", 
+           RowBox[{"List", "[", 
+            RowBox[{"List", "[", 
+             RowBox[{"Automatic", ",", "0.5`", ",", 
+              RowBox[{"GraphicsBox", "[", 
+               RowBox[{"LineBox", "[", 
+                RowBox[{"NCache", "[", 
+                 RowBox[{
+                  RowBox[{"List", "[", 
+                   RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}], 
+                    ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}], 
+                    ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"2", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"Rational", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}]}],
+                    "]"}], ",", 
+                  RowBox[{"List", "[", 
+                   RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "0.5`"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", 
+                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", "0.5`"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", "0.5`"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"2", ",", "0"}], "]"}], ",", 
+                    RowBox[{"List", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}],
+                 "]"}], "]"}]}], "]"}], "]"}], "]"}], ",", 
+          RowBox[{"Arrow", "[", 
+           RowBox[{"List", "[", 
+            RowBox[{
+             RowBox[{"List", "[", 
+              RowBox[{
+              "1.1102230246251565`*^-16", ",", "0.5877852522924732`"}], "]"}],
+              ",", 
+             RowBox[{"List", "[", 
+              RowBox[{"0.19098300562505244`", ",", "0"}], "]"}]}], "]"}], 
+           "]"}]}], "]"}]}], "]"}]}], "]"}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{"\"\<Up3Left.png\>\"", ",", "%", ",", 
+    RowBox[{"ImageResolution", "\[Rule]", "300"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.638100214306172*^9, 3.638100241342718*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {RGBColor[0.6941176470588235, 0.050980392156862744`, 0.788235294117647], 
+    PolygonBox[{{0.30901699437494756`, 0.3632712640026805}, {
+      0.8090169943749475, 0}, {0.42705098312484224`, 0}}]}, 
+   {Arrowheads[{{Automatic, 0.5, 
+       GraphicsBox[
+        LineBox[
+         NCache[{{{-1, 
+             Rational[1, 2]}, {0, 0}, {-1, 
+             Rational[-1, 2]}}, {{0, 
+             Rational[1, 2]}, {1, 0}, {0, 
+             Rational[-1, 2]}}, {{1, 
+             Rational[1, 2]}, {2, 0}, {1, 
+             Rational[-1, 2]}}}, {{{-1, 0.5}, {0, 0}, {-1, -0.5}}, {{
+            0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {2, 0}, {1, -0.5}}}]]]}}],
+     ArrowBox[{{1.1102230246251565`*^-16, 0.5877852522924732}, {
+      0.19098300562505244`, 0}}]}, {
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{1, 0.5}, {2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0.30901699437494756`, 0.3632712640026805}, {
+       0.42705098312484224`, 0}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {
+             2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0.42705098312484224`, 0}, {0.8090169943749475, 0}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{-1, 
+              Rational[1, 2]}, {0, 0}, {-1, 
+              Rational[-1, 2]}}, {{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{-1, 0.5}, {0, 0}, {-1, -0.5}}, {{
+             0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {2, 0}, {
+             1, -0.5}}}]]]}}], 
+     ArrowBox[{{0.30901699437494756`, 0.3632712640026805}, {
+       0.8090169943749475, 0}}]}}, {
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{1, 0.5}, {2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0.30901699437494756`, 0.3632712640026805}, {
+       0.42705098312484224`, 0}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {
+             2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0.30901699437494756`, 0.3632712640026805}, {
+       0.19098300562505244`, 0}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{-1, 
+              Rational[1, 2]}, {0, 0}, {-1, 
+              Rational[-1, 2]}}, {{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{-1, 0.5}, {0, 0}, {-1, -0.5}}, {{
+             0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {2, 0}, {
+             1, -0.5}}}]]]}}], 
+     ArrowBox[{{0.42705098312484224`, 0}, {0.19098300562505244`, 0}}]}}, {
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{1, 0.5}, {2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{1.1102230246251565`*^-16, 0.5877852522924732}, {
+      0.30901699437494756`, 0.3632712640026805}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {
+             2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0.30901699437494756`, 0.3632712640026805}, {
+       0.19098300562505244`, 0}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{-1, 
+              Rational[1, 2]}, {0, 0}, {-1, 
+              Rational[-1, 2]}}, {{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{-1, 0.5}, {0, 0}, {-1, -0.5}}, {{
+             0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {2, 0}, {
+             1, -0.5}}}]]]}}], 
+     ArrowBox[{{1.1102230246251565`*^-16, 0.5877852522924732}, {
+       0.19098300562505244`, 0}}]}}}]], "Output",
+ CellChangeTimes->{{3.638100214393177*^9, 3.638100242790801*^9}}]
+}, {2}]],
 
 Cell[BoxData[
  RowBox[{
@@ -18744,6 +19637,8 @@ Cell[BoxData["\<\"Up4Left.png\"\>"], "Output",
  CellChangeTimes->{3.6380629391221533`*^9}]
 }, {2}]],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[
  RowBox[{
   GraphicsBox[{
@@ -18865,786 +19760,6 @@ Cell[BoxData[
    ImageSize->{297.2727272727313, Automatic}], "//", "FullForm"}]], "Input",
  CellChangeTimes->{{3.6380626478294926`*^9, 3.6380626887448325`*^9}}],
 
-Cell[CellGroupData[{
-
-Cell[BoxData[{
- TagBox[
-  StyleBox[
-   RowBox[{"Graphics", "[", 
-    RowBox[{
-     RowBox[{"List", "[", 
-      RowBox[{
-       RowBox[{"List", "[", 
-        RowBox[{
-         RowBox[{"RGBColor", "[", 
-          RowBox[{
-          "0.6941176470588235`", ",", "0.050980392156862744`", ",", 
-           "0.788235294117647`"}], "]"}], ",", 
-         RowBox[{"Polygon", "[", 
-          RowBox[{"List", "[", 
-           RowBox[{
-            RowBox[{"List", "[", 
-             RowBox[{"1.1102230246251565`*^-16", ",", "0.5877852522924732`"}],
-              "]"}], ",", 
-            RowBox[{"List", "[", 
-             RowBox[{"0.19098300562505244`", ",", "0"}], "]"}], ",", 
-            RowBox[{"List", "[", 
-             RowBox[{"0.30901699437494756`", ",", "0.3632712640026805`"}], 
-             "]"}]}], "]"}], "]"}]}], "]"}], ",", 
-       RowBox[{"List", "[", 
-        RowBox[{
-         RowBox[{"Arrowheads", "[", 
-          RowBox[{"List", "[", 
-           RowBox[{"List", "[", 
-            RowBox[{"Automatic", ",", "0.5`", ",", 
-             RowBox[{"GraphicsBox", "[", 
-              RowBox[{"LineBox", "[", 
-               RowBox[{"NCache", "[", 
-                RowBox[{
-                 RowBox[{"List", "[", 
-                  RowBox[{
-                   RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}], 
-                   ",", 
-                   RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}], 
-                   ",", 
-                   RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"2", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}]}],
-                   "]"}], ",", 
-                 RowBox[{"List", "[", 
-                  RowBox[{
-                   RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", "0.5`"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", 
-                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}], ",", 
-                   RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", "0.5`"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", 
-                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}], ",", 
-                   RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", "0.5`"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"2", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}],
-                "]"}], "]"}]}], "]"}], "]"}], "]"}], ",", 
-         RowBox[{"Arrow", "[", 
-          RowBox[{"List", "[", 
-           RowBox[{
-            RowBox[{"List", "[", 
-             RowBox[{"1.1102230246251565`*^-16", ",", "0.5877852522924732`"}],
-              "]"}], ",", 
-            RowBox[{"List", "[", 
-             RowBox[{"0.19098300562505244`", ",", "0"}], "]"}]}], "]"}], 
-          "]"}]}], "]"}], ",", 
-       RowBox[{"List", "[", 
-        RowBox[{
-         RowBox[{"List", "[", 
-          RowBox[{
-           RowBox[{"Arrowheads", "[", 
-            RowBox[{"List", "[", 
-             RowBox[{"List", "[", 
-              RowBox[{"Automatic", ",", "0.5`", ",", 
-               RowBox[{"GraphicsBox", "[", 
-                RowBox[{"LineBox", "[", 
-                 RowBox[{"NCache", "[", 
-                  RowBox[{
-                   RowBox[{"List", "[", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"2", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}], 
-                    "]"}], ",", 
-                   RowBox[{"List", "[", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", "0.5`"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"2", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}], "]"}]}], "]"}], 
-                 "]"}], "]"}]}], "]"}], "]"}], "]"}], ",", 
-           RowBox[{"Arrow", "[", 
-            RowBox[{"List", "[", 
-             RowBox[{
-              RowBox[{"List", "[", 
-               RowBox[{"0.30901699437494756`", ",", "0.3632712640026805`"}], 
-               "]"}], ",", 
-              RowBox[{"List", "[", 
-               RowBox[{"0.42705098312484224`", ",", "0"}], "]"}]}], "]"}], 
-            "]"}]}], "]"}], ",", 
-         RowBox[{"List", "[", 
-          RowBox[{
-           RowBox[{"Arrowheads", "[", 
-            RowBox[{"List", "[", 
-             RowBox[{"List", "[", 
-              RowBox[{"Automatic", ",", "0.5`", ",", 
-               RowBox[{"GraphicsBox", "[", 
-                RowBox[{"LineBox", "[", 
-                 RowBox[{"NCache", "[", 
-                  RowBox[{
-                   RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}], 
-                    ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"2", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}]}],
-                     "]"}], ",", 
-                   RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", "0.5`"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", 
-                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", "0.5`"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"2", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}],
-                  "]"}], "]"}]}], "]"}], "]"}], "]"}], ",", 
-           RowBox[{"Arrow", "[", 
-            RowBox[{"List", "[", 
-             RowBox[{
-              RowBox[{"List", "[", 
-               RowBox[{"0.42705098312484224`", ",", "0"}], "]"}], ",", 
-              RowBox[{"List", "[", 
-               RowBox[{"0.8090169943749475`", ",", "0"}], "]"}]}], "]"}], 
-            "]"}]}], "]"}], ",", 
-         RowBox[{"List", "[", 
-          RowBox[{
-           RowBox[{"Arrowheads", "[", 
-            RowBox[{"List", "[", 
-             RowBox[{"List", "[", 
-              RowBox[{"Automatic", ",", "0.5`", ",", 
-               RowBox[{"GraphicsBox", "[", 
-                RowBox[{"LineBox", "[", 
-                 RowBox[{"NCache", "[", 
-                  RowBox[{
-                   RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}], 
-                    ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}], 
-                    ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"2", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}]}],
-                     "]"}], ",", 
-                   RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", "0.5`"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", 
-                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", "0.5`"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", 
-                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", "0.5`"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"2", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}],
-                  "]"}], "]"}]}], "]"}], "]"}], "]"}], ",", 
-           RowBox[{"Arrow", "[", 
-            RowBox[{"List", "[", 
-             RowBox[{
-              RowBox[{"List", "[", 
-               RowBox[{"0.30901699437494756`", ",", "0.3632712640026805`"}], 
-               "]"}], ",", 
-              RowBox[{"List", "[", 
-               RowBox[{"0.8090169943749475`", ",", "0"}], "]"}]}], "]"}], 
-            "]"}]}], "]"}]}], "]"}], ",", 
-       RowBox[{"List", "[", 
-        RowBox[{
-         RowBox[{"List", "[", 
-          RowBox[{
-           RowBox[{"Arrowheads", "[", 
-            RowBox[{"List", "[", 
-             RowBox[{"List", "[", 
-              RowBox[{"Automatic", ",", "0.5`", ",", 
-               RowBox[{"GraphicsBox", "[", 
-                RowBox[{"LineBox", "[", 
-                 RowBox[{"NCache", "[", 
-                  RowBox[{
-                   RowBox[{"List", "[", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"2", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}], 
-                    "]"}], ",", 
-                   RowBox[{"List", "[", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", "0.5`"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"2", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}], "]"}]}], "]"}], 
-                 "]"}], "]"}]}], "]"}], "]"}], "]"}], ",", 
-           RowBox[{"Arrow", "[", 
-            RowBox[{"List", "[", 
-             RowBox[{
-              RowBox[{"List", "[", 
-               RowBox[{"0.30901699437494756`", ",", "0.3632712640026805`"}], 
-               "]"}], ",", 
-              RowBox[{"List", "[", 
-               RowBox[{"0.42705098312484224`", ",", "0"}], "]"}]}], "]"}], 
-            "]"}]}], "]"}], ",", 
-         RowBox[{"List", "[", 
-          RowBox[{
-           RowBox[{"Arrowheads", "[", 
-            RowBox[{"List", "[", 
-             RowBox[{"List", "[", 
-              RowBox[{"Automatic", ",", "0.5`", ",", 
-               RowBox[{"GraphicsBox", "[", 
-                RowBox[{"LineBox", "[", 
-                 RowBox[{"NCache", "[", 
-                  RowBox[{
-                   RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}], 
-                    ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"2", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}]}],
-                     "]"}], ",", 
-                   RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", "0.5`"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", 
-                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", "0.5`"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"2", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}],
-                  "]"}], "]"}]}], "]"}], "]"}], "]"}], ",", 
-           RowBox[{"Arrow", "[", 
-            RowBox[{"List", "[", 
-             RowBox[{
-              RowBox[{"List", "[", 
-               RowBox[{"0.30901699437494756`", ",", "0.3632712640026805`"}], 
-               "]"}], ",", 
-              RowBox[{"List", "[", 
-               RowBox[{"0.19098300562505244`", ",", "0"}], "]"}]}], "]"}], 
-            "]"}]}], "]"}], ",", 
-         RowBox[{"List", "[", 
-          RowBox[{
-           RowBox[{"Arrowheads", "[", 
-            RowBox[{"List", "[", 
-             RowBox[{"List", "[", 
-              RowBox[{"Automatic", ",", "0.5`", ",", 
-               RowBox[{"GraphicsBox", "[", 
-                RowBox[{"LineBox", "[", 
-                 RowBox[{"NCache", "[", 
-                  RowBox[{
-                   RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}], 
-                    ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}], 
-                    ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"2", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}]}],
-                     "]"}], ",", 
-                   RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", "0.5`"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", 
-                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", "0.5`"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", 
-                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", "0.5`"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"2", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}],
-                  "]"}], "]"}]}], "]"}], "]"}], "]"}], ",", 
-           RowBox[{"Arrow", "[", 
-            RowBox[{"List", "[", 
-             RowBox[{
-              RowBox[{"List", "[", 
-               RowBox[{"0.42705098312484224`", ",", "0"}], "]"}], ",", 
-              RowBox[{"List", "[", 
-               RowBox[{"0.19098300562505244`", ",", "0"}], "]"}]}], "]"}], 
-            "]"}]}], "]"}]}], "]"}], ",", 
-       RowBox[{"List", "[", 
-        RowBox[{
-         RowBox[{"List", "[", 
-          RowBox[{
-           RowBox[{"Arrowheads", "[", 
-            RowBox[{"List", "[", 
-             RowBox[{"List", "[", 
-              RowBox[{"Automatic", ",", "0.5`", ",", 
-               RowBox[{"GraphicsBox", "[", 
-                RowBox[{"LineBox", "[", 
-                 RowBox[{"NCache", "[", 
-                  RowBox[{
-                   RowBox[{"List", "[", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"2", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}], 
-                    "]"}], ",", 
-                   RowBox[{"List", "[", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", "0.5`"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"2", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}], "]"}]}], "]"}], 
-                 "]"}], "]"}]}], "]"}], "]"}], "]"}], ",", 
-           RowBox[{"Arrow", "[", 
-            RowBox[{"List", "[", 
-             RowBox[{
-              RowBox[{"List", "[", 
-               RowBox[{
-               "1.1102230246251565`*^-16", ",", "0.5877852522924732`"}], 
-               "]"}], ",", 
-              RowBox[{"List", "[", 
-               RowBox[{"0.30901699437494756`", ",", "0.3632712640026805`"}], 
-               "]"}]}], "]"}], "]"}]}], "]"}], ",", 
-         RowBox[{"List", "[", 
-          RowBox[{
-           RowBox[{"Arrowheads", "[", 
-            RowBox[{"List", "[", 
-             RowBox[{"List", "[", 
-              RowBox[{"Automatic", ",", "0.5`", ",", 
-               RowBox[{"GraphicsBox", "[", 
-                RowBox[{"LineBox", "[", 
-                 RowBox[{"NCache", "[", 
-                  RowBox[{
-                   RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}], 
-                    ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"2", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}]}],
-                     "]"}], ",", 
-                   RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", "0.5`"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", 
-                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", "0.5`"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"2", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}],
-                  "]"}], "]"}]}], "]"}], "]"}], "]"}], ",", 
-           RowBox[{"Arrow", "[", 
-            RowBox[{"List", "[", 
-             RowBox[{
-              RowBox[{"List", "[", 
-               RowBox[{"0.30901699437494756`", ",", "0.3632712640026805`"}], 
-               "]"}], ",", 
-              RowBox[{"List", "[", 
-               RowBox[{"0.19098300562505244`", ",", "0"}], "]"}]}], "]"}], 
-            "]"}]}], "]"}], ",", 
-         RowBox[{"List", "[", 
-          RowBox[{
-           RowBox[{"Arrowheads", "[", 
-            RowBox[{"List", "[", 
-             RowBox[{"List", "[", 
-              RowBox[{"Automatic", ",", "0.5`", ",", 
-               RowBox[{"GraphicsBox", "[", 
-                RowBox[{"LineBox", "[", 
-                 RowBox[{"NCache", "[", 
-                  RowBox[{
-                   RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}], 
-                    ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}], 
-                    ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{"1", ",", "2"}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"2", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"Rational", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", "2"}], "]"}]}], "]"}]}], "]"}]}],
-                     "]"}], ",", 
-                   RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", "0.5`"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", 
-                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", "0.5`"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"0", ",", 
-                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", "0.5`"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"2", ",", "0"}], "]"}], ",", 
-                    RowBox[{"List", "[", 
-                    RowBox[{"1", ",", 
-                    RowBox[{"-", "0.5`"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}],
-                  "]"}], "]"}]}], "]"}], "]"}], "]"}], ",", 
-           RowBox[{"Arrow", "[", 
-            RowBox[{"List", "[", 
-             RowBox[{
-              RowBox[{"List", "[", 
-               RowBox[{
-               "1.1102230246251565`*^-16", ",", "0.5877852522924732`"}], 
-               "]"}], ",", 
-              RowBox[{"List", "[", 
-               RowBox[{"0.19098300562505244`", ",", "0"}], "]"}]}], "]"}], 
-            "]"}]}], "]"}]}], "]"}]}], "]"}], ",", 
-     RowBox[{"Rule", "[", 
-      RowBox[{"ImageSize", ",", 
-       RowBox[{"List", "[", 
-        RowBox[{"297.2727272727313`", ",", "Automatic"}], "]"}]}], "]"}]}], 
-    "]"}],
-   ShowSpecialCharacters->False,
-   ShowStringCharacters->True,
-   NumberMarks->True],
-  FullForm], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"Export", "[", 
-   RowBox[{"\"\<Up3Left.png\>\"", ",", "%", ",", 
-    RowBox[{"ImageResolution", "\[Rule]", "300"}]}], "]"}], ";"}]}], "Input",
- CellChangeTimes->{{3.638062789008567*^9, 3.638062790069628*^9}}],
-
 Cell[BoxData[
  GraphicsBox[{
    {RGBColor[0.6941176470588235, 0.050980392156862744`, 0.788235294117647], 
@@ -19762,7 +19877,7 @@ Cell[BoxData[
        0.19098300562505244`, 0}}]}}},
   ImageSize->{297.2727272727313, Automatic}]], "Output",
  CellChangeTimes->{3.6380627908786745`*^9}]
-}, {2}]],
+}, Open  ]],
 
 Cell[BoxData[""], "Input",
  CellChangeTimes->{{3.638062565246769*^9, 3.638062583484812*^9}}],
@@ -33632,8 +33747,733 @@ Cell[BoxData[
  CellChangeTimes->{{3.6380426917210684`*^9, 3.638042729811247*^9}}]
 }, Open  ]],
 
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.638042721534774*^9, 3.638042726390051*^9}}]
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"??", "See"}]], "Input",
+ CellChangeTimes->{{3.638105056438126*^9, 3.6381050611713967`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ StyleBox["\<\"Displays list of polygons as a graphic\"\>", "MSG"]], "Print", \
+"PrintUsage",
+ CellChangeTimes->{3.6381050616724253`*^9},
+ CellTags->"Info3638090661-3724769"],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {GridBox[{
+       {
+        RowBox[{"See", ":=", 
+         RowBox[{
+          RowBox[{"\<\"Graphics\"\>", "[", 
+           RowBox[{"{", 
+            RowBox[{"Transpose", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"IfFat", "[", 
+                    RowBox[{"#1", ",", "NicePurple", ",", "NiceYellow"}], 
+                    "]"}], "&"}], ")"}], "/@", "#1"}], "&"}], ")"}], "[", 
+                "#1", "]"}], ",", 
+               RowBox[{"Polygon", "/@", 
+                RowBox[{"Coor", "/@", 
+                 RowBox[{"\[CapitalDelta]", "/@", "#1"}]}]}]}], "}"}], "]"}], 
+            "}"}], "]"}], "&"}]}]}
+      },
+      BaselinePosition->{Baseline, {1, 1}},
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxItemSize->{"Columns" -> {{
+           Scaled[0.999]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+        "RowsIndexed" -> {}}]}
+   },
+   BaselinePosition->{Baseline, {1, 1}},
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}}],
+  Definition[PenroseTilingFunctions`See],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6381050616924267`*^9},
+ CellTags->"Info3638090661-3724769"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData["unitskinny"], "Input",
+ CellChangeTimes->{{3.6381048151713266`*^9, 3.6381048230107746`*^9}, 
+   3.638105115494504*^9, {3.638105168265522*^9, 3.638105172099742*^9}, {
+   3.6381053683229647`*^9, 3.6381053696880426`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"ArrowEdges", "@", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Exp", "[", 
+          RowBox[{"i", " ", "I", " ", 
+           RowBox[{"Pi", "/", "5"}]}], "]"}], "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0.5`", ",", 
+             RowBox[{"-", "0.5`"}], ",", 
+             RowBox[{"0.`", "\[VeryThinSpace]", "+", 
+              RowBox[{"1.5388417685876268`", " ", "\[ImaginaryI]"}]}]}], 
+            "}"}], "-", 
+           RowBox[{"(", 
+            RowBox[{"0.`", "\[VeryThinSpace]", "+", 
+             RowBox[{"1.5388417685876268`", " ", "\[ImaginaryI]"}]}], ")"}]}],
+           ")"}]}], ",", "\"\<skinny\>\""}], "}"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "10", ",", "2"}], "}"}]}], "]"}], ",", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"ArrowEdges", "@", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Exp", "[", 
+          RowBox[{"i", " ", "I", " ", "2", 
+           RowBox[{"Pi", "/", "5"}]}], "]"}], "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "0.5`"}], ",", "0.5`", ",", 
+             RowBox[{"0.`", "\[VeryThinSpace]", "+", 
+              RowBox[{"1.5388417685876268`", " ", "\[ImaginaryI]"}]}]}], 
+            "}"}], "-", 
+           RowBox[{"(", 
+            RowBox[{"0.`", "\[VeryThinSpace]", "+", 
+             RowBox[{"1.5388417685876268`", " ", "\[ImaginaryI]"}]}], ")"}]}],
+           ")"}]}], ",", "\"\<skinny\>\""}], "}"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "0", ",", "10"}], "}"}]}], "]"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<WedgeWheel.png\>\"", ",", "%", ",", 
+   RowBox[{"ImageResolution", "\[Rule]", "300"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6381053916062965`*^9, 3.6381055006285324`*^9}, {
+  3.638105534010442*^9, 3.638105617133196*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{1, 0.5}, {2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {1.3090169943749475`, -0.9510565162951538}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {
+             2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {0.5, -1.538841768587627}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{-1, 
+              Rational[1, 2]}, {0, 0}, {-1, 
+              Rational[-1, 2]}}, {{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{-1, 0.5}, {0, 0}, {-1, -0.5}}, {{
+             0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {2, 0}, {
+             1, -0.5}}}]]]}}], 
+     ArrowBox[{{1.3090169943749475`, -0.9510565162951538}, {
+      0.5, -1.538841768587627}}]}}, {
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{1, 0.5}, {2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {1.3090169943749477`, 0.9510565162951534}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {
+             2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {1.6180339887498951`, -1.6653345369377348`*^-16}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{-1, 
+              Rational[1, 2]}, {0, 0}, {-1, 
+              Rational[-1, 2]}}, {{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{-1, 0.5}, {0, 0}, {-1, -0.5}}, {{
+             0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {2, 0}, {
+             1, -0.5}}}]]]}}], 
+     ArrowBox[{{1.3090169943749477`, 0.9510565162951534}, {
+      1.6180339887498951`, -1.6653345369377348`*^-16}}]}}, {
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{1, 0.5}, {2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {-0.5, 1.5388417685876268`}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {
+             2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {0.5, 1.5388417685876268`}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{-1, 
+              Rational[1, 2]}, {0, 0}, {-1, 
+              Rational[-1, 2]}}, {{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{-1, 0.5}, {0, 0}, {-1, -0.5}}, {{
+             0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {2, 0}, {
+             1, -0.5}}}]]]}}], 
+     ArrowBox[{{-0.5, 1.5388417685876268`}, {0.5, 1.5388417685876268`}}]}}, {
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{1, 0.5}, {2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {-1.6180339887498951`, -1.6653345369377348`*^-16}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {
+             2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {-1.3090169943749477`, 0.9510565162951534}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{-1, 
+              Rational[1, 2]}, {0, 0}, {-1, 
+              Rational[-1, 2]}}, {{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{-1, 0.5}, {0, 0}, {-1, -0.5}}, {{
+             0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {2, 0}, {
+             1, -0.5}}}]]]}}], 
+     ArrowBox[{{-1.6180339887498951`, -1.6653345369377348`*^-16}, \
+{-1.3090169943749477`, 0.9510565162951534}}]}}, {
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{1, 0.5}, {2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {-0.5, -1.538841768587627}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {
+             2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {-1.3090169943749475`, -0.9510565162951538}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{-1, 
+              Rational[1, 2]}, {0, 0}, {-1, 
+              Rational[-1, 2]}}, {{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{-1, 0.5}, {0, 0}, {-1, -0.5}}, {{
+             0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {2, 0}, {
+             1, -0.5}}}]]]}}], 
+     ArrowBox[{{-0.5, -1.538841768587627}, {-1.3090169943749475`, \
+-0.9510565162951538}}]}}, {
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{1, 0.5}, {2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {-0.5, -1.5388417685876268`}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {
+             2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {0.5, -1.5388417685876268`}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{-1, 
+              Rational[1, 2]}, {0, 0}, {-1, 
+              Rational[-1, 2]}}, {{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{-1, 0.5}, {0, 0}, {-1, -0.5}}, {{
+             0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {2, 0}, {
+             1, -0.5}}}]]]}}], 
+     ArrowBox[{{-0.5, -1.5388417685876268`}, {0.5, -1.5388417685876268`}}]}}, {
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{1, 0.5}, {2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {1.3090169943749475`, -0.9510565162951536}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {
+             2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {1.618033988749895, -1.1102230246251565`*^-16}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{-1, 
+              Rational[1, 2]}, {0, 0}, {-1, 
+              Rational[-1, 2]}}, {{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{-1, 0.5}, {0, 0}, {-1, -0.5}}, {{
+             0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {2, 0}, {
+             1, -0.5}}}]]]}}], 
+     ArrowBox[{{1.3090169943749475`, -0.9510565162951536}, {
+      1.618033988749895, -1.1102230246251565`*^-16}}]}}, {
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{1, 0.5}, {2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {1.3090169943749477`, 0.9510565162951534}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {
+             2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {0.5000000000000002, 1.5388417685876268`}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{-1, 
+              Rational[1, 2]}, {0, 0}, {-1, 
+              Rational[-1, 2]}}, {{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{-1, 0.5}, {0, 0}, {-1, -0.5}}, {{
+             0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {2, 0}, {
+             1, -0.5}}}]]]}}], 
+     ArrowBox[{{1.3090169943749477`, 0.9510565162951534}, {0.5000000000000002,
+       1.5388417685876268`}}]}}, {
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{1, 0.5}, {2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {-0.5000000000000002, 1.5388417685876268`}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {
+             2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {-1.3090169943749477`, 0.9510565162951534}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{-1, 
+              Rational[1, 2]}, {0, 0}, {-1, 
+              Rational[-1, 2]}}, {{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{-1, 0.5}, {0, 0}, {-1, -0.5}}, {{
+             0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {2, 0}, {
+             1, -0.5}}}]]]}}], 
+     ArrowBox[{{-0.5000000000000002, 
+      1.5388417685876268`}, {-1.3090169943749477`, 0.9510565162951534}}]}}, {
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{1, 0.5}, {2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {-1.618033988749895, -1.1102230246251565`*^-16}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {
+             2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {-1.3090169943749475`, -0.9510565162951536}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{-1, 
+              Rational[1, 2]}, {0, 0}, {-1, 
+              Rational[-1, 2]}}, {{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{-1, 0.5}, {0, 0}, {-1, -0.5}}, {{
+             0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {2, 0}, {
+             1, -0.5}}}]]]}}], 
+     ArrowBox[{{-1.618033988749895, -1.1102230246251565`*^-16}, \
+{-1.3090169943749475`, -0.9510565162951536}}]}}, {
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{1, 0.5}, {2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {-0.5, -1.5388417685876268`}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {
+             2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {0.5, -1.5388417685876268`}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{-1, 
+              Rational[1, 2]}, {0, 0}, {-1, 
+              Rational[-1, 2]}}, {{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{-1, 0.5}, {0, 0}, {-1, -0.5}}, {{
+             0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {2, 0}, {
+             1, -0.5}}}]]]}}], 
+     ArrowBox[{{-0.5, -1.5388417685876268`}, {0.5, -1.5388417685876268`}}]}}, {
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{1, 0.5}, {2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {1.3090169943749475`, -0.9510565162951536}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {
+             2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {1.618033988749895, -1.1102230246251565`*^-16}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{-1, 
+              Rational[1, 2]}, {0, 0}, {-1, 
+              Rational[-1, 2]}}, {{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{-1, 0.5}, {0, 0}, {-1, -0.5}}, {{
+             0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {2, 0}, {
+             1, -0.5}}}]]]}}], 
+     ArrowBox[{{1.3090169943749475`, -0.9510565162951536}, {
+      1.618033988749895, -1.1102230246251565`*^-16}}]}}, {
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{1, 0.5}, {2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {1.3090169943749477`, 0.9510565162951534}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {
+             2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {0.5000000000000002, 1.5388417685876268`}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{-1, 
+              Rational[1, 2]}, {0, 0}, {-1, 
+              Rational[-1, 2]}}, {{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{-1, 0.5}, {0, 0}, {-1, -0.5}}, {{
+             0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {2, 0}, {
+             1, -0.5}}}]]]}}], 
+     ArrowBox[{{1.3090169943749477`, 0.9510565162951534}, {0.5000000000000002,
+       1.5388417685876268`}}]}}, {
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{1, 0.5}, {2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {-0.5000000000000002, 1.5388417685876268`}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {
+             2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {-1.3090169943749477`, 0.9510565162951534}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{-1, 
+              Rational[1, 2]}, {0, 0}, {-1, 
+              Rational[-1, 2]}}, {{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{-1, 0.5}, {0, 0}, {-1, -0.5}}, {{
+             0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {2, 0}, {
+             1, -0.5}}}]]]}}], 
+     ArrowBox[{{-0.5000000000000002, 
+      1.5388417685876268`}, {-1.3090169943749477`, 0.9510565162951534}}]}}, {
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{1, 0.5}, {2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {-1.618033988749895, -1.1102230246251565`*^-16}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {
+             2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {-1.3090169943749475`, -0.9510565162951536}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{-1, 
+              Rational[1, 2]}, {0, 0}, {-1, 
+              Rational[-1, 2]}}, {{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{-1, 0.5}, {0, 0}, {-1, -0.5}}, {{
+             0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {2, 0}, {
+             1, -0.5}}}]]]}}], 
+     ArrowBox[{{-1.618033988749895, -1.1102230246251565`*^-16}, \
+{-1.3090169943749475`, -0.9510565162951536}}]}}, {
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{1, 0.5}, {2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {-0.5, -1.5388417685876268`}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {
+             2, 0}, {1, -0.5}}}]]]}}], 
+     ArrowBox[{{0., 0.}, {0.5, -1.5388417685876268`}}]}, 
+    {Arrowheads[{{Automatic, 0.5, 
+        GraphicsBox[
+         LineBox[
+          NCache[{{{-1, 
+              Rational[1, 2]}, {0, 0}, {-1, 
+              Rational[-1, 2]}}, {{0, 
+              Rational[1, 2]}, {1, 0}, {0, 
+              Rational[-1, 2]}}, {{1, 
+              Rational[1, 2]}, {2, 0}, {1, 
+              Rational[-1, 2]}}}, {{{-1, 0.5}, {0, 0}, {-1, -0.5}}, {{
+             0, 0.5}, {1, 0}, {0, -0.5}}, {{1, 0.5}, {2, 0}, {
+             1, -0.5}}}]]]}}], 
+     ArrowBox[{{-0.5, -1.5388417685876268`}, {0.5, -1.5388417685876268`}}]}}},
+  ImageSize->{615.4545454545461, Automatic}]], "Output",
+ CellChangeTimes->{{3.6381053986677003`*^9, 3.638105412450489*^9}, 
+   3.638105463544411*^9, 3.6381055011505623`*^9, {3.638105534936495*^9, 
+   3.638105584146309*^9}, 3.6381056175572205`*^9}],
+
+Cell[BoxData["\<\"WedgeWheel.png\"\>"], "Output",
+ CellChangeTimes->{{3.6381053986677003`*^9, 3.638105412450489*^9}, 
+   3.638105463544411*^9, 3.6381055011505623`*^9, {3.638105534936495*^9, 
+   3.638105584146309*^9}, 3.6381056181082516`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"ArrowEdges", "@", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Exp", "[", 
+          RowBox[{"i", " ", "I", " ", 
+           RowBox[{"Pi", "/", "5"}]}], "]"}], "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0.5`", ",", 
+             RowBox[{"-", "0.5`"}], ",", 
+             RowBox[{"0.`", "\[VeryThinSpace]", "+", 
+              RowBox[{"1.5388417685876268`", " ", "\[ImaginaryI]"}]}]}], 
+            "}"}], "-", 
+           RowBox[{"(", 
+            RowBox[{"0.`", "\[VeryThinSpace]", "+", 
+             RowBox[{"1.5388417685876268`", " ", "\[ImaginaryI]"}]}], ")"}]}],
+           ")"}]}], ",", "\"\<skinny\>\""}], "}"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "10", ",", "2"}], "}"}]}], "]"}], ",", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"ArrowEdges", "@", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Exp", "[", 
+          RowBox[{"i", " ", "I", " ", "2", 
+           RowBox[{"Pi", "/", "5"}]}], "]"}], "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "0.5`"}], ",", "0.5`", ",", 
+             RowBox[{"0.`", "\[VeryThinSpace]", "+", 
+              RowBox[{"1.5388417685876268`", " ", "\[ImaginaryI]"}]}]}], 
+            "}"}], "-", 
+           RowBox[{"(", 
+            RowBox[{"0.`", "\[VeryThinSpace]", "+", 
+             RowBox[{"1.5388417685876268`", " ", "\[ImaginaryI]"}]}], ")"}]}],
+           ")"}]}], ",", "\"\<skinny\>\""}], "}"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "0", ",", "10"}], "}"}]}], "]"}]}], "]"}]], "Input"],
+
+Cell[BoxData["unitfat"], "Input",
+ CellChangeTimes->{{3.638109114975261*^9, 3.6381091613659143`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"-", "0.8090169943749475`"}], ",", "0.8090169943749475`", ",", 
+      RowBox[{"1.1102230246251565`*^-16", "+", 
+       RowBox[{"0.5877852522924732`", " ", "\[ImaginaryI]"}]}]}], "}"}], "-", 
+    RowBox[{"(", 
+     RowBox[{"1.1102230246251565`*^-16", "+", 
+      RowBox[{"0.5877852522924732`", " ", "\[ImaginaryI]"}]}], ")"}]}], ",", 
+   "\"\<fat\>\""}], "}"}]], "Input",
+ CellChangeTimes->{{3.6381091734366045`*^9, 3.638109182071099*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "0.8090169943749476`"}], "-", 
+      RowBox[{"0.5877852522924732`", " ", "\[ImaginaryI]"}]}], ",", 
+     RowBox[{"0.8090169943749473`", "\[VeryThinSpace]", "-", 
+      RowBox[{"0.5877852522924732`", " ", "\[ImaginaryI]"}]}], ",", 
+     RowBox[{"0.`", "\[VeryThinSpace]", "+", 
+      RowBox[{"0.`", " ", "\[ImaginaryI]"}]}]}], "}"}], ",", "\"\<fat\>\""}], 
+  "}"}]], "Input",
+ CellChangeTimes->{3.6381091982900267`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "0.8090169943749476`"}], "-", 
+      RowBox[{"0.5877852522924732`", " ", "\[ImaginaryI]"}]}], ",", 
+     RowBox[{"0.8090169943749473`", "\[VeryThinSpace]", "-", 
+      RowBox[{"0.5877852522924732`", " ", "\[ImaginaryI]"}]}], ",", 
+     RowBox[{"0.`", "\[VeryThinSpace]", "+", 
+      RowBox[{"0.`", " ", "\[ImaginaryI]"}]}]}], "}"}], ",", "\<\"fat\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.638109198319028*^9}]
+}, Open  ]]
 },
 WindowSize->{944, 1022},
 WindowMargins->{{Automatic, 0}, {Automatic, 0}},
@@ -33645,10 +34485,18 @@ StyleDefinitions->"Default.nb"
 
 (* Internal cache information *)
 (*CellTagsOutline
-CellTagsIndex->{}
+CellTagsIndex->{
+ "Info3638090661-3724769"->{
+  Cell[1416598, 33757, 188, 4, 44, "Print",
+   CellTags->"Info3638090661-3724769"],
+  Cell[1416789, 33763, 1520, 41, 45, "Print",
+   CellTags->"Info3638090661-3724769"]}
+ }
 *)
 (*CellTagsIndex
-CellTagsIndex->{}
+CellTagsIndex->{
+ {"Info3638090661-3724769", 1445472, 34488}
+ }
 *)
 (*NotebookFileOutline
 Notebook[{
@@ -33822,122 +34670,146 @@ Cell[757239, 17103, 94, 1, 32, InheritFromParent],
 Cell[757336, 17106, 852, 17, 170, InheritFromParent],
 Cell[758191, 17125, 96, 1, 32, InheritFromParent],
 Cell[758290, 17128, 94, 1, 32, "Input"],
-Cell[758387, 17131, 753, 16, 32, "Input"],
-Cell[759143, 17149, 3081, 73, 78, InheritFromParent],
+Cell[758387, 17131, 803, 17, 32, "Input"],
 Cell[CellGroupData[{
-Cell[762249, 17226, 19360, 455, 1253, InheritFromParent],
-Cell[781612, 17683, 2923, 70, 255, "Output"]
+Cell[759215, 17152, 32990, 770, 2033, InheritFromParent],
+Cell[792208, 17924, 4823, 115, 308, "Output"]
+}, {2}]],
+Cell[797043, 18042, 3081, 73, 78, InheritFromParent],
+Cell[CellGroupData[{
+Cell[800149, 18119, 19360, 455, 1253, InheritFromParent],
+Cell[819512, 18576, 2923, 70, 255, "Output"]
 }, {2}]],
 Cell[CellGroupData[{
-Cell[784569, 17758, 1970, 51, 193, InheritFromParent],
-Cell[786542, 17811, 503, 9, 170, "Output"]
+Cell[822469, 18651, 1970, 51, 193, InheritFromParent],
+Cell[824442, 18704, 503, 9, 170, "Output"]
 }, Open  ]],
-Cell[787060, 17823, 4609, 107, 57, InheritFromParent],
+Cell[824960, 18716, 4609, 107, 57, InheritFromParent],
 Cell[CellGroupData[{
-Cell[791694, 17934, 30091, 698, 1853, InheritFromParent],
-Cell[821788, 18634, 4450, 106, 170, "Output"],
-Cell[826241, 18742, 90, 1, 33, "Output"]
-}, {2}]],
-Cell[826343, 18746, 5061, 119, 259, InheritFromParent],
-Cell[CellGroupData[{
-Cell[831429, 18869, 33496, 776, 2033, InheritFromParent],
-Cell[864928, 19647, 4869, 116, 257, "Output"]
-}, {2}]],
-Cell[869809, 19766, 92, 1, 32, InheritFromParent],
-Cell[CellGroupData[{
-Cell[869926, 19771, 37146, 859, 2353, InheritFromParent],
-Cell[907075, 20632, 5503, 132, 255, "Output"]
-}, {2}]],
-Cell[912590, 20767, 5481, 131, 279, InheritFromParent],
-Cell[918074, 20900, 4287, 102, 170, InheritFromParent],
-Cell[CellGroupData[{
-Cell[922386, 21006, 3375, 85, 293, InheritFromParent],
-Cell[925764, 21093, 840, 17, 170, "Output"]
+Cell[829594, 18827, 30091, 698, 1853, InheritFromParent],
+Cell[859688, 19527, 4450, 106, 170, "Output"],
+Cell[864141, 19635, 90, 1, 33, "Output"]
 }, {2}]],
 Cell[CellGroupData[{
-Cell[926638, 21115, 7841, 191, 573, InheritFromParent],
-Cell[934482, 21308, 1835, 39, 170, "Output"]
+Cell[864265, 19641, 5061, 119, 259, InheritFromParent],
+Cell[869329, 19762, 4869, 116, 257, "Output"]
+}, Open  ]],
+Cell[874213, 19881, 92, 1, 32, InheritFromParent],
+Cell[CellGroupData[{
+Cell[874330, 19886, 37146, 859, 2353, InheritFromParent],
+Cell[911479, 20747, 5503, 132, 255, "Output"]
 }, {2}]],
-Cell[936329, 21350, 94, 1, 32, InheritFromParent],
-Cell[936426, 21353, 122, 2, 32, InheritFromParent],
-Cell[936551, 21357, 122, 2, 32, InheritFromParent],
-Cell[936676, 21361, 122, 2, 32, InheritFromParent],
+Cell[916994, 20882, 5481, 131, 279, InheritFromParent],
+Cell[922478, 21015, 4287, 102, 170, InheritFromParent],
 Cell[CellGroupData[{
-Cell[936823, 21367, 2556, 67, 213, InheritFromParent],
-Cell[939382, 21436, 719, 13, 170, "Output"]
+Cell[926790, 21121, 3375, 85, 293, InheritFromParent],
+Cell[930168, 21208, 840, 17, 170, "Output"]
 }, {2}]],
-Cell[940113, 21452, 300, 5, 308, InheritFromParent],
 Cell[CellGroupData[{
-Cell[940438, 21461, 2495, 64, 253, InheritFromParent],
-Cell[942936, 21527, 698, 12, 308, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[943671, 21544, 1041, 28, 113, InheritFromParent],
-Cell[944715, 21574, 288, 6, 255, "Output"]
-}, Open  ]],
-Cell[945018, 21583, 96, 1, 32, InheritFromParent],
-Cell[945117, 21586, 911, 16, 170, InheritFromParent],
-Cell[946031, 21604, 4592, 93, 57, InheritFromParent],
-Cell[CellGroupData[{
-Cell[950648, 21701, 17368, 415, 1373, InheritFromParent],
-Cell[968019, 22118, 4315, 88, 170, "Output"]
+Cell[931042, 21230, 7841, 191, 573, InheritFromParent],
+Cell[938886, 21423, 1835, 39, 170, "Output"]
 }, {2}]],
-Cell[972346, 22209, 96, 1, 32, InheritFromParent],
-Cell[972445, 22212, 4460, 91, 465, InheritFromParent],
-Cell[976908, 22305, 96, 1, 32, "Input"],
+Cell[940733, 21465, 94, 1, 32, InheritFromParent],
+Cell[940830, 21468, 122, 2, 32, InheritFromParent],
+Cell[940955, 21472, 122, 2, 32, InheritFromParent],
+Cell[941080, 21476, 122, 2, 32, InheritFromParent],
 Cell[CellGroupData[{
-Cell[977029, 22310, 9509, 276, 613, "Input"],
-Cell[986541, 22588, 2199, 47, 170, "Output"],
-Cell[988743, 22637, 2359, 50, 172, "Output"],
-Cell[991105, 22689, 1983, 43, 491, "Output"],
-Cell[993091, 22734, 2139, 46, 493, "Output"],
-Cell[995233, 22782, 14189, 326, 101, "Output"],
-Cell[1009425, 23110, 6431, 147, 256, "Output"],
-Cell[1015859, 23259, 14962, 342, 101, "Output"],
-Cell[1030824, 23603, 6838, 154, 256, "Output"]
-}, Open  ]],
-Cell[1037677, 23760, 1084, 29, 73, "Input"],
+Cell[941227, 21482, 2556, 67, 213, InheritFromParent],
+Cell[943786, 21551, 719, 13, 170, "Output"]
+}, {2}]],
+Cell[944517, 21567, 300, 5, 308, InheritFromParent],
 Cell[CellGroupData[{
-Cell[1038786, 23793, 1705, 36, 153, "Input"],
-Cell[1040494, 23831, 105815, 2797, 397, "Output"],
-Cell[1146312, 26630, 313, 4, 33, "Output"]
+Cell[944842, 21576, 2495, 64, 253, InheritFromParent],
+Cell[947340, 21642, 698, 12, 308, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1146662, 26639, 1481, 33, 153, "Input"],
-Cell[1148146, 26674, 107141, 2835, 408, "Output"],
-Cell[1255290, 29511, 438, 6, 33, "Output"]
+Cell[948075, 21659, 1041, 28, 113, InheritFromParent],
+Cell[949119, 21689, 288, 6, 255, "Output"]
 }, Open  ]],
-Cell[1255743, 29520, 94, 1, 32, "Input"],
+Cell[949422, 21698, 96, 1, 32, InheritFromParent],
+Cell[949521, 21701, 911, 16, 170, InheritFromParent],
+Cell[950435, 21719, 4592, 93, 57, InheritFromParent],
 Cell[CellGroupData[{
-Cell[1255862, 29525, 1358, 28, 133, "Input"],
-Cell[1257223, 29555, 69848, 1851, 649, "Output"],
-Cell[1327074, 31408, 332, 4, 33, "Output"]
+Cell[955052, 21816, 17368, 415, 1373, InheritFromParent],
+Cell[972423, 22233, 4315, 88, 170, "Output"]
+}, {2}]],
+Cell[976750, 22324, 96, 1, 32, InheritFromParent],
+Cell[976849, 22327, 4460, 91, 465, InheritFromParent],
+Cell[981312, 22420, 96, 1, 32, "Input"],
+Cell[CellGroupData[{
+Cell[981433, 22425, 9509, 276, 613, "Input"],
+Cell[990945, 22703, 2199, 47, 170, "Output"],
+Cell[993147, 22752, 2359, 50, 172, "Output"],
+Cell[995509, 22804, 1983, 43, 491, "Output"],
+Cell[997495, 22849, 2139, 46, 493, "Output"],
+Cell[999637, 22897, 14189, 326, 101, "Output"],
+Cell[1013829, 23225, 6431, 147, 256, "Output"],
+Cell[1020263, 23374, 14962, 342, 101, "Output"],
+Cell[1035228, 23718, 6838, 154, 256, "Output"]
+}, Open  ]],
+Cell[1042081, 23875, 1084, 29, 73, "Input"],
+Cell[CellGroupData[{
+Cell[1043190, 23908, 1705, 36, 153, "Input"],
+Cell[1044898, 23946, 105815, 2797, 397, "Output"],
+Cell[1150716, 26745, 313, 4, 33, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1327443, 31417, 1381, 28, 133, "Input"],
-Cell[1328827, 31447, 69452, 1838, 649, "Output"],
-Cell[1398282, 33287, 333, 4, 33, "Output"]
+Cell[1151066, 26754, 1481, 33, 153, "Input"],
+Cell[1152550, 26789, 107141, 2835, 408, "Output"],
+Cell[1259694, 29626, 438, 6, 33, "Output"]
+}, Open  ]],
+Cell[1260147, 29635, 94, 1, 32, "Input"],
+Cell[CellGroupData[{
+Cell[1260266, 29640, 1358, 28, 133, "Input"],
+Cell[1261627, 29670, 69848, 1851, 649, "Output"],
+Cell[1331478, 31523, 332, 4, 33, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1398652, 33296, 2080, 53, 193, "Input"],
-Cell[1400735, 33351, 1747, 41, 170, "Output"],
-Cell[1402485, 33394, 208, 3, 33, "Output"],
-Cell[1402696, 33399, 1826, 42, 172, "Output"],
-Cell[1404525, 33443, 206, 3, 33, "Output"],
-Cell[1404734, 33448, 1522, 36, 491, "Output"],
-Cell[1406259, 33486, 206, 3, 33, "Output"],
-Cell[1406468, 33491, 1607, 38, 493, "Output"],
-Cell[1408078, 33531, 207, 3, 33, "Output"]
+Cell[1331847, 31532, 1381, 28, 133, "Input"],
+Cell[1333231, 31562, 69452, 1838, 649, "Output"],
+Cell[1402686, 33402, 333, 4, 33, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1408322, 33539, 120, 2, 32, "Input"],
-Cell[1408445, 33543, 1653, 39, 170, "Output"]
+Cell[1403056, 33411, 2080, 53, 193, "Input"],
+Cell[1405139, 33466, 1747, 41, 170, "Output"],
+Cell[1406889, 33509, 208, 3, 33, "Output"],
+Cell[1407100, 33514, 1826, 42, 172, "Output"],
+Cell[1408929, 33558, 206, 3, 33, "Output"],
+Cell[1409138, 33563, 1522, 36, 491, "Output"],
+Cell[1410663, 33601, 206, 3, 33, "Output"],
+Cell[1410872, 33606, 1607, 38, 493, "Output"],
+Cell[1412482, 33646, 207, 3, 33, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1410135, 33587, 147, 2, 32, "Input"],
-Cell[1410285, 33591, 1732, 40, 172, "Output"]
+Cell[1412726, 33654, 120, 2, 32, "Input"],
+Cell[1412849, 33658, 1653, 39, 170, "Output"]
 }, Open  ]],
-Cell[1412032, 33634, 92, 1, 32, "Input"]
+Cell[CellGroupData[{
+Cell[1414539, 33702, 147, 2, 32, "Input"],
+Cell[1414689, 33706, 1732, 40, 172, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1416458, 33751, 115, 2, 32, "Input"],
+Cell[CellGroupData[{
+Cell[1416598, 33757, 188, 4, 44, "Print",
+ CellTags->"Info3638090661-3724769"],
+Cell[1416789, 33763, 1520, 41, 45, "Print",
+ CellTags->"Info3638090661-3724769"]
+}, Open  ]]
+}, Open  ]],
+Cell[1418336, 33808, 232, 3, 32, "Input"],
+Cell[CellGroupData[{
+Cell[1418593, 33815, 2043, 54, 173, InheritFromParent],
+Cell[1420639, 33871, 20753, 497, 660, "Output"],
+Cell[1441395, 34370, 241, 3, 33, "Output"]
+}, Open  ]],
+Cell[1441651, 34376, 1759, 48, 153, "Input"],
+Cell[1443413, 34426, 101, 1, 32, "Input"],
+Cell[1443517, 34429, 536, 13, 53, InheritFromParent],
+Cell[CellGroupData[{
+Cell[1444078, 34446, 521, 13, 53, InheritFromParent],
+Cell[1444602, 34461, 520, 13, 33, "Output"]
+}, Open  ]]
 }
 ]
 *)
