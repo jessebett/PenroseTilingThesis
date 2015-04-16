@@ -31,6 +31,7 @@
 \newtheorem{myprop}{Property}
 \newtheorem{mythm}{Theorem}
 \newtheorem{mylem}{Lemma}
+\newtheorem{mycor}{Corollary}
 
 \graphicspath{{./Figures/}}
 
@@ -181,7 +182,7 @@ The practical importance of these theories on aperiodic tiling was realized in t
 
 \chapter{Constructing the Penrose Tiling}
 
-\section{Rhombus Representation of the Penrose Tiling}
+\section{Rhombus Representation of the Penrose Tiling} %DONE
 As introduced, there are multiple protoset representations that admit the Penrose tiling. However, the construction methods outlined in this section were described initially by de Bruijn, who favoured the Rhombs representation.  For this reason, we will consider only construction of the Penrose tiling by the Rhombs protoset (see Fig.\ref{fig:Rhombs}). 
 
 Since this protoset is composed of two rhombi, it might be suspected that the prototiles can be arranged to produce a periodic tiling, since rhombi can generally produce periodic tilings. Consider, for example, the tiling produced by adjacent rows of thick and thin rhombi (see Fig.\ref{fig:RhombsPeriodic}). This tiling underscores the necessity of edge-matching rules for the aperiodic protoset. 
@@ -252,18 +253,37 @@ The edge-matching rules of the Penrose rhombs have been illustrated with blue an
 Now that we have seen the Penrose rhombs protoset, and the criteria which allow two tiles to meet, we can investigate how to construct valid tilings. 
 
 
-\section{Non-Local Growth}
+\section{Non-Local Growth} %DONE
 Penrose tilings cannot be procedurally constructed one-tile-at-a-time, as one would tile a floor. In attempting to construct a tiling this way, there is no guarantee that any finite, valid arrangement of tiles can be continued infinitely. 
 
+When we construct a tiling one-tile-at-a-time, rarely are our next tile placements forced. Usually, we have the option to choose the next tile from among both thick and thin Rhombs. One might anticipate that as long as we choose our tile arrangements such that we satisfy the local matching rules, we will eventually tile the entire plane. However, it is in these choices that we encounter a problem with this one-at-a-time method, we can choose incorrectly. If we place our tiles one-at-a-time we can make mistakes.
 
- that the fact that simply because a protoset admits a tiling does not guarantee that any valid arrangement of those prototiles can be continued to an infinite tiling. 
-The Penrose tiling features a notable difficulty in procedurally constructing tilings one tile at a time due to the non-locality of tiling growth, this will be discussed shortly. Though, to motivate the consideration of Penrose tiling despite the frustration of non-locality, I will provide a theorem now which will be proven later.
+\begin{mydef}
+A \textbf{mistake} is a valid placement of a tile which causes the resulting tiling to not continue infinitely to tile the plane. The manifestation of this mistake, either as an unfillable gap or overlap, is called an \textbf{error}. \cite{Penrose1989,Ross}
+\end{mydef}
 
-\begin{mythm}
-The Penrose Rhombs protoset, with matching rules, admits a tiling of the plane.
-\end{mythm}
+For example, consider the arrangement of tiles in Fig.\ref{fig:mistake}. As we can see from the blue and orange circle arcs, these tiles are validly arranged under the edge matching rules. However, despite the validity of this arrangement, this is a mistake. The error of this mistake manifests itself immediate, we have created an gap which cannot be filled by any valid tile arrangement. One might think that we could fill this gap with a thin Rhomb, as seen in Fig.\ref{fig:error}, but we see that such an arrangement does not satisfy the edge matching rules.
 
-\section{Substitution Construction}
+\begin{figure}[h]
+\centering
+\begin{subfigure}{0.6\textwidth}
+\includegraphics[width=\textwidth]{Mistake}
+\caption{Although valid, this arrangement of thick Rhombs is a mistake.}
+\label{fig:mistake}
+\end{subfigure}\\
+\begin{subfigure}{0.6\textwidth}
+\includegraphics[width=\textwidth]{MistakeNext}
+\caption{The manifestation of this mistake, the error, is this gap no valid arrangement could fill.}
+\label{fig:error}
+\end{subfigure}
+\caption{A simple mistake results in an error which cannot be continued to produce a valid tiling of the whole plane.}
+\label{fig:mistakes}
+\end{figure}
+
+However, mistakes are often far more sinister than the one illustrated in Fig.\ref{fig:mistakes}. Here we see a mistake that manifested its error immediately. That is, the error occurs adjacent to the mistake. This is not true in general. As we will see shortly, Penrose tilings must satisfy certain substitution criteria. One effect of satisfying these substitution criteria is that Penrose tilings will have structures that must agree across arbitrarily large distances. What does this mean for a one-tile-at-a-time construction method? Well, it means that the placement of a tile could be a mistake due to the placement of another tile arbitrarily far away. What's even worse? This mistake may not manifest its error for another arbitrarily large distance from either tile placements. This means that if we were trying to tile the plane one-tile-at-a-time, we could generate a mistake because of the placement of another piece arbitrarily far away from the piece we're placing, and we wouldn't even know about our mistake until arbitrarily many other pieces have been placed. This is because Penrose tilings are non-local. That is, while the matching rules describe local conditions, the substitution hierarchy we will soon discuss imposes global conditions on the tiling. Non-locality of the Penrose tiling, in short, means that the placement of tiles must globally agree with the tiling, so arrangements cannot be determined by local matching rules. For this reason, we cannot procedurally tile the Penrose tiling one-tile-at-a-time.
+
+
+\section{Substitution Construction} %DONE
 Despite non-locality, Penrose and Conway showed that we can construct arbitrarily large tilings by repeated application of substitution rules.
 
 To clearly understand the substitution rules on the rhombs, we will first demonstrate the substitution of the constituent Robinson triangles (Fig.\ref{fig:RobSubs})
@@ -406,13 +426,32 @@ This substitution process can be used to generate arbitrarily large Penrose tili
 \label{fig:ThinDeflate}
 	\end{figure}
 	
-Consider again that under inflation each of the thick and thin rhombi in the deflated patterns will be scaled back to the original rhombi size. Further, consider that this substitution process can be iterated arbitrarily many times, generating a tiling that is arbitrarily large. 
 
-Also, notice that even after successive applications of the deflation substitution, the resulting tiling is still valid under the initial matching rules. Again, in Figures \ref{fig:ThickDeflate} and \ref{fig:ThinDeflate} this is illustrated by the continuity of the orange and blue edge-matching curves.
+Notice that even after successive applications of the deflation substitution, the resulting tiling is still valid under the initial matching rules. Again, in Figures \ref{fig:ThickDeflate} and \ref{fig:ThinDeflate} this is illustrated by the continuity of the orange and blue edge-matching curves.
 
 \subsection{Extension Theorem}
+This substitution method is also called the deflation/inflation method, for the complementary processes described above. Where deflation applies successive substitutions to the Rhombs, and inflation scales the Rhombs back to their original size.
 
-\section{Up-Down Construction}
+From Grunbaum and Shephard's \textit{Tilings and Patterns} we give the following important theorem for determining if a protoset will tile a plane \cite{Grunbaum1986}:
+\begin{mythm}
+\textbf{The Extension Theorem\\}
+Let $\mathcal{P}$ be a finite set of prototiles. If $\mathcal{P}$ tiles over arbitrarily large circular disks, then $\mathcal{P}$ admits a tiling of the plane. \cite{Grunbaum1986,Ross}
+\end{mythm}
+
+\begin{mycor}
+The Penrose Rhombs protoset admits tilings of the plane.
+\end{mycor}
+
+\begin{proof}
+Under each iteration of the deflation, the substitution Rhombs are scaled by a factor of $\frac{1}{\phi}$. Consider the largest closed disk tiled completely by an arrangement of Rhombs. Under deflation each tile is scaled by  $\frac{1}{\phi}$, so the complementary inflation process will scale each tile by a factor of $\phi$. Therefore, the largest disk tiled completely by our substituted tiles will scale its diameter by at least a factor of $\phi$. For $n$ substitutions, the largest tiled disk will increase in diameter by at least $n\phi$. Therefore, deflation/inflation method can generate valid Penrose tilings of an arbitrary large disks in the plane.\\
+$\therefore$ by Extension Theorem, the Penrose Rhombs admit tilings of the plane. 
+\end{proof}
+
+
+
+
+
+\section{Up-Down Construction} %DONE
 
 In his 1990 paper \textit{Updown generation of Penrose patterns}, de Bruijn describes a construction method attributed to Conway by which tilings are generated by infinite sequences of steps along a directed graph. The Up-Down generation process borrows some concepts from the substitution method, namely that we build tilings by substituting tiles with constituent decomposition tiles, as per substitution rules. The key difference, however, is that we build a tiling instead by considering the relationship between a constituent tile and its inflation. As the name suggests, Up-Down generation constructs tilings through two processes: Up and Down.
 
@@ -699,8 +738,121 @@ $\therefore$ there are uncountably many Penrose tilings by Cantor's Diagonalizat
 
 
 \chapter{Features of the Penrose Tiling}
-\section{Mutual Local Derivability of Representations}
-\section{Five-Fold Rotational Symmetry}
+
+\section{Mutual Local Derivability of Representations} %DONE
+As we've seen, tilings by Penrose Rhombs can be uniquely defined from tilings by oriented Robinson triangles simply by deleting the triangle bases. This relationship is also reciprocal, by adding a diagonal along the long edge of thick Rhombs and along the short edge of thin Rhombs we will generate the respective Robinson triangle tiling. Tilings with this property are said to be mutually locally derivable.
+
+\begin{mydef}
+Two tilings are \textbf{mutually locally derivable} if each is uniquely defined by the other by local rules. 
+\end{mydef}
+
+We've described local rule for uniquely deriving Penrose Rhombs tilings from oriented Robinson triangle tilings and vice versa. This allows us to consider equivalence classes of mutually locally derivable tilings. In other words, given a Penrose tiling by Rhombs, we can consider the unique complementary Penrose tiling by Robinson triangles to be equivalent under mutually local derivability. That is, we can consider both tilings to be different representations of the same Penrose tiling.
+
+In the introduction we described another famous representation of Penrose's tiling, the Kites and Darts representation. These prototiles are generated also by Robinson triangles, but reflected across their legs instead of bases, see Fig.\ref{fig:kitedart}.
+
+\begin{figure}
+\begin{subfigure}[t]{0.37\textwidth}
+\includegraphics[width=\textwidth]{kite}
+\caption{A Kite}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.3\textwidth}
+\includegraphics[width=\textwidth]{dart}
+\caption{A Dart}
+\end{subfigure}
+\label{fig:kitedart}
+\end{figure}
+
+Recall from the introduction that we elected to consider only the Rhombs representation when describing the construction methods. This was not a restrictive choice because a tiling with Kites and Darts representation is mutually locally derivable from the Rhombs representation.
+
+Consider the local rules illustrated in Fig.\ref{fig:kitedartrules}. To derive Kites and Darts from Rhombs we draw edges along the right edges of the thin Rhombs and along the long diagonal of the thick Rhombs. Recall, these Rhombs are oriented so the `right' edges of the thin Rhombs are well-defined. 
+
+\begin{figure}
+\begin{subfigure}[t]{0.4\textwidth}
+\centering
+\includegraphics[width=0.4\textwidth]{ThinKiteRule}
+\caption{Local Rule for Thin Rhomb}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.5\textwidth}
+\includegraphics[width=\textwidth]{ThickKiteRule}
+\caption{Local Rule for Thick Rhomb}
+\end{subfigure}
+\caption{By drawing these red edges, we can mutually locally derive Kites and Darts tilings from Rhombs tilings.}
+\label{fig:kitedartrules}
+\end{figure}
+
+Applying these local rules to a Penrose tiling by Rhombs will derive the a Kites and Darts tiling as seen in Fig.\ref{fig:KiteRules}. Notice that each Kite and Dart is composed of the same arrangements of thin Rhombs and thick half-Rhombs, so there is a unique mapping back to a Rhombs tiling. Therefore, the two are mutually locally derivable. Further, we could have also easily shown that these are both mutually locally derivable with the Robinson triangles. Since these are equivalence relations, that also implies they are mutually locally derivable with each other.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth]{KiteRules}
+\caption{Kites and Darts tiling (red) mutually locally derived from Rhombs tiling (grey). Kites and Darts are derived according to local rules in Fig.\ref{fig:kitedartrules}. Conversely, we see that Kites can derive one thin Rhomb, and halves of two thick Rhombs. While Darts also allow us to derive two halves of thick Rhombs. We see this since each Kite and Dart is composed of the same arrangements of Rhombs.}
+\label{fig:KiteRules}
+\end{figure}
+
+Also, when introducing the historical development of aperiodic protosets, we mentioned that Penrose had discovered an aperiodic protoset with six members. This protoset consisted of three, differently oriented pentagons, a pentagram, a "boat" or "jester's cap", and a thin rhombus. This protoset, called the Penrose's pentagonal protoset, or P1, is also mutually locally derivable from the Rhombs. As such, all four of these protosets, the Rhombs, Kites and Darts, pentagonal, and Robinson triangles, form Penrose tilings which are mutually locally derivable, as such we can consider tilings in these representations equivalent. 
+\section{Local Isomorphism}
+ We've seen that within a Penrose tiling a pattern, tiling configuration, or finite subregion, will repeat itself infinitely many times throughout the plane with impressive density. There is, also, another notion of repeatability, describing how patterns repeat across all Penrose tilings.
+ 
+ \begin{mydef}
+ Two tilings are said to belong to the same \textbf{local isomorphism class} if they are super-imposable over arbitrarily large regions. That is, if every bounded tile configuration in one also appears in the other. \cite{Senechal1996}
+ \end{mydef}
+ 
+ It is important to recognize that two locally isomorphic tilings need not be the same tiling. This may seem like another veridical paradox, that every bounded configuration of tiles in one tiling also appears identically in the other. What this means, however, is that all tilings within a local isomorphism class are locally equivalent, and it is only in the infinite global limits of the tiling that we can distinguish one from the other.
+ 
+ \begin{mythm}
+ All Penrose tilings belong to the same local isomorphism class.
+ \end{mythm}
+ 
+ \begin{proof}
+ Recall from the Up-Down method that all Penrose tilings correspond uniquely to families of cofinal composition sequences. Further, recall that these sequences describe the hierarchical composition of tilings placing smaller constituent tiles into their larger parent tiles.\\
+ Let $\mathcal{T}$ and $\mathcal{T}'$ be two Penrose tilings.\\
+ If $\mathcal{T} = \mathcal{T}'$ then they are trivially locally isomorphic.\\
+ Consider any bounded tiling configuration, $\zeta$, in $\mathcal{T}$.\\
+ Since $\zeta$ is bounded, the maximum distance between any two tiles in $\zeta$ is finite.\\
+ This means that at some hierarchical level of the Up process, there is a Robinson triangle which will completely determine $\zeta$ in its Down process decomposition.\\
+ To see this, choose an individual tile in $\zeta$.\\
+ There will be a finite composition sequence, $\rho$, from this tile to a larger hierarchal Robinson triangle which will define $\zeta$ in its Down process decomposition.\\
+ \begin{equation*}
+ \rho = \{\rho_0, \rho_1, \rho_2,\mathellipsis,\rho_n\}
+ \end{equation*}
+ Therefore, at level $n$ of Up process composition hierarchy there is a Robinson triangle which contains $\zeta$ in its Down process decomposition.\\
+ Consider now the Penrose tiling $\mathcal{T}'$.\\
+ At hierarchical composition level $n$ of this tiling, there are infinitely many Robinson triangles of the same type as that which contains $\zeta$ after $n$ decompositions.\\
+ Therefore $\zeta$ is contained inside $\mathcal{T}'$ for all bounded tiling configurations $\zeta$.\\
+ $\therefore$ All Penrose tilings belong to the same isomorphism class. 
+ \end{proof}
+ 
+ We've shown here that any bounded region inside one Penrose tiling appears infinitely often in every other Penrose tiling! Therefore, even though there are uncountably many different Penrose tilings, we could never know which one we are looking at by considering an arbitrarily large finite subregion. The difference between all the uncountably many Penrose tilings only occurs globally, at their infinite limits. Further, since the Penrose tilings are non-periodic, even though every finite region repeats infinitely many times, the entire tiling itself is not determined by infinitely repeating finite subregions. This means that if we choose any arbitrarily large finite region, we are guaranteed to find infinitely many non-trivial translations which will superimpose that region over an identical repetition. However, the entire tiling will not superimpose itself under any non-trivial translation.
+ 
+\section{Worms} 
+\section{Density of Patterns}
+Graphical representations of Penrose tilings are considered by many to be beautiful, or at the very least aesthetic. This is largely because they apparently have patterns, or finite tile configurations, which repeat regularly throughout the tiling. What's more, once we recognize a pattern, we inevitably find repetitions of it again and again. John Conway showed us that this is no coincidence.
+
+\begin{myprop}
+Any pattern or tiling configuration contained inside a circle of radius, $d$ will begin repeating itself within $\frac{\sqrt[3]{\phi}}{2}d$ from the perimeter of this circle. \cite{Gardner1997}
+\end{myprop}
+
+We can see in Fig.\ref{fig:patternfind}, if we consider any pattern inside a Penrose tiling, we are guaranteed that this pattern will begin repeating itself with relative proximity given by Conway's upper bound. 
+
+Gardner refers to these patterns as `towns' \cite{Gardner1997}. He describes a scenario where we fully explore a region of the tiling, called our home town, as it is familiar to us. Perhaps we venture outside of our hometown. Conway's upper bound shows us that, if we walk in the right direction, we are guaranteed to find another town exactly matching ours within a relatively small distance from the perimeter of our town.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth]{PatternFind3}
+\caption{A pattern contained inside (green) circle with diameter $d$ will begin repeating itself within $\frac{\sqrt[3]{\phi}}{2}d$ from its perimeter. This upper bound is shown in red. As predicted, the pattern (blue) begins repeating in this bound.}
+\label{fig:patternfind}
+\end{figure}
+
+\begin{mycor}
+No point in a Penrose tiling is more than $\frac{\sqrt[3]{\phi}}{2}d$ away from a pattern with diameter $d$.
+\end{mycor}
+
+Consider, again, Gardner's towns. If we are transported from our home town to another region in our tiling. Or worse yet, if we are transported wholly into another Penrose tiling altogether. We know from Conway's upper bound, and from the local isomorphism of all Penrose tilings, that we are no more than a relatively short walk from a town which exactly matches our familiar hometown.
+
+Gardner provides us with another analogy to emphasize the remarkable density of the repeating tiles  \cite{Gardner1997}. Consider, for contrast, the digits of an unpatterned number like $\pi$. It is conjectured that if we choose an arbitrarily long, finite sequence of digits, that we will find it somewhere within $\pi$. Consider, for simplicity, a sequence of only 10 digits long. If we begin searching for such a sequence within the digits $\pi$ we suspect that we will eventually find it. However, this process has no upper bound, so we could be searching for an arbitrarily long amount of time. If these digits behaved like Penrose tiles, we would be guaranteed to find a our finite sequence within some relatively small distance from any random starting location in the decimal expansion. Further, we would also be guaranteed to have that sequence repeat again within another relatively short distance. Of course, this distance depends on the length of the finite sequence we're considering.
+
+So while it is impressive that patterns within Penrose tiles are guaranteed to repeat themselves, what's truly remarkable is the density of these repetitions. 
+\section{Five-Fold Rotational Symmetry} %DONE
 \begin{mythm}
 No tiling can have more than one center of fivefold rotational symmetry.
 \label{symthm}
@@ -709,7 +861,7 @@ No tiling can have more than one center of fivefold rotational symmetry.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.4\textwidth]{proof}
-    \caption{Barlow's Proof that no tiling can have more than one center of fivefold symmetry.}
+    \caption{Barlow's Proof that no tiling can have more than one center of fivefold symmetry. \cite{Gardner1997}}
     \label{fig:fivefoldproof}
 \end{figure}
 
@@ -751,8 +903,13 @@ $\therefore$ By contradiction, periodic tilings have no centers of fivefold symm
 \end{proof}
 
 We have shown that fivefold symmetry is incompatible with periodic tilings. For this reason, the admittance of a single center fivefold symmetry is related to the aperiodicity of a tiling. As we will see, centers of fivefold symmetry are possible in Penrose tilings. 
-\section{Worms}
-\section{Local Isomorphism}
+
+As previously stated, tilings of the $\frac{\pi}{5}$-wedge generated by the Up-Down method can be extended to Penrose tilings of the plane by reflection over the edges of the wedge. Such tilings will have five-fold rotational symmetry about the wedge point. Tilings generated by deflation/inflation will have a center of five-fold symmetry if they originated from an initial arrangement of tiles with five-fold symmetry. The center of symmetry for such a tiling will share the center of symmetry with its initial arrangement.  
+
+
+
+
+
 \section{Ratio of Prototiles}
 \chapter{Graphical Geodesic Paths}
 \section{Path Generation Rules}
