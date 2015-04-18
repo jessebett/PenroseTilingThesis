@@ -10,9 +10,13 @@
   cleardoublepage=empty
 ]{scrbook}
 
+\usepackage{xcolor}
+\definecolor{nicepurple}{HTML}{B10DC9}
+\definecolor{niceblue}{HTML}{0074D9}
+\usepackage[colorlinks=true,linkcolor=niceblue,citecolor=nicepurple]{hyperref}
+
 \tolerance=100
 \usepackage{lipsum}
-\usepackage[hidelinks]{hyperref}
 \usepackage{graphicx}
 \usepackage[linedheaders,parts,pdfspacing]{classicthesis}
 \usepackage{acronym}
@@ -47,7 +51,7 @@
 %%\include{FrontBackMatter/dedication}
 %\include{FrontBackMatter/acknowledgements}
 %\include{FrontBackMatter/declaration}
-%\include{FrontBackMatter/contents}
+\include{FrontBackMatter/contents}
 
 
 
@@ -180,9 +184,9 @@ In 1981, Dutch mathematician Nicolaas de Bruijn provided other methods of constr
 The practical importance of these theories on aperiodic tiling was realized in the 1980's with the discovery by materials scientist Dan Shechtman of certain aluminum-manganese alloys which produce crystallographic diffraction patterns with no translational symmetries. Shechtman was awarded the 2011 Nobel Prize in Chemistry for his discovery of these structures, known now as quasicrystals. In 2009, the first natural quasicrystal was discovered, the mineral icosahedrite, whose diffraction pattern displays fivefold symmetry previously thought impossible in crystalline structures. This past month, in March 2015, the second natural quasicrystal was discovered in a meteorite, with a diffraction pattern displaying decagonal symmetry \cite{Bindi2015}. Marjorie Senechal formalizes the relationship between aperiodic tiling and the geometry of quasicrystals in her 1995 monograph \textit{Quasicrystals and Geometry}. 
 
 
-\chapter{Constructing the Penrose Tiling}
+\chapter{Substitution Construction}
 
-\section{Rhombus Representation of the Penrose Tiling} %DONE
+\section{Rhombs Representation of the Penrose Tiling} %DONE
 As introduced, there are multiple protoset representations that admit the Penrose tiling. However, the construction methods outlined in this section were described initially by de Bruijn, who favoured the Rhombs representation.  For this reason, we will consider only construction of the Penrose tiling by the Rhombs protoset (see Fig.\ref{fig:Rhombs}). 
 
 Since this protoset is composed of two rhombi, it might be suspected that the prototiles can be arranged to produce a periodic tiling, since rhombi can generally produce periodic tilings. Consider, for example, the tiling produced by adjacent rows of thick and thin rhombi (see Fig.\ref{fig:RhombsPeriodic}). This tiling underscores the necessity of edge-matching rules for the aperiodic protoset. 
@@ -283,7 +287,7 @@ For example, consider the arrangement of tiles in Fig.\ref{fig:mistake}. As we c
 However, mistakes are often far more sinister than the one illustrated in Fig.\ref{fig:mistakes}. Here we see a mistake that manifested its error immediately. That is, the error occurs adjacent to the mistake. This is not true in general. As we will see shortly, Penrose tilings must satisfy certain substitution criteria. One effect of satisfying these substitution criteria is that Penrose tilings will have structures that must agree across arbitrarily large distances. What does this mean for a one-tile-at-a-time construction method? Well, it means that the placement of a tile could be a mistake due to the placement of another tile arbitrarily far away. What's even worse? This mistake may not manifest its error for another arbitrarily large distance from either tile placements. This means that if we were trying to tile the plane one-tile-at-a-time, we could generate a mistake because of the placement of another piece arbitrarily far away from the piece we're placing, and we wouldn't even know about our mistake until arbitrarily many other pieces have been placed. This is because Penrose tilings are non-local. That is, while the matching rules describe local conditions, the substitution hierarchy we will soon discuss imposes global conditions on the tiling. Non-locality of the Penrose tiling, in short, means that the placement of tiles must globally agree with the tiling, so arrangements cannot be determined by local matching rules. For this reason, we cannot procedurally tile the Penrose tiling one-tile-at-a-time.
 
 
-\section{Substitution Construction} %DONE
+\section{Deflation and Inflation} %DONE
 Despite non-locality, Penrose and Conway showed that we can construct arbitrarily large tilings by repeated application of substitution rules.
 
 To clearly understand the substitution rules on the rhombs, we will first demonstrate the substitution of the constituent Robinson triangles (Fig.\ref{fig:RobSubs})
@@ -429,7 +433,7 @@ This substitution process can be used to generate arbitrarily large Penrose tili
 
 Notice that even after successive applications of the deflation substitution, the resulting tiling is still valid under the initial matching rules. Again, in Figures \ref{fig:ThickDeflate} and \ref{fig:ThinDeflate} this is illustrated by the continuity of the orange and blue edge-matching curves.
 
-\subsection{Extension Theorem}
+\section{Extension Theorem}
 This substitution method is also called the deflation/inflation method, for the complementary processes described above. Where deflation applies successive substitutions to the Rhombs, and inflation scales the Rhombs back to their original size.
 
 From Grunbaum and Shephard's \textit{Tilings and Patterns} we give the following important theorem for determining if a protoset will tile a plane \cite{Grunbaum1986}:
@@ -451,7 +455,7 @@ $\therefore$ by Extension Theorem, the Penrose Rhombs admit tilings of the plane
 
 
 
-\section{Up-Down Construction} %DONE
+\chapter{Up-Down Construction} %DONE
 
 In his 1990 paper \textit{Updown generation of Penrose patterns}, de Bruijn describes a construction method attributed to Conway by which tilings are generated by infinite sequences of steps along a directed graph. The Up-Down generation process borrows some concepts from the substitution method, namely that we build tilings by substituting tiles with constituent decomposition tiles, as per substitution rules. The key difference, however, is that we build a tiling instead by considering the relationship between a constituent tile and its inflation. As the name suggests, Up-Down generation constructs tilings through two processes: Up and Down.
 
@@ -616,7 +620,7 @@ Infinite sequences of the Up-Down process, corresponding to infinite paths along
 \label{fig:WedgeWheel}
 \end{figure}
 
-\subsection{Penrose Tilings as Infinite Sequences}
+\section{Penrose Tilings as Infinite Sequences}
 We've seen how the Up-Down method generates Penrose tilings from infinite compositions of mappings. By describing these infinite compositions as sequences, we've alluded to an alternative representation of a Penrose tiling, as an infinite sequence of steps on the directed graph in Fig.\ref{fig:UpDownGraph}. 
 
 \begin{mydef}
@@ -733,12 +737,218 @@ Therefore, a countable list of composition sequence families will always be inco
 Therefore, there are uncountably many composition sequence families.\\
 $\therefore$ there are uncountably many Penrose tilings by Cantor's Diagonalization.
 \end{proof}
+\chapter{Pentagrid Construction}
+\section{Duals}
+As we will see, one useful way to determine a tiling is to describe its \textbf{dual}. \cite{Effinger2006}
 
-\section{Projective Construction}
+\begin{mydef}
+Two tilings, $\mathcal{T}$ and $\mathcal{T}'$, are \textbf{dual} if 
+\begin{enumerate}
+\item There exists one-to-one mappings from the vertices, edges, and faces of $\mathcal{T}$  to the faces, edges, and vertices of $\mathcal{T}'$, respectively.
+\item If a face, $\mathcal{F}$ in $\mathcal{T}$ contains a vertex, $v$ in $\mathcal{T}'$ then the faces in $\mathcal{T}'$ belonging to $v$ will contain vertices belonging to $\mathcal{F}$. 
+\end{enumerate}
+\end{mydef}
+
+\begin{mydef}
+Two dual tilings, $\mathcal{T}$ and $\mathcal{T}'$, are \textbf{orthogonally dual} if each edge in $\mathcal{T}$ is orthogonal to its corresponding edge in $\mathcal{T}'$.
+\end{mydef}
+
+For example, consider the hexagonal tiling and its orthogonal dual tiling in Fig.\ref{fig:Hexagons}. Each face of the hexagonal tiling is in one-to-one correspondence with a vertex of the equilateral triangle tiling. Each vertex of the hexagonal tiling is in one-to-one correspondence with a face of the equilateral triangle tiling. The edges of the tilings are also in one-to-one correspondence and orthogonal. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{HexagonDuals}
+\caption{A hexagonal tiling, $\mathcal{T}$, has a dual tiling, $\mathcal{T}'$, of equilateral triangles (purple). As defined, there is a one-to-one correspondence between the hexagonal faces of $\mathcal{T}$ and the vertices (blue) of $\mathcal{T}'$. Likewise, there is a one-to-one correspondence between the triangular faces of $\mathcal{T}'$ and the vertices (red) of $\mathcal{T}$. Further, these tilings are orthogonal duals, so each edge of $\mathcal{T}$ (black) is in one-to-one correspondence and orthogonal to an edge of $\mathcal{T}'$ (purple).}
+\label{fig:Hexagons}
+\end{figure}
+
+Consider that the equilateral triangle tiling is given by three families of equally spaced lines, superimposed and rotated by $\frac{\pi}{3}$, which we will call the trigrid (see Fig.\ref{fig:trifam}). As we've seen in Fig.\ref{fig:Hexagons}, the equilateral triangle tiling is the orthogonal dual of the hexagonal tiling. We, then, can consider the hexagonal tiling to be completely determined by the points of intersection of the trigrid. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{TriangleFamilies}
+\caption{Three families of parallel, equally spaced lines, the trigrid, coloured orange, purple, and blue. The families, superimposed and rotated by $\frac{\pi}{3}$ from each other, give the equilateral triangle tiling.}
+\label{fig:trifam}
+\end{figure}
+
+It is important to note that this is an idealized example for the visualization of tiling duals. We are able to superimpose the hexagonal tiling and the equilateral triangle tiling in a meaningful way. However, from our definition of dual, this is not a requirement. To understand how tilings can be duals, without being superimposable, consider Fig.\ref{fig:hexsmall}. Here we see a hexagonal tile placed at each intersection point of the trigrid. The six rays of the trigrid from each intersection point meet the edges of the hexagon orthogonally. Further, the intersections of the trigrid uniquely determine the configuration of the hexagonal tiles. Observe in Fig.\ref{fig:hexsmall} that each triangle face contains three hexagonal vertices. Since these are dual tilings, those three hexagonal vertices must correspond to the same vertex in a hexagonal tiling. Likewise, notice that each equilateral triangle edge meets two hexagonal tile edges, therefore those two hexagons must abut in a hexagonal tiling.  We see that the trigrid completely determines the hexagonal tiling. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{HexagonDualSmall}
+\caption{A hexagonal tiling is completely determined by the intersections of the trigrid in Fig.\ref{fig:trifam}. We can see how each intersection uniquely describes a hexagonal tile, with the lines orthogonally meeting the edges of the tile. Notice that each triangle face contains three hexagonal vertices, example highlighted in red. By the definition of dual, these vertices must meet at a single vertex in the hexagonal tiling. Likewise, each triangle edge meets with two hexagon edges, an example of this is shown in red. Therefore, these edges must correspond to a single edge of the hexagonal tiling. Thus, the trigrid uniquely determine the configuration of the hexagon tiles.}
+\label{fig:hexsmall}
+\end{figure}
+
+It is useful to construct tilings by their duals in this way if, as above, the duals can be given as intersecting families of lines. Constructing tilings in this way equips us with tools from other fields of mathematics, especially projective and algebraic methods.
+
+\section{Regular Pentagrids}
+Here we will describe a pentagrid, constructed similarly to the trigrid, but with five families of parallel lines. Consider, first, the fifth roots of unity, vectors pointing to the vertices of a regular pentagon (see Fig.\ref{fig:rootsunity}):
+\begin{equation*}
+\vec{\epsilon}_i= e^{\frac{2 \pi \mathrm{i}}{5}} \qquad \qquad i=\{0,1,2,3,4\}\\
+\end{equation*}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{RootsUnity}
+\caption[Fifth Roots of Unity]{The fifth roots of unity. Vectors point to the vertices of a regular pentagon.}
+\label{fig:rootsunity}
+\end{figure}
+
+We will refer to these vectors as \textit{grid vectors}. Now, as with the trigrid, consider five families of equally spaced parallel lines, superimposed and rotated $\frac{2\pi}{5}$. As seen in Fig.\ref{fig:singularpentagrid}, each family corresponds to a grid vector, meeting that grid vector orthogonally. Further, the distance between consecutive lines in a family is $\frac{1}{|\vec{\epsilon}|}$.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{SingularPentagrid}
+\caption[Singular Pentagrid]{Five families of equally spaced parallel lines, superimposed and rotated about the origin by $\frac{2\pi}{5}$. Each family corresponds to one grid vector, meeting it orthogonally. For example, the orange family corresponds to the $\vec{\epsilon}_0$ grid vector. This forms a singular pentagrid, as all families of lines meet at the origin.}
+\label{fig:singularpentagrid}
+\end{figure}
+
+The families of the above grid all intersect at the origin. We consider this grid a \textit{singular pentagrid}. We describe this pentagrid as \textit{singular} because more than two lines intersect at any point. However, as we will see, we are interested only in pentagrids with the property that no more than two grid lines intersect at any point, we call such pentagrids \textit{regular}.
+
+To construct regular pentagrids, we shift a family of grid lines from the origin by a \textit{shift factor}, $\gamma_i \in \mathbb{R}$, in the direction of its corresponding grid vector $\vec{\epsilon}_i$, see Fig.\ref{fig:regularpentagrid}. All points on the grid in such a shifted pentagrid will satisfy the \textit{grid equation}:
+\begin{equation}
+\vec{x}\cdot\vec{\epsilon}+\gamma=k \quad k\in\mathbb{Z}
+\end{equation}
+
+If a line on grid $i$ satisfies the equation
+\begin{equation}
+\vec{x}\cdot\vec{\epsilon}_i+\gamma=k_i \quad k_i\in\mathbb{Z}
+\end{equation}
+then the line has \textit{index} $k_i$.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{RegularPentagrid}
+\caption[Regular Pentagrid]{We shift each family of grid lines by a shift factor,  $\gamma_i$, in the direction if its corresponding grid vector, $\vec{\epsilon}_i$. A shifted pentagrid will be regular if it satisfies de Bruijn's sum condition in Eq.\ref{eq:sumcondition}.}
+\label{fig:regularpentagrid}
+\end{figure}
+
+De Bruijn proved that a pentagrid will be regular if its shift factors satisfy a sum condition:
+\begin{equation}
+\sum_{i=0}^{4}\gamma_i=0
+\label{eq:sumcondition}
+\end{equation}
+
+Recall from our definition of regular that each intersection of such a pentagrid will occur only between two lines. Further, we can see that these intersections only occur at angles of $\frac{\pi}{5}$ or $\frac{2\pi}{5}$, see Fig.\ref{fig:intersections}.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.5\textwidth}
+\centering
+\includegraphics[width=0.6\textwidth]{Intersection1}
+\caption{$\frac{\pi}{5}$}
+\end{subfigure}\hfill
+\begin{subfigure}[b]{0.5\textwidth}
+\centering
+\includegraphics[width=0.5\textwidth]{Intersection2}
+\caption{$\frac{2\pi}{5}$}
+\end{subfigure}
+
+\caption[Two types of grid line intersections]{Intersections of of grid lines in regular pentagrids only occur between two lines. These intersections are either at angles of $\frac{\pi}{5}$ or $\frac{2\pi}{5}$. }
+\label{fig:intersections}
+\end{figure}
+
+
+\section{Regular Pentagrids as Penrose Tiling Duals}
+In his 1981 paper, \textit{Algebraic theory of Penrose's non-periodic tilings of the plane}, de Bruijn described regular pentagrids as orthogonal duals of Penrose tilings \cite{DeBruijn1981}.
+
+Notice, first, that the the edges of the rhombus tiles of the Penrose Rhombs tiling are given by two sets of parallel lines. Further, these rhombus tiles will abut along these edges in a tiling. Therefore, abutting tiles on opposite sides of a given rhombus will also have edges in the direction of these parallel lines. In this way, we can consider \textit{ribbons} of rhombuses, whose shared edges are all perpendicular to a \textit{ribbon line}, see Fig.\ref{fig:rhombribbons}. Since the edges of each rhombus are given by two sets of parallel lines, every rhombus occurs uniquely at the intersection of two ribbons. Further, since each ribbon is given by the ribbon line, we can therefore see that each rhombus is uniquely determined by the intersection of two ribbon lines. Notice that these intersecting lines are also orthogonal to the edges of the rhombus. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{RhombRibbons}
+\caption[Ribbons of Rhombs]{Rhombus edges are given by two sets of parallel lines, and abutting tiles in a Penrose tiling share these edges. We can consider ribbons of tiles whose abutting edges are all parallel to each other. Therefore, the parallel edges of these ribbons are all perpendicular to the same ribbon line. As illustrated, the horizontal edges of the red rhombuses are all perpendicular to the vertical red ribbon line. Further, since each rhombus is given by two sets of parallel lines, each rhombus uniquely occurs at the intersection of two ribbons.}
+\label{fig:rhombribbons}
+\end{figure}
+
+Now we see the correspondence between two intersecting lines and a Penrose Rhomb. Consider again the two types of intersections in a regular pentagrid (Fig.\ref{fig:intersections}). At each intersection, we find two vectors normal to the grid lines, see Fig.\ref{fig:intersectionsnorms}. Note that sign of the normal vector, and the orientation of the line, is chosen prior to rotation of the families. Therefore, the direction of the normal vector is related to which family the intersecting grid lines belong to. The coloured vectors in Fig.\ref{fig:intersectionsnorms} indicate all possible normal directions at a given intersection.
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{\textwidth}
+\begin{subfigure}[b]{0.4\textwidth}
+\centering
+\includegraphics[width=\textwidth]{Intersection1Norms}
+\caption{$\frac{\pi}{5}$ Intersection}
+\end{subfigure}\hfill \Large \raisebox{80px}{$\rightarrow$}\hfil
+\begin{subfigure}[b]{0.5\textwidth}
+\centering
+\includegraphics[width=0.25\textwidth]{ColouredSkinnyRhomb}
+\caption{Thin Rhomb}
+\end{subfigure}
+
+\end{subfigure}
+
+\begin{subfigure}[b]{\textwidth}
+\begin{subfigure}[b]{0.4\textwidth}
+\centering
+\includegraphics[width=\textwidth]{Intersection2Norms}
+\caption{$\frac{2\pi}{5}$ Intersection}
+\end{subfigure}\hfill \Large \raisebox{80px}{$\rightarrow$}\hfil
+\begin{subfigure}[b]{0.5\textwidth}
+\centering
+\includegraphics[width=0.8\textwidth]{ColouredFatRhomb}
+\caption{Thick Rhomb}
+\end{subfigure}
+\end{subfigure}
+\caption[Intersection Normals and their Rhombs]{Normal vectors to grid lines at point of intersection. The normal vectors at an intersection correspond to the edges of a Rhomb, given by the angle between the vectors. The direction of the normal vectors determines the orientation of the intersection, as indicated by the edge colours. }
+\label{fig:intersectionsnorms}
+\end{figure}
+As seen in Fig.\ref{fig:intersectionsnorms}, the possible directions for normal vectors at each intersection uniquely determine a Penrose Rhomb. The specific combination of normal vectors determines the orientation of the Rhomb. In any case, we can now see how we can uniquely correspond Penrose Rhombs to intersections of the grid lines, see Fig.\ref{fig:rhombsintersections}.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.5\textwidth}
+\centering
+\includegraphics[width=0.7\textwidth]{ThinIntersection}
+\caption{Thin Rhomb at $\frac{\pi}{5}$}
+\end{subfigure}\hfill
+\begin{subfigure}[b]{0.5\textwidth}
+\centering
+\includegraphics[width=0.6\textwidth]{ThickIntersection}
+\caption{Thick Rhomb at $\frac{2\pi}{5}$}
+\end{subfigure}
+\caption[Rhombs at their Intersections]{Penrose Rhombs at their corresponding intersections. Notice that the intersection lines are orthogonal to the edges of the Rhombs.}
+\label{fig:rhombsintersections}
+\end{figure}
+
+Here we see how the regular pentagrids can be used to construct Penrose tilings. If we consider a region of the pentagrid, the intersections of the grid lines uniquely determine the type and configuration of Penrose Rhombs, see Fig.\ref{fig:pentagridconstruction}. 
+
+The regular pentagrid is itself a tiling of the plane, where tile faces are given by regions enclosed by the grid lines, edges by grid lines, and vertices by intersections. As a tiling, the regular pentagrid is the orthogonal dual to the Penrose tiling. As seen in Fig.\ref{fig:pentagridconstruction}, the pentagrid dual completely determines the Penrose tiling. Recall from our discussion of the hexagon dual, that it is not a requirement that duals be superimposable (see Fig.\ref{fig:hexsmall}). This is the case with the pentagrid dual. As such, there is no meaningful way to scale the pentagrid and superimpose it over the Penrose tiling. 
+
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{\textwidth}
+\centering
+\includegraphics[width=0.5\textwidth]{PentagridConstruct}
+\caption{A region of the regular pentagrid}
+\end{subfigure}
+
+\begin{subfigure}[b]{\textwidth}
+\centering
+\includegraphics[width=0.7\textwidth]{RhombPlacement}
+\caption{Intersections uniquely correspond to Penrose Rhombs}
+\end{subfigure}
+
+\begin{subfigure}[b]{\textwidth}
+\centering
+\includegraphics[width=0.3\textwidth]{RhombConstructed}
+\caption{As duals, this uniquely determines the Rhomb configuration}
+\end{subfigure}
+\caption[Construction of Penrose Tiling from Pentagrid Dual]{Each intersection of the regular pentagrid corresponds to a unique Penrose Rhomb. The pentagrid is itself a tiling, and is an orthogonal dual to the Penrose Rhombs. As such, all Rhomb vertices inside a pentagrid face must correspond to the same vertex in a Penrose tiling. In this way, the regular uniquely determines the configuration of Penrose Rhombs.}
+\label{fig:pentagridconstruction}
+\end{figure}
+
+Our discussion of the regular pentagrid as a dual began with the introduction of Rhomb ribbons. Recall from Fig.\ref{fig:rhombribbons} that these ribbons are described by ribbon lines perpendicular to the abutting parallel edges. Further, recall that each Rhomb in a tiling is uniquely determined by the intersection of two ribbons, and therefore, the intersection of two ribbon lines. These ribbon lines directly correspond to grid lines of the regular pentagrid. A result of this is that all ribbons must travel in one of only five directions. Therefore, we can consider a whole Penrose tiling as `weaves' of Rhomb ribbons, whose pattern is given by the regular pentagrid. 
+
+The regular pentagrid dual is a very insightful way of interpreting the Penrose tiling. Not only is it a powerful way to algorithmically generate the tilings, it allows us to utilize tools from projective and algebraic geometry to understand the tiling.
+
+\section{Projective Interpretation}
+Consider a tiling of five-dimensional Euclidean space, $\mathbb{E}^5$, by 5-cubes, or five-dimensional hypercubes. The vertices of the hypercubes each belong to a point in an integer lattice, $I_5 \in \mathbb{Z}_5$. Let $\vec{k}=(k_0,\mathellipsis, k_4)$, where each $k_i \in \mathbb{Z}$. Further, consider a shift vector $\vec{\gamma}=(\gamma_0,\mathellipsis, \gamma_4)$, a translation in $\mathbb{E}^5$ whose components satisfy the sum condition in Eq.\ref{eq:sumcondition}. Take this hypercube tiling, and translate each vertex in $I_5$ by the shift vector $\vec{\gamma}$ to define a new tiling, given by $I_5 + \vec{\gamma}$.\\
+We can interpret the pentagrid through projective geometry by considering a plane through this five-dimensional shifted hypercube tiling. If this plane intersects the five-dimensional tiling such that it does not meet any vertices, edges, or 2-faces of the hypercubes, then the projection of the tiling will be a regular pentagrid. Further, we can see how finding such a plane utilizes methods from algebraic geometry. 
+By understanding the construction of Penrose tilings from their regular pentagrid duals we enrich our understanding of their relationship with tilings in higher dimensions.
 
 
 \chapter{Features of the Penrose Tiling}
-
 \section{Mutual Local Derivability of Representations} %DONE
 As we've seen, tilings by Penrose Rhombs can be uniquely defined from tilings by oriented Robinson triangles simply by deleting the triangle bases. This relationship is also reciprocal, by adding a diagonal along the long edge of thick Rhombs and along the short edge of thin Rhombs we will generate the respective Robinson triangle tiling. Tilings with this property are said to be mutually locally derivable.
 
@@ -830,16 +1040,16 @@ We've seen that bounded regions of the Penrose tiling repeat themselves infinite
 
 To visualize the process of superimposing a tiling and translating, see Fig.\ref{fig:translations}. Here we take a star-shaped region of a Penrose tiling, coloured purple, and superimpose a copy of itself, coloured yellow. We then translate the yellow tiling over the purple tiling, sliding it to the right. In Fig.\ref{fig:far} that some finite subregions of the tiling agree with the translated superimposed copy, as demonstrated by the purple tiling being completely obfuscated by the yellow tiling. However, we also see that there are regions which do not agree under translation, mismatching with the superimposed copy. In the figure, this is seen as purple peeking out from below the yellow. Notice that in this example these mismatches occur along ribbons. These structures, called worms, travel along the entire length of the Penrose tiling. Notice that they all travel in only one of five directions, and only intersect each other at angles of $\frac{2\pi}{5}$. In Fig.\ref{fig:close}, we can see how these worms disagree with the superimposed tiling.
 
-\begin{figure}[H]
+\begin{figure}[h]
 \centering
 \begin{subfigure}{0.8\textwidth}
-\includegraphics[width=\textwidth]{TranslateFar}
+\includegraphics[width=\textwidth]{reTranslateFar}
 \caption{A star-shaped region of a Penrose tiling (Purple) with an identical copy of itself superimposed and translated (Yellow). Subregions where the purple tiling is invisible correspond to the regions where the translations identically match each other. Lines, or `worms', where the purple tiling is visible under the yellow tiling occur where the tiling and its translation mismatch. Note that worms travel in one of five directions.}
 \label{fig:far}
 \end{subfigure}
 
 \begin{subfigure}{0.6\textwidth}
-\includegraphics[width=\textwidth]{TranslateClose}
+\includegraphics[width=\textwidth]{reTranslateClose}
 \caption{Closer view of the above overlay and translation. We can see the structure of the worms here, and how they disagree with the overlaying tiling. Notice that the worms only intersect at angles of $\frac{2\pi}{5}$}
 \label{fig:close}
 \end{subfigure}
@@ -849,18 +1059,19 @@ To visualize the process of superimposing a tiling and translating, see Fig.\ref
 
 We can see an examples of a finite worms in Fig.\ref{fig:worm}. Worms can be oriented either upwards or downwards. The mismatching which occurred in Fig.\ref{fig:translations} is the result of upwards oriented worms overlapping downwards oriented worms. 
 
+Worms are composed of either sequences of long and short segments, where the long segment is $\phi$ times as long as the short segment.
 
-\begin{figure}[H]
+\begin{figure}[h]
 \centering
 \begin{subfigure}{\textwidth}
 \centering
-\includegraphics[width=\textwidth]{Worm}
+\includegraphics[width=\textwidth]{reWorm}
 \caption{Upwards oriented worm}
 \end{subfigure}
 
 \begin{subfigure}{\textwidth}
 \centering
-\includegraphics[width=\textwidth]{WormDown}
+\includegraphics[width=\textwidth]{reWormDown}
 \caption{Downwards oriented worm}
 \end{subfigure}
 
@@ -868,18 +1079,16 @@ We can see an examples of a finite worms in Fig.\ref{fig:worm}. Worms can be ori
 \label{fig:worm}
 \end{figure}
 
-Worms are composed of either sequences of long and short segments, where the long segment is $\phi$ times as long as the short segment.
-
-\begin{figure}[H]
+\begin{figure}[h]
 \centering
 \begin{subfigure}[b]{0.4\textwidth}
 \centering
-\includegraphics[width=0.7\textwidth]{WideWorm}
+\includegraphics[width=0.7\textwidth]{reWideWorm}
 \caption{Long segment}
 \end{subfigure}\hfill
 \begin{subfigure}[b]{0.4\textwidth}
 \centering
-\includegraphics[width=0.4\textwidth]{TallWorm}
+\includegraphics[width=0.4\textwidth]{reTallWorm}
 \caption{Short segment}
 \end{subfigure}
 \caption{Worm segments}
@@ -888,29 +1097,29 @@ Worms are composed of either sequences of long and short segments, where the lon
 
 As discussed previously, the Penrose tiling is non-locally constructed. That is, placement of tiles must agree with global placement conditions. As we've seen with the Up-Down method, these global conditions are determined by hierarchies of how tilings compose larger parent tiles. Worms are very apparent communicators of this global agreement information. The placement of tiles continuing the worms in either direction must correspond to valid compositions of hierarchical parent tiles. For an example of how worms can communicate non-local mistakes, see Fig.\ref{fig:wormmistakes}. For detailed descriptions of how worms communicate mistakes over arbitrarily large distances, see David Austin's AMS Feature Column \textit{Penrose Tiles Talk Across Miles} \cite{Austin2007} or Elissa Ross's Master's thesis \textit{Non-Local Growth of Penrose Tilings} \cite{Ross}.
 
-\begin{figure}[H]
+\begin{figure}[h]
 \centering
 \begin{subfigure}{\textwidth}
 \centering
-\includegraphics[width=\textwidth]{ValidWorm0}
+\includegraphics[width=\textwidth]{reValidWorm0}
 \caption{Upwards oriented worm}
 \end{subfigure}
 
 \begin{subfigure}{\textwidth}
 \centering
-\includegraphics[width=\textwidth]{ValidWorm1}
+\includegraphics[width=\textwidth]{reValidWorm1}
 \caption{Valid continuation of an upwards oriented worm}
 \end{subfigure}
 
 \begin{subfigure}{\textwidth}
 \centering
-\includegraphics[width=\textwidth]{ValidWorm2}
+\includegraphics[width=\textwidth]{reValidWorm2}
 \caption{Valid continuation of an upwards oriented worm}
 \end{subfigure}
 
 \begin{subfigure}{\textwidth}
 \centering
-\includegraphics[width=\textwidth]{InvalidWorm}
+\includegraphics[width=\textwidth]{reInvalidWorm}
 \caption{Invalid continuation of an upwards oriented worm. This generates a mistake.}
 \end{subfigure}
 
@@ -920,7 +1129,7 @@ As discussed previously, the Penrose tiling is non-locally constructed. That is,
 \caption{Worm mistake manifests an unfillable gap error at the red dot at the bottom of this subregion. Figure recolored from \cite{Austin2007}.}
 \end{subfigure}
 
-\caption{Continuing worms can non-locally communicate mistakes over arbitrarily large distances.}
+\caption{Worms can communicate mistakes over arbitrarily large distances.}
 \label{fig:wormmistakes}
 \end{figure}
 
@@ -1010,9 +1219,113 @@ As previously stated, tilings of the $\frac{\pi}{5}$-wedge generated by the Up-D
 
 
 \section{Ratio of Prototiles}
-\chapter{Graphical Geodesic Paths}
-\section{Path Generation Rules}
+\chapter{Graphical Geodesics}
+\section{Introduction and Definition}
+In 1990, Drs. Toru Ogawa and Robert Collins published a short paper in \textit{Quasicrystals} of the Springer Series in Solid-State Sciences introducing the concept of graphical geodesics over two-dimensional triangular meshes and applying them to triangulated Penrose tilings \cite{Ogawa1999}. 
+
+To construct graphical geodesics, we consider a triangular mesh. That is, a tiling by triangles whose vertices and edges are shared with their abutting triangles. For each triangle in the mesh, we inscribe another triangle whose vertices are given by the midpoints of the three edges. We will call the edges of these inscribed triangles the \textit{inscribed mesh}, see Fig.\ref{fig:inscribedmesh}.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{InscribedMesh}
+\caption[Inscribed Mesh]{The triangular mesh of the Penrose Rhombs are generated by drawing an edge along the short diagonal of each rhombus. The inscribed mesh is generated by inscribing triangles at the midpoints of the triangles in the triangular mesh. Here the triangular mesh is coloured grey.}
+\label{fig:inscribedmesh}
+\end{figure}
+Now we begin our graphical geodesic by choosing a midpoint and starting direction along one edge of the inscribed mesh. 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{FirstStep}
+\caption[First Step of Geodesic]{Begin a graphical geodesic by choosing a vertex (green) on the inscribed mesh and an initial direction (red).}
+\label{fig:startstep}
+\end{figure}
+Following this edge we arrive at another vertex on the inscribed mesh, remember that these correspond to midpoints of the original triangular mesh. From each vertex of the inscribed mesh there will be four edges, two of which will belong to the previous inscribed triangle, two belonging to the next triangle. Upon arriving at the next vertex in our graphical geodesic we will have two edges to choose from, as we exclude the edges of the previous triangle. Oriented such that the previous triangle is `behind' us, we can describe the remaining edges as either left or right. That is, the right edge will be the first edge counter-clockwise from the previous triangle about the vertex. Similarly the left edge will be the first edge clockwise from the previous triangle about the vertex.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{NextStep}
+\caption[Next Step of Geodesic]{The next step of the geodesic we choose the handedness. From the second vertex (teal) there will be two edges belonging to the next inscribed triangle. The right edge (blue) and the left edge (orange) will uniquely determine two different graphical geodesics.}
+\label{fig:nextstep}
+\end{figure}
+To determine the next edge of our graphical geodesic, we choose either left or right. This choice will completely determine the rest of the graphical geodesic, we call this initial choice the \textit{handedness} of the graphical geodesic. To summarize, to initiate a graphical geodesic, we choose an initial point, an initial direction, and an initial handedness (left or right).
+
+To continue the graphical geodesic, we follow the chosen edge to the next vertex in our inscribed mesh. From here we determine the next turn direction by alternating hands. That is, if we previously turned left, we now turn right. We continue this process of following edges and alternating turn directions. 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{Geodesic}
+\caption[Continued Geodesic]{Once handedness is chosen, subsequent steps alternate between left and right turns. This uniquely determines the rest of the geodesic. From the choice in Fig.\ref{fig:nextstep} we chose right handedness.}
+\label{fig:geocontinued}
+\end{figure}
+The graphical geodesic terminates if we either reach the end of the mesh or begin overlapping the path. The first case will not occur if the mesh is a tiling of the plane, we call such graphical geodesics \textit{open}. Further, it is important to distinguish between overlapping and simply crossing. A graphical geodesic can cross itself, as we will see, and we call such geodesics \textit{self-crossing}. However, since geodesics are completely determined from a point, direction, and handedness, if we arrive at a previous point on our geodesic, with the same incoming direction and handedness, then this continuation process will overlap infinitely. We call such geodesics \textit{self-closing}.
+
+The \textit{length} of a geodesic refers to the number of edges the path travels. In any finite mesh, we can determine the total length of every geodesic in the mesh. 
+
+It is appropriate to borrow the vocabulary `geodesic' here because, as we see, the graphical geodesic is locally straight. However, it can globally meander. In the publication by Ogawa and Collins, they completely characterized all types of graphical geodesics on triangulations of Penrose tiles by the characteristics of their global meandering.
+
 \section{Types of Paths}
+To construct graphical geodesics on a Penrose tiling, we must first construct the triangular mesh. From the Penrose Rhombs, we construct the triangles by drawing an edge along the short edge of each rhombus. 
+
+Once triangulated, we can construct graphical geodesics as described above. The results of Ogawa and Collins is that all graphical geodesics on a triangulated Penrose tiling will be one of the following types based on the characteristics of their global meandering: chains, rings, peanuts, or flowers.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{Chains}
+\caption[Chains]{Chains travel in one of five directions.}
+\end{figure}
+\textbf{Chains} are characterized by their globally straight meandering. Like Rhomb ribbons and worms, chains only travel in one of five directions. However, chains do not run along either ribbons or worms, so it is surprising that they also express this directionality. Further, the distance between two adjacent chains, two parallel chains with no chains between them, can only be one of two widths. The ratio between the large distance and the short distance is $\phi$. One third of the total length of all graphical geodesics in an (arbitrarily large) region of a Penrose tiling are chains. Chains are the only open geodesic on the Penrose tiling.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.4\textwidth}
+\includegraphics[width=\textwidth]{Rings}
+\caption[Rings]{40 and 80 Rings.}
+\end{subfigure}\hfill
+\begin{subfigure}[b]{0.4\textwidth}
+\includegraphics[width=\textwidth]{BobRing}
+\caption[Rings]{60 Ring from \cite{Collins}}
+\end{subfigure}
+\caption[Rings]{Three types of Rings}
+\end{figure}
+\textbf{Rings} are approximately circular, self-closing geodesics. Rings can be only one of three lengths: 40, 60, 80. A 60-ring encloses a configuration of Rhombs with five-fold symmetry about its center. 40- and 80-rings enclose decagons without five-fold symmetries. 42.75\% of the total length of geodesics in a Penrose tiling are rings.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{Peanut}
+\caption[Peanut]{Peanuts are only of length 48.}
+\end{figure}
+\textbf{Peanuts} are self-closing geodesics of length 48. Only 6.50\% of the total length of geodesics in Penrose tilings are rings. 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{FlowerPart}
+\caption[Flower Part]{Part of a Flower}
+\end{figure}
+\textbf{Flowers} are self-closing and self-crossing geodesics. They are five-fold symmetric about their center. There are two types of flowers: stars and pentagons. 17.41\% of total geodesic length in a Penrose tiling are flowers. 
+
+Due to computational complexity and inefficiencies in my path generation code which blows up for larger Penrose tilings, I was unable to search full large enough regions to find either full flowers or 60-rings. Dr. Rob Collins' son, Stephen Collins, has created a more efficient software, which he named Bob after his father. Using this software, the flowers in Fig.\ref{fig:collinsflowers} were found.
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.45\textwidth}
+\includegraphics[width=\textwidth]{Star}
+\caption[Star]{Star}
+\end{subfigure}\hfill
+\begin{subfigure}[b]{0.45\textwidth}
+\includegraphics[width=\textwidth]{Pentagon}
+\caption[Pentagon]{Pentagon}
+\end{subfigure}
+\caption[Rings]{Two types of Flowers, figures by Stephen Collins \cite{Collins}.}
+\label{fig:collinsflowers}
+\end{figure}
+As Stephen Collins software is vastly more efficent than mine, he was able to generate remarkably large star, which illustrates self-similarity of geodesics at different scales, see Fig.\ref{fig:Koch}. Realize that, although this star leaves the region, as a flower it will eventually self-close. 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{Koch}
+\caption[Koch]{Very large star illustrating self-similarity of geodesic. The star path approaches the Koch snowflake. \cite{Collins}}
+\label{fig:Koch}
+\end{figure}
+
+\section{Future Work}
+Future work in this area will be to address efficiency issues in my path generation algorithm. My current method requires inefficient use of database searching to find subsequent vertices. To address efficiency I will utilize the possible arrangements of edges and previously designed algorithms for meshes. 
+
+Further, I will explore alternative triangulation methods. Ogawa and Collins triangulate the Penrose Rhombs by drawing short edges. However, this does not correspond to the triangulation by Robinson triangles. I will explore how triangulation in this way affects the geodesics. Likewise, how tiling by Kites and Darts will affect these geodesics. I suspect these are actually the same question, because of mutual local derivability.
+
+Finally, Ogawa and Collins make significant use of the number of edges, or degree, of each vertex in the triangulation. This was not addressed in this thesis, but there are many discussions of the valid types of vertices in Penrose tilings. I will attempt to illustrate how the degrees of the vertices enclosed by self-closing geodesics affect their shape, as the enclosing degree will determine the meandering curvature of the geodesic. 
 
 \bibliographystyle{unsrt}
 \bibliography{bibliography}    
