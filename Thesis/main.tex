@@ -28,6 +28,7 @@
 \usepackage{subcaption}
 \usepackage{gensymb}
 
+
 \usepackage{amsmath,amsfonts,amsthm,amssymb}
 \usepackage[cal=cm]{mathalfa}
 
@@ -47,10 +48,10 @@
 
 \maketitle
 
-%\include{FrontBackMatter/abstract}
-%%\include{FrontBackMatter/dedication}
-%\include{FrontBackMatter/acknowledgements}
-%\include{FrontBackMatter/declaration}
+\include{FrontBackMatter/abstract}
+\include{FrontBackMatter/dedication}
+\include{FrontBackMatter/acknowledgements}
+\include{FrontBackMatter/declaration}
 \include{FrontBackMatter/contents}
 
 
@@ -113,7 +114,7 @@ For example, consider an infinite black-and-white checkerboard (Fig.\ref{fig:che
 \end{subfigure} 
 \hspace*{\fill}
 \label{fig:checker}
-\caption{A protoset of black and white squares can admit multiple tilings. Some of them may be periodic, but this is not necessary.}
+\caption[Checkerboard Tilings]{A protoset of black and white squares can admit multiple tilings. Some of them may be periodic, but this is not necessary.}
 \end{figure}
 
 \begin{mydef}
@@ -149,7 +150,56 @@ A protoset $\mathcal{P}$ is said to be \textbf{aperiodic} if it admits only non-
 Here, `only' means that no subset of the protoset, nor the entire protoset, can tile periodically. 
 
 
-\section{Kepler's Monsters} %START
+\section{Kepler's Monsters} 
+In 1619, Kepler discovered the third law of planetary motion which he described in his book \textit{Harmonices Mundi} (The Harmonies of the World) \cite{Kepler1997}. While patterns of plane tilings have been known to the ancients, featured widely in art and architecture, it was in Harmonices Mundi where Kepler first provided a mathematical framework with which to discuss these tiling patterns. Primarily, he shows that only 3 polygons are able to regularly tile the plane in singular protosets (Fig. \ref{fig:regular}). That is, using protosets containing only one element, only protosets of equilateral triangles, squares, and hexagons admit plane tilings. 
+
+\begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{triangle}
+                \caption{Tiling by triangles}
+                \label{fig:triangle}
+        \end{subfigure}\hfill%
+        ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+        \begin{subfigure}[b]{0.35\textwidth}
+                \includegraphics[width=\textwidth]{square}
+                \caption{Tiling by squares}
+                \label{fig:square}
+        \end{subfigure}\hfill
+        ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{hexagon}
+                \caption{Tiling by hexagons}
+                \label{fig:hexagon}
+        \end{subfigure}
+        \caption[Regular Polygon Tilings]{Regular tiling of the plane using single polygon protosets}\label{fig:regular}
+\end{figure}
+
+As we will see, while polygons of 3-, 4-, and 6-fold symmetries, as above, admit plane tilings, 5-fold symmetry is special. In experimenting with plane tilings by regular polygons, Kepler attempted to build tilings from polygons with fivefold symmetry. Pentagons alone will not tile the plane, as the gap between two abutting pentagons will not accommodate another. So, Kepler experimented with packing irregular polygons, see Fig.\ref{fig:Experiments}. One such pattern, Aa, can be continued as a plane tiling, Fig.\ref{fig:tilingmonsters}. However, the Aa pattern made use of pentagons, pentagrams, decagons, and another polygon formed by `fusing' two decagons. Kepler called such fused decagons monsters. 
+
+As we will see in the discovery of aperiodic tilings, five is a troublesome notion in plane tilings, whether pentagon tiles or global five-fold symmetry. However, unlike Kepler's monsters, we will see that such tilings do not damage the theory of plane tilings, but deeply enrich it.
+
+\begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.9\textwidth}
+                \includegraphics[width=\textwidth]{KeplersExperiments}
+                \caption{Kepler's Experiments with Polygon Packing. \cite{Senechal1996}}
+                \label{fig:Experiments}
+        \end{subfigure}
+        
+        ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+        \begin{subfigure}[b]{0.9\textwidth}
+                \includegraphics[width=\textwidth]{Monsters}
+                \caption{The Aa pattern from above can be continued to tile the plane. However, to do so, Kepler employed `fused' decagons, which he called monsters. We can see that these monsters result from filling the gaps in a regular pentagon tiling. \cite{CraigKaplan}}
+                \label{fig:tilingmonsters}
+        \end{subfigure}\hfill
+         \caption[Kepler's Experiments with Monsters]{Kepler's experiments with polygon packing produced a tiling of the plane by pentagons, pentagrams, decagons, and fused decagons, which Kepler called monsters.}
+         \label{fig:Monsters}
+\end{figure}
+
 \section{Discovering Aperiodic Tessellations} %DONE
 Studied in the mid-1900's was a class of tilings produced by spiraling deformed isosceles triangles about a central point. A method discovered by Micheal Goldberg in 1955 generates these spiral tilings readily. Further, due to their spiraling arrangement, these tilings admit no translational symmetries, so non-periodic. However, these spiral tilings are admitted by protosets which also admits periodic tilings. In fact, all other non-periodic tilings known at the time, also notably Golomb's `reptiles', were formed from protosets which also admit periodic tilings.
 
@@ -160,7 +210,7 @@ Studied in the mid-1900's was a class of tilings produced by spiraling deformed 
 \begin{subfigure}{0.4\textwidth}
 \includegraphics[width=\textwidth]{monohedral-trans}
 \end{subfigure}
-\caption{Spiral tilings are non-periodic, but their protosets also admit periodic tilings \cite{Austin2007}.}
+\caption[Spiral Protosets also admit Periodic Tilings]{Spiral tilings are non-periodic, but their protosets also admit periodic tilings \cite{Austin2007}.}
 \end{figure}
 
 It was conjectured that no protosets existed which allow only non-periodic tiling. That is, that no aperiodic protosets were possible. This was proved untrue when, in 1961, Hao Wang began writing on protosets composed of unit squares with coloured edges, called Wang dominoes. The matching rules for these dominoes require adjacent dominoes to share the same colour on their abutting edge, with rotation and reflection of the prototiles not allowed. Wang was concerned with questions in logic, specifically investigating algorithmic procedures for deciding whether any arbitrary set of dominoes would admit a plane tiling, called decision procedures. Wang posed a conjecture that any protoset which can admit a plane tiling will also admit a periodic tiling, and Wang showed that if this is true then there must also be an algorithmic procedure for deciding whether such a set will tile. 
@@ -207,7 +257,7 @@ The edge-matching rules of the Penrose rhombs have been illustrated with blue an
 \caption{Matching rules require blue and orange curves to meet along adjacent edges. Clearly, this tiling does not satisfy these matching rules.}
 \label{fig:RhombsPeriodicRules}
 \end{subfigure}
-\caption{Periodic tiling using Penrose rhombs is only possible in the absence of edge-matching rules.}
+\caption[Rhomb Matching Rules Forcing Aperiodicity]{Periodic tiling using Penrose rhombs is only possible in the absence of edge-matching rules.}
 
 \end{figure}
 
@@ -250,7 +300,7 @@ The edge-matching rules of the Penrose rhombs have been illustrated with blue an
                 \caption*{ \centering Penrose Rhombs from Robinson triangles. Blue and Orange curves illustrate matching rules.}
                 \label{fig:JustRhombs}     
         \end{subfigure}
-        \caption{Penrose Rhombs are generated by reflecting the Robinson triangles across their bases. The Rhombs with an edge-matching criterion, illustrated by the blue and orange curves, form an aperiodic protoset.}
+        \caption[Robinson Triangles and Penrose Rhombs]{Penrose Rhombs are generated by reflecting the Robinson triangles across their bases. The Rhombs with an edge-matching criterion, illustrated by the blue and orange curves, form an aperiodic protoset.}
         \label{fig:Rhombs}
 \end{figure}
 
@@ -280,7 +330,7 @@ For example, consider the arrangement of tiles in Fig.\ref{fig:mistake}. As we c
 \caption{The manifestation of this mistake, the error, is this gap no valid arrangement could fill.}
 \label{fig:error}
 \end{subfigure}
-\caption{A simple mistake results in an error which cannot be continued to produce a valid tiling of the whole plane.}
+\caption[A Simple Mistake]{A simple mistake results in an error which cannot be continued to produce a valid tiling of the whole plane.}
 \label{fig:mistakes}
 \end{figure}
 
@@ -323,7 +373,7 @@ To clearly understand the substitution rules on the rhombs, we will first demons
         \caption{Substitution rule for Thick Robinson triangle}
         \label{fig:RobSubThin}
         \end{subfigure}
-        \caption{Substitution rules demonstrated on Robinson triangles. The substitution fragments each Robinson triangle into Robinson sub-triangles. The vertices of these sub-triangles are given such that the edges of the substituted triangle are divided according to the Golden ratio. The ratios of these divided edges are labeled accordingly. Note that these substitutions produce valid arrangements as per the edge-matching rules, illustrated by the orange and blue curves.}
+        \caption[Robinson Triangles Deflation]{Substitution rules demonstrated on Robinson triangles. The substitution fragments each Robinson triangle into Robinson sub-triangles. The vertices of these sub-triangles are given such that the edges of the substituted triangle are divided according to the Golden ratio. The ratios of these divided edges are labeled accordingly. Note that these substitutions produce valid arrangements as per the edge-matching rules, illustrated by the orange and blue curves.}
         \label{fig:RobSubs}
 \end{figure}
 
@@ -358,10 +408,10 @@ Recall that these Robinson triangles generate Penrose Rhombs by reflection acros
                 \includegraphics[scale=0.4]{RhombSkinnySub}
         \end{subfigure}   
         \caption{Deflation rule for Thin Penrose Rhomb}
-        \label{fig:RobSubThin}
+        \label{fig:RhombSubThin}
         \end{subfigure}
-        \caption{Deflation rules of the Penrose Rhombs. Pre-substituted rhomb is illustrated with dashed black lines. Note that these substitutions produce valid arrangements as per the edge-matching rules, illustrated by the orange and blue curves.}
-        \label{fig:RobSubs}
+        \caption[Penrose Rhombs Deflation]{Deflation rules of the Penrose Rhombs. Pre-substituted rhomb is illustrated with dashed black lines. Note that these substitutions produce valid arrangements as per the edge-matching rules, illustrated by the orange and blue curves.}
+        \label{fig:RhombSubs}
 \end{figure}
 
 This substitution process can be used to generate arbitrarily large Penrose tilings through a complementary process, called \textbf{inflation}. Following a series of deflation substitutions, the generated tiling is then `inflated' such that the deflated rhombuses are scaled to the same size as the original, pre-deflated rhombuses. Notice that a single application of the deflation rule scales the composite rhombi by a factor of $\frac{1}{\phi}$. This means that, after $n$ iterations of the deflation process, the resulting rhombs can be scaled, or inflated, by a factor of $\phi^n$ to return them to the original rhombus size. We can see in Figures \ref{fig:ThickDeflate} and \ref{fig:ThinDeflate} that iterations of the deflation process produce increasingly complex patterns. 
@@ -394,7 +444,7 @@ This substitution process can be used to generate arbitrarily large Penrose tili
              \includegraphics[scale=0.4]{FatInflation5}
              \end{subfigure}   \\
 \end{tabular}
-\caption{Five successive iterations of the deflation process applied to the Thick Rhombus.}
+\caption[Successive of Deflations on Thick Rhomb]{Five successive iterations of the deflation process applied to the Thick Rhombus.}
 \label{fig:ThickDeflate}
 	\end{figure}
 
@@ -426,7 +476,7 @@ This substitution process can be used to generate arbitrarily large Penrose tili
              \includegraphics[scale=0.4]{SkinnyInflation5}
              \end{subfigure}   \\
 \end{tabular}
-\caption{Five successive iterations of the deflation process applied to the Thin Rhombus.}
+\caption[Successive Deflations on Thin Rhomb]{Five successive iterations of the deflation process applied to the Thin Rhombus.}
 \label{fig:ThinDeflate}
 	\end{figure}
 	
@@ -457,13 +507,13 @@ $\therefore$ by Extension Theorem, the Penrose Rhombs admit tilings of the plane
 
 \chapter{Up-Down Construction} %DONE
 
-In his 1990 paper \textit{Updown generation of Penrose patterns}, de Bruijn describes a construction method attributed to Conway by which tilings are generated by infinite sequences of steps along a directed graph. The Up-Down generation process borrows some concepts from the substitution method, namely that we build tilings by substituting tiles with constituent decomposition tiles, as per substitution rules. The key difference, however, is that we build a tiling instead by considering the relationship between a constituent tile and its inflation. As the name suggests, Up-Down generation constructs tilings through two processes: Up and Down.
+In his 1990 paper \textit{Updown generation of Penrose patterns}, de Bruijn describes a construction method attributed to Conway by which tilings are generated by infinite sequences of steps along a directed graph \cite{DeBruijn1990}. The Up-Down generation process borrows some concepts from the substitution method, namely that we build tilings by \textbf{decomposing} tiles with constituent tiles, as per substitution rules. The key difference, however, is that we build a tiling instead by considering the relationship between a constituent tile and its inflation, that is, how constituent tiles \textbf{compose} parent tiles. As the name suggests, Up-Down generation constructs tilings through two processes: composition and decomposition or Up and Down.
 
 In introducing this construction method, we must consider again the Robinson triangles. As with the substitution method, decomposition of these triangles is dependent on their orientation. Unlike substitution, the influence of triangle orientation under the Up-Down method is subtle and not automatic. Moving forward, we must be explicit with the triangle orientation, see Fig.\ref{fig:OrientedRob}. Further, recall from the substitution method that oriented Robinson triangles, arranged according to those matching rules, will determine a Penrose tiling of the plane by Penrose Rhombs. Robinson triangles can be transformed into Penrose Rhombs by reflection about their base, see Fig.\ref{fig:Rhombs}. As such, while the Up-Down method describes the process to construct a tiling of the plane by the oriented Robinson triangles of Fig.\ref{fig:OrientedRob}, we are also indirectly constructing a Penrose tiling by Rhombs. The relationship between these representations will be discussed in greater detail later, with the discussion of mutual local derivability. 
 
  
 
-\begin{figure}[h]
+\begin{figure}[H]
         \begin{subfigure}[t]{0.4\textwidth}
                 \includegraphics[width=\textwidth]{TFRob}
                 \caption*{\Large T}
@@ -481,7 +531,7 @@ In introducing this construction method, we must consider again the Robinson tri
                 \includegraphics[width=\textwidth]{T'SRob}
                 \caption*{\Large t'}
         \end{subfigure}  
-        \caption{Oriented Robinson triangles. Thick or Obtuse Robinson Triangle is denoted with T. Thin or acute Robinson triangle is denoted with t. Reversed orientation is denoted with '. Arrowed edges illustrate Up-Down matching rules.}  
+        \caption[Oriented Robinson Triangles]{Oriented Robinson triangles. Thick or Obtuse Robinson Triangle is denoted with T. Thin or acute Robinson triangle is denoted with t. Reversed orientation is denoted with '. Arrowed edges illustrate Up-Down matching rules.}  
         \label{fig:OrientedRob}                    
 \end{figure}
 
@@ -515,15 +565,15 @@ The matching rules under the substitution method behave slightly differently tha
         \begin{subfigure}[t]{0.4\textwidth}
                 \includegraphics[width=\textwidth]{a4inflate}
         \end{subfigure}\\   
-        \caption{Parent edges (Left) and their constituent edges (Right)}     
+        \caption[Edge Composition Rules]{Parent edges (Left) and their constituent edges (Right)}     
         \label{fig:EdgeRules}
 \end{figure} 
 
 
 \pagebreak
-Consider again the substitution rules on the Robinson triangles described in Fig.\ref{fig:RobSubs}. This substitution is also employed in the Up-Down method. However, in this case we will label the constituent triangles of the substitution. We do this so we can explicitly describe the relationship between a constituent triangle and its parent triangle. We label this relationship using mapping functions, given by lowercase Greek letters: $\alpha, \beta, \delta, \gamma$. We see the oriented Robinson triangles, substituted with relationship labels, in Fig.\ref{fig:OrientedSub}.
+Consider again the substitution rules on the Robinson triangles described in Fig.\ref{fig:RobSubs}. This substitution is also employed in the Up-Down method. However, in this case we will label the constituent triangles of the substitution. We do this so we can explicitly describe how a constituent triangle composes a parent triangle. We label this composition relationship using mapping functions, given by lowercase Greek letters: $\alpha, \beta, \delta, \gamma$. We see the oriented Robinson triangles, substituted with relationship labels, in Fig.\ref{fig:OrientedSub}.
 
-These relationship labels can be considered as mappings from a constituent triangle to its parent triangle. These mappings are as follows:
+Composition relationships can be considered as mappings from a constituent triangle to its parent triangle. These composition mappings are as follows:
 \begin{align}
 \epsilon &: T \rightarrow T  &\epsilon' &: T' \rightarrow T' \nonumber\\  
 \alpha &: T \rightarrow t  &\alpha' &: T' \rightarrow t' \nonumber\\  
@@ -531,7 +581,7 @@ These relationship labels can be considered as mappings from a constituent trian
 \delta &: t' \rightarrow T  &\delta' &: t \rightarrow T' \nonumber\\ 
 \gamma &: T' \rightarrow T  &\gamma' &: T \rightarrow T' \nonumber
 \end{align}
-Again, these mappings are also labeled in Fig.\ref{fig:OrientedSub}. For an example of how to interpret this mapping, consider the mapping $\delta$ which maps constituent \textbf{t'} to parent \textbf{T}. This tells us that following relationship $\delta$, the yellow \textbf{t'} triangle will be located inside the pink \textbf{T} parent.
+Again, composition mappings are also labeled in Fig.\ref{fig:OrientedSub}. For an example of how to interpret a composition mapping, consider the mapping $\delta$ which maps constituent \textbf{t'} to parent \textbf{T}. This tells us that under composition by $\delta$, a yellow \textbf{t'} triangle will be compose a \textbf{T} parent.
 
 
 
@@ -549,7 +599,7 @@ Again, these mappings are also labeled in Fig.\ref{fig:OrientedSub}. For an exam
         \begin{subfigure}[t]{0.35\textwidth}
                 \includegraphics[width=\textwidth]{TS'}
         \end{subfigure}   
-        \caption{Oriented Robinson triangles with their constituent triangles. The relationship mappings between a constituent and parent triangles are given by lowercase Greek letters. For example, constituent triangle \textbf{T'} is related to parent triangle \textbf{T} under the mapping $\gamma$. The original edges of the parent triangles are also shown in grey. The relationship between the constituent and parent edges is shown in Fig.\ref{fig:EdgeRules}.}
+        \caption[Robinson Triangle Composition]{Oriented Robinson triangles with their constituent triangles. The relationship mappings between a constituent and parent triangles are given by lowercase Greek letters. For example, constituent triangle \textbf{T'} is related to parent triangle \textbf{T} under the mapping $\gamma$. The original edges of the parent triangles are also shown in grey. The relationship between the constituent and parent edges is shown in Fig.\ref{fig:EdgeRules}.}
         \label{fig:OrientedSub}                     
 \end{figure}
 
@@ -571,24 +621,26 @@ We can alternatively visualize the mappings in Equations (\ref{eq:maps}) as dire
         \begin{subfigure}[t]{0.4\textwidth}
                 \includegraphics[width=\textwidth]{tslgraph}
         \end{subfigure}  
-        \caption{Relationship mapping from constituent triangles to parent triangles given by Equations (\ref{eq:maps})} 
+        \caption[Composition Mappings]{Relationship mapping from constituent triangles to parent triangles given by Equations (\ref{eq:maps})} 
         \label{fig:functionmap}                    
 \end{figure}
 
-We are now ready to introduce the Up process. Realizing that mappings from Equations (\ref{eq:maps}) will place constituent triangles inside parent triangles, we see that each application of a mapping will generate a larger finite region of the tiling. Think of this process as the opposite of substitution, we are starting from a constituent and generating a substituted parent triangle. Just as substitution generated a finite section of a tiling, by mapping a constituent to a substituted parent triangle we have similarly generated a finite section.
+We are now ready to introduce the Up process. Realizing that composition mappings from Equations (\ref{eq:maps}) will place constituent triangles inside parent triangles, we see that each application of a mapping will generate a larger finite region of the tiling. Think of this process as the opposite of substitution, we are starting from a constituent and composing a  parent triangle. Just as substitution generated a finite section of a tiling, by mapping a constituent to a parent triangle we have similarly generated a finite section.
 
 Further, just as with the substitution method, the end result of each mapping is an oriented Robinson triangle. That is, the image of every mapping will be the domain of other mappings. This allows us to form compositions of the mappings, from the image of one to the domain of another. To illustrate how these mappings can be composed from another, we have a cyclic directed graph in Fig.\ref{fig:UpDownGraph}.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{UpDownGraph}
-\caption{A directed graph, or finite automaton, for the generation of parent triangles from constituent triangles. Paths along the directed edges represent compositions of the mappings from Equations (\ref{eq:maps}). Infinite paths along the directed edges may generate Penrose tilings of the plane.}
+\caption[Directed Graph of Composition Mappings]{A directed graph, or finite automaton, for the generation of parent triangles from constituent triangles. Paths along the directed edges represent compositions of the mappings from Equations (\ref{eq:maps}). Infinite paths along the directed edges may generate Penrose tilings of the plane.}
 \label{fig:UpDownGraph}
 \end{figure}
 
-Paths along this directed graph represent compositions of the mappings. This is what is involved under the Up process, defining a sequence of the mappings. A finite sequence of mappings will directly correspond to a finite subregion of a Penrose tiling. The generation of the tiling region from the sequence of mappings is the Down process. Think of the Up process as producing a tiling instruction manual, and the Down process as following these instructions to produce a tiling. 
+Paths along this directed graph represent compositions of the mappings. This is what is involved under the Up process, defining a sequence of the mappings. A finite sequence of mappings will directly correspond to a finite subregion of a Penrose tiling. Each sequential application of a mapping will describe a larger region of the tiling, and how the previous region composes into it. We can think of this process as hierarchically defining larger and larger regions by each sequential mapping.
 
-The Down process can describe a tiling region from the Up sequence because the mappings explicitly describe the relationship among substitution triangles. Even though each mapping only directly describes the relationship between a constituent triangle and its parent, we have also determined the placement of the other constituent oriented Robinson triangles of that parent. Further, the substitution rules from Fig.\ref{fig:OrientedRob} explicitly described the substitutions of the other constituent triangles. With this in mind, we can see how the Down process generates tiling regions from the Up process instructions. Essentially, the sequence of mappings from the Up process describes a sequence of substitutions, the Down process preforms these substitutions.
+The generation of the tiling region from the sequence of mappings is the Down process. Think of the Up process as producing a tiling instruction manual, and the Down process as following these instructions to produce a tiling. 
+
+The Down process can describe a tiling region from the Up sequence because the mappings explicitly describe the relationship among decomposed triangles. Even though each mapping only directly describes the relationship between a constituent triangle and its parent, we have also uniquely determined the placement of the other constituent oriented Robinson triangles composing the parent. Further, the substitution rules from Fig.\ref{fig:OrientedRob} explicitly described the substitutions of the other constituent triangles. With this in mind, we can see how the Down process generates tiling regions from the Up process instructions. Essentially, the sequence of composition mappings from the Up process describes a sequence of decompositions, the Down process preforms these decompositions.
 
 For an example of a finite sequence of the Up-Down process, consider the Up sequence from the graph path $\delta'\gamma\epsilon$ which defines the composition $\epsilon \circ \gamma \circ \delta'$. From the graph in Fig.\ref{fig:UpDownGraph} we can see that this Up sequence takes a \textbf{t} triangle and eventually embeds it into a \textbf{T} triangle. The Down process, given by this composition, then, will substitute that \textbf{T} triangle according to the composition sequence. This substitution ends once we've generated the initial \textbf{t} triangle. 
 
@@ -606,7 +658,7 @@ For an example of a finite sequence of the Up-Down process, consider the Up sequ
 \raisebox{0px}{\includegraphics[width=0.3\textwidth]{Up1Left}} &\raisebox{30px}{\Large \textcolor{gray}{$ \rightarrow$}}& \includegraphics[width=0.6\textwidth]{Down1}\\
 \end{tabular}
 \end{center}
-\captionof{figure}{A finite region generated by the Up-Down process. The Up sequence $\delta'\gamma\epsilon$ describes the mapping composition $\epsilon \circ \gamma \circ \delta'$. The Up process maps a \textbf{t} triangle to a \textbf{T} triangle. The Down process applies those substitutions on a \textbf{T} triangle to generate the initial \textbf{t} triangle.}
+\captionof{figure}[Up-Down Region Generation]{A finite region generated by the Up-Down process. The Up sequence $\delta'\gamma\epsilon$ describes the mapping composition $\epsilon \circ \gamma \circ \delta'$. The Up process maps a \textbf{t} triangle to a \textbf{T} triangle. The Down process applies those substitutions on a \textbf{T} triangle to generate the initial \textbf{t} triangle.}
 
 \end{table}
 
@@ -616,7 +668,7 @@ Infinite sequences of the Up-Down process, corresponding to infinite paths along
 \begin{figure}
 \centering
 \includegraphics[width=0.5\textwidth]{WedgeWheel}
-\caption{Reflection along sides of thin Robinson triangles produces valid arrangement of triangles under the edge matching rules. Demonstrated for finite triangles, this is also true for infinite  $\frac{\pi}{5}$-plane wedges. As such,  $\frac{\pi}{5}$-plane wedges can be extended to tilings of the entire plane under side reflection. Planes tiled in this way will exhibit fivefold rotational symmetry about the wedge point.}
+\caption[Reflection along $\frac{\pi}{5}$-plane Wedge Edges]{Reflection along sides of thin Robinson triangles produces valid arrangement of triangles under the edge matching rules. Demonstrated for finite triangles, this is also true for infinite  $\frac{\pi}{5}$-plane wedges. As such,  $\frac{\pi}{5}$-plane wedges can be extended to tilings of the entire plane under side reflection. Planes tiled in this way will exhibit fivefold rotational symmetry about the wedge point.}
 \label{fig:WedgeWheel}
 \end{figure}
 
@@ -758,7 +810,7 @@ For example, consider the hexagonal tiling and its orthogonal dual tiling in Fig
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{HexagonDuals}
-\caption{A hexagonal tiling, $\mathcal{T}$, has a dual tiling, $\mathcal{T}'$, of equilateral triangles (purple). As defined, there is a one-to-one correspondence between the hexagonal faces of $\mathcal{T}$ and the vertices (blue) of $\mathcal{T}'$. Likewise, there is a one-to-one correspondence between the triangular faces of $\mathcal{T}'$ and the vertices (red) of $\mathcal{T}$. Further, these tilings are orthogonal duals, so each edge of $\mathcal{T}$ (black) is in one-to-one correspondence and orthogonal to an edge of $\mathcal{T}'$ (purple).}
+\caption[Hexagonal Tiling Dual]{A hexagonal tiling, $\mathcal{T}$, has a dual tiling, $\mathcal{T}'$, of equilateral triangles (purple). As defined, there is a one-to-one correspondence between the hexagonal faces of $\mathcal{T}$ and the vertices (blue) of $\mathcal{T}'$. Likewise, there is a one-to-one correspondence between the triangular faces of $\mathcal{T}'$ and the vertices (red) of $\mathcal{T}$. Further, these tilings are orthogonal duals, so each edge of $\mathcal{T}$ (black) is in one-to-one correspondence and orthogonal to an edge of $\mathcal{T}'$ (purple).}
 \label{fig:Hexagons}
 \end{figure}
 
@@ -767,7 +819,7 @@ Consider that the equilateral triangle tiling is given by three families of equa
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\textwidth]{TriangleFamilies}
-\caption{Three families of parallel, equally spaced lines, the trigrid, coloured orange, purple, and blue. The families, superimposed and rotated by $\frac{\pi}{3}$ from each other, give the equilateral triangle tiling.}
+\caption[Trigrid]{Three families of parallel, equally spaced lines, the trigrid, coloured orange, purple, and blue. The families, superimposed and rotated by $\frac{\pi}{3}$ from each other, give the equilateral triangle tiling.}
 \label{fig:trifam}
 \end{figure}
 
@@ -776,7 +828,7 @@ It is important to note that this is an idealized example for the visualization 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.6\textwidth]{HexagonDualSmall}
-\caption{A hexagonal tiling is completely determined by the intersections of the trigrid in Fig.\ref{fig:trifam}. We can see how each intersection uniquely describes a hexagonal tile, with the lines orthogonally meeting the edges of the tile. Notice that each triangle face contains three hexagonal vertices, example highlighted in red. By the definition of dual, these vertices must meet at a single vertex in the hexagonal tiling. Likewise, each triangle edge meets with two hexagon edges, an example of this is shown in red. Therefore, these edges must correspond to a single edge of the hexagonal tiling. Thus, the trigrid uniquely determine the configuration of the hexagon tiles.}
+\caption[Hexagons Defined by Trigrid Intersections]{A hexagonal tiling is completely determined by the intersections of the trigrid in Fig.\ref{fig:trifam}. We can see how each intersection uniquely describes a hexagonal tile, with the lines orthogonally meeting the edges of the tile. Notice that each triangle face contains three hexagonal vertices, example highlighted in red. By the definition of dual, these vertices must meet at a single vertex in the hexagonal tiling. Likewise, each triangle edge meets with two hexagon edges, an example of this is shown in red. Therefore, these edges must correspond to a single edge of the hexagonal tiling. Thus, the trigrid uniquely determine the configuration of the hexagon tiles.}
 \label{fig:hexsmall}
 \end{figure}
 
@@ -934,7 +986,7 @@ The regular pentagrid is itself a tiling of the plane, where tile faces are give
 \includegraphics[width=0.3\textwidth]{RhombConstructed}
 \caption{As duals, this uniquely determines the Rhomb configuration}
 \end{subfigure}
-\caption[Construction of Penrose Tiling from Pentagrid Dual]{Each intersection of the regular pentagrid corresponds to a unique Penrose Rhomb. The pentagrid is itself a tiling, and is an orthogonal dual to the Penrose Rhombs. As such, all Rhomb vertices inside a pentagrid face must correspond to the same vertex in a Penrose tiling. In this way, the regular uniquely determines the configuration of Penrose Rhombs.}
+\caption[Construction of Penrose Tiling from Pentagrids]{Each intersection of the regular pentagrid corresponds to a unique Penrose Rhomb. The pentagrid is itself a tiling, and is an orthogonal dual to the Penrose Rhombs. As such, all Rhomb vertices inside a pentagrid face must correspond to the same vertex in a Penrose tiling. In this way, the regular uniquely determines the configuration of Penrose Rhombs.}
 \label{fig:pentagridconstruction}
 \end{figure}
 
@@ -969,6 +1021,7 @@ In the introduction we described another famous representation of Penrose's tili
 \includegraphics[width=\textwidth]{dart}
 \caption{A Dart}
 \end{subfigure}
+\caption{Kite and Dart Prototiles}
 \label{fig:kitedart}
 \end{figure}
 
@@ -986,7 +1039,7 @@ Consider the local rules illustrated in Fig.\ref{fig:kitedartrules}. To derive K
 \includegraphics[width=\textwidth]{ThickKiteRule}
 \caption{Local Rule for Thick Rhomb}
 \end{subfigure}
-\caption{By drawing these red edges, we can mutually locally derive Kites and Darts tilings from Rhombs tilings.}
+\caption[Mutually Deriving Representations]{By drawing these red edges, we can mutually locally derive Kites and Darts tilings from Rhombs tilings.}
 \label{fig:kitedartrules}
 \end{figure}
 
@@ -995,7 +1048,7 @@ Applying these local rules to a Penrose tiling by Rhombs will derive the a Kites
 \begin{figure}
 \centering
 \includegraphics[width=0.7\textwidth]{KiteRules}
-\caption{Kites and Darts tiling (red) mutually locally derived from Rhombs tiling (grey). Kites and Darts are derived according to local rules in Fig.\ref{fig:kitedartrules}. Conversely, we see that Kites can derive one thin Rhomb, and halves of two thick Rhombs. While Darts also allow us to derive two halves of thick Rhombs. We see this since each Kite and Dart is composed of the same arrangements of Rhombs.}
+\caption[Kites and Darts from Rhombs]{Kites and Darts tiling (red) mutually locally derived from Rhombs tiling (grey). Kites and Darts are derived according to local rules in Fig.\ref{fig:kitedartrules}. Conversely, we see that Kites can derive one thin Rhomb, and halves of two thick Rhombs. While Darts also allow us to derive two halves of thick Rhombs. We see this since each Kite and Dart is composed of the same arrangements of Rhombs.}
 \label{fig:KiteRules}
 \end{figure}
 
@@ -1040,7 +1093,7 @@ We've seen that bounded regions of the Penrose tiling repeat themselves infinite
 
 To visualize the process of superimposing a tiling and translating, see Fig.\ref{fig:translations}. Here we take a star-shaped region of a Penrose tiling, coloured purple, and superimpose a copy of itself, coloured yellow. We then translate the yellow tiling over the purple tiling, sliding it to the right. In Fig.\ref{fig:far} that some finite subregions of the tiling agree with the translated superimposed copy, as demonstrated by the purple tiling being completely obfuscated by the yellow tiling. However, we also see that there are regions which do not agree under translation, mismatching with the superimposed copy. In the figure, this is seen as purple peeking out from below the yellow. Notice that in this example these mismatches occur along ribbons. These structures, called worms, travel along the entire length of the Penrose tiling. Notice that they all travel in only one of five directions, and only intersect each other at angles of $\frac{2\pi}{5}$. In Fig.\ref{fig:close}, we can see how these worms disagree with the superimposed tiling.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \begin{subfigure}{0.8\textwidth}
 \includegraphics[width=\textwidth]{reTranslateFar}
@@ -1053,7 +1106,7 @@ To visualize the process of superimposing a tiling and translating, see Fig.\ref
 \caption{Closer view of the above overlay and translation. We can see the structure of the worms here, and how they disagree with the overlaying tiling. Notice that the worms only intersect at angles of $\frac{2\pi}{5}$}
 \label{fig:close}
 \end{subfigure}
-\caption{Superimposed and translated Penrose tiling illustrating mismatching of patterns along worms.}
+\caption[Translated Tilings Mismatch on Worms]{Superimposed and translated Penrose tiling illustrating mismatching of patterns along worms.}
 \label{fig:translations}
 \end{figure}
 
@@ -1061,7 +1114,7 @@ We can see an examples of a finite worms in Fig.\ref{fig:worm}. Worms can be ori
 
 Worms are composed of either sequences of long and short segments, where the long segment is $\phi$ times as long as the short segment.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \begin{subfigure}{\textwidth}
 \centering
@@ -1079,7 +1132,7 @@ Worms are composed of either sequences of long and short segments, where the lon
 \label{fig:worm}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \begin{subfigure}[b]{0.4\textwidth}
 \centering
@@ -1097,7 +1150,7 @@ Worms are composed of either sequences of long and short segments, where the lon
 
 As discussed previously, the Penrose tiling is non-locally constructed. That is, placement of tiles must agree with global placement conditions. As we've seen with the Up-Down method, these global conditions are determined by hierarchies of how tilings compose larger parent tiles. Worms are very apparent communicators of this global agreement information. The placement of tiles continuing the worms in either direction must correspond to valid compositions of hierarchical parent tiles. For an example of how worms can communicate non-local mistakes, see Fig.\ref{fig:wormmistakes}. For detailed descriptions of how worms communicate mistakes over arbitrarily large distances, see David Austin's AMS Feature Column \textit{Penrose Tiles Talk Across Miles} \cite{Austin2007} or Elissa Ross's Master's thesis \textit{Non-Local Growth of Penrose Tilings} \cite{Ross}.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \begin{subfigure}{\textwidth}
 \centering
@@ -1129,7 +1182,7 @@ As discussed previously, the Penrose tiling is non-locally constructed. That is,
 \caption{Worm mistake manifests an unfillable gap error at the red dot at the bottom of this subregion. Figure recolored from \cite{Austin2007}.}
 \end{subfigure}
 
-\caption{Worms can communicate mistakes over arbitrarily large distances.}
+\caption[Worms Communicate Mistakes]{Worms can communicate mistakes over arbitrarily large distances.}
 \label{fig:wormmistakes}
 \end{figure}
 
@@ -1147,7 +1200,7 @@ Gardner refers to these patterns as `towns' \cite{Gardner1997}. He describes a s
 \begin{figure}
 \centering
 \includegraphics[width=0.7\textwidth]{PatternFind3}
-\caption{A pattern contained inside (green) circle with diameter $d$ will begin repeating itself within $\frac{\sqrt[3]{\phi}}{2}d$ from its perimeter. This upper bound is shown in red. As predicted, the pattern (blue) begins repeating in this bound.}
+\caption[Upper Bound for Pattern Density]{A pattern contained inside (green) circle with diameter $d$ will begin repeating itself within $\frac{\sqrt[3]{\phi}}{2}d$ from its perimeter. This upper bound is shown in red. As predicted, the pattern (blue) begins repeating in this bound.}
 \label{fig:patternfind}
 \end{figure}
 
@@ -1169,7 +1222,7 @@ No tiling can have more than one center of fivefold rotational symmetry.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.4\textwidth]{proof}
-    \caption{Barlow's Proof that no tiling can have more than one center of fivefold symmetry. \cite{Gardner1997}}
+    \caption[Proof of No Periodic Five-fold Symmetry]{Barlow's Proof that no tiling can have more than one center of fivefold symmetry. \cite{Gardner1997}}
     \label{fig:fivefoldproof}
 \end{figure}
 
@@ -1219,6 +1272,127 @@ As previously stated, tilings of the $\frac{\pi}{5}$-wedge generated by the Up-D
 
 
 \section{Ratio of Prototiles}
+Recall from the substitution and Up-Down methods that we can construct tilings by decomposing Robinson triangles into smaller constituent triangles, see Fig.\ref{fig:RobSubsAgain}
+
+
+\begin{figure}[H]
+        \centering
+        \begin{subfigure}[t]{\textwidth}
+        \begin{subfigure}[t]{0.4\textwidth}
+                \centering
+               \raisebox{9px}{\includegraphics[scale=0.4]{RobinsonFat}}
+        \end{subfigure}\hfill \raisebox{30px}{\huge$\rightarrow$} \hfill%
+        ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+        \begin{subfigure}[t]{0.4\textwidth}
+                \centering
+                \includegraphics[scale=0.4]{RobFatSub}
+        \end{subfigure}
+        \caption*{$\textbf{T}=2\textbf{T}+\textbf{t}$}
+        \label{fig:RobSubThickAgain}
+        \end{subfigure}
+        ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+          
+        \begin{subfigure}[b]{\textwidth}
+        \begin{subfigure}[b]{0.4\textwidth}
+        \centering
+		\includegraphics[scale=0.3]{RobinsonSkinny}
+        \end{subfigure}\hfill \raisebox{30px}{\huge$\rightarrow$} \hfill
+        \begin{subfigure}[b]{0.4\textwidth}
+        \centering
+                \includegraphics[scale=0.3]{RobSkinnySub}
+        \end{subfigure}   
+        \caption*{$\textbf{t}=\textbf{T}+\textbf{t}$}
+        \label{fig:RobSubThinAgain}
+        \end{subfigure}
+        \caption[Robinson Triangles Deflation Again]{Decomposition equations for Robinson triangles.}
+        \label{fig:RobSubsAgain}
+\end{figure}
+
+From these decomposition rules, we can define the following substitution equations for Thick \textbf{T} and Thin \textbf{t} triangles:
+\begin{equation}
+\begin{split}
+\textbf{T}=2\textbf{T}+\textbf{t}\\
+\textbf{t}=\textbf{T}+\textbf{t}
+\end{split}
+\end{equation}
+Which can be represented by the substitution matrix:
+\begin{equation}
+\begin{bmatrix}
+2 & 1 \\
+1 & 1
+\end{bmatrix}
+\end{equation}
+Each substitution increases the number of Thick and Thin triangles by according to this linear equation: 
+\begin{equation}
+\begin{bmatrix}
+\textbf{T}_{i+1} \\
+\textbf{t}_{i+1}
+\end{bmatrix}=
+\begin{bmatrix}
+2 & 1 \\
+1 & 1
+\end{bmatrix}
+\begin{bmatrix}
+\textbf{T}_{i} \\
+\textbf{t}_{i}
+\end{bmatrix}
+\end{equation}
+Where $\textbf{T}_{i}$ is the number of Thick triangles prior to decomposition, and $\textbf{T}_{i+1}$ is the number after decomposition. Applying this decomposition $n$ times will give us the following:
+\begin{equation}
+\begin{bmatrix}
+\textbf{T}_{i+1} \\
+\textbf{t}_{i+1}
+\end{bmatrix}=
+\begin{bmatrix}
+2 & 1 \\
+1 & 1
+\end{bmatrix}^n
+\begin{bmatrix}
+\textbf{T}_{i} \\
+\textbf{t}_{i}
+\end{bmatrix}
+\label{eq:subeq}
+\end{equation}
+To determine the ratio of Thick triangles to Thin triangles in an arbitrarily large Penrose tiling, we consider the limiting behaviour of this equation as $n\rightarrow\infty$. One way to accomplish this is to recognize that the $n^{\text{th}}$ power of the substitution matrix has the form:
+\begin{equation}
+\begin{bmatrix}
+2 & 1 \\
+1 & 1
+\end{bmatrix}^n= 
+\begin{bmatrix}
+F_{2n+1} & F_{2n} \\
+F_{2n} & F_{2n-1}
+\end{bmatrix}
+\end{equation}
+Where $F_n$ is the $n^{\text{th}}$ Fibonacci number.\\
+Alternatively, we can describe the limiting behaviour of the $n^{\text{th}}$ power of the substitution matrices by considering its eigenvectors. The characteristic polynomial of the substitution matrix is:
+\begin{equation}
+\lambda^2-3\lambda+1
+\end{equation}
+With eigenvalues
+\begin{align}
+\lambda_1=\phi^2 &\quad
+&\lambda_2=\frac{1}{\phi^2}
+\end{align}
+The eigenvectors of these eigenvalues are:
+\begin{align}
+v_1= \begin{bmatrix}
+\phi \\
+1
+\end{bmatrix}
+&\quad&
+v_2= \begin{bmatrix}
+1 \\
+-\phi
+\end{bmatrix}
+\end{align}
+These eigenvectors are orthogonal, and each with positive eigenvalue, and are unstable equilibria, Therefore, we see that the limiting behaviour the linear equation in Eq.\ref{eq:subeq} cause all initial conditions to attract to approach one of these eigenvectors away from the origin. Likewise, it is a well know fact that the ratio between two consecutive numbers in the Fibonacci sequence is $\phi$. Therefore, we see that the ratio of Thick to Thin triangles, and therefore Rhombs, is $\phi$.
+
+One might have initially anticipated that there would be more Thin Rhombs than Thick, perhaps because we can envision Thin Rhombs filling in smaller gaps. However, we see that this is not the case.
+
+More surprisingly, however, is that this ratio is irrational. This provides deep insight into the aperiodicity of the tiling. If the tiling was periodic, then the global ratio of the tiles will be the same as the ratio of the infinitely repeating subregion which defines the periodic tiling. However, since we know that aperiodic tilings cannot be represented by a single, infinitely repeating region, this is not insightful for aperiodic tilings. The irrationality of the tiling ratio informs us that aperiodic tilings exist at the infinite limits of these processes. Of course, the number of Thick and Thin tiles are both whole numbers, so how then could we ever achieve a tiling where their ratio is the irrational $\phi$? Only by considering the infinite limit of the tiling methods.
 \chapter{Graphical Geodesics}
 \section{Introduction and Definition}
 In 1990, Drs. Toru Ogawa and Robert Collins published a short paper in \textit{Quasicrystals} of the Springer Series in Solid-State Sciences introducing the concept of graphical geodesics over two-dimensional triangular meshes and applying them to triangulated Penrose tilings \cite{Ogawa1999}. 
@@ -1327,6 +1501,15 @@ Further, I will explore alternative triangulation methods. Ogawa and Collins tri
 
 Finally, Ogawa and Collins make significant use of the number of edges, or degree, of each vertex in the triangulation. This was not addressed in this thesis, but there are many discussions of the valid types of vertices in Penrose tilings. I will attempt to illustrate how the degrees of the vertices enclosed by self-closing geodesics affect their shape, as the enclosing degree will determine the meandering curvature of the geodesic. 
 
+\chapter{Conclusion}
+Aperiodic tilings will draw in unsuspecting undergraduate students through beautiful graphical representations.  However, they will soon realize that underlying these tilings is rich mathematical theory from diverse disciplines. As we've seen in this thesis alone, methods from Real and Complex Analysis, Algebra, Discrete and Projective Geometry, Linear Algebra, and Graph Theory have all synthesized for this perspective of the tiling. However, this only scratches the surface of the surprising connections of mathematical fields to aperiodic tilings, including Lie theory, Ergodic theory, dynamical systems, finite-state automata, Fourier and Functional Analysis, Statistical Mechanics, and more.\\
+Penrose tilings, for their diversity in mathematical theory, allow for accessible motivation to concepts introduced at an undergraduate level. The proof for tile ratio requires only first year linear algebra. Unaccountability of Penrose tilings is a small extension from Cantor's Diagonalization Argument for the unaccountability of real numbers. The projective geometric interpretation of the pentagrid problem, finding a plane which won't intersect the hypercube tiling at any vertex, edge, or face, could be introduced in an undergraduate algebra course. Applying this breadth of mathematical tools here is very rewarding, demonstrating the interconnectedness of mathematics and the diversity of undergraduate mathematics curriculum.\\
+Finally, we can't ignore the aesthetic value of pursuing this area. The graphical representations of these tilings excite students, mathematicians, and strangers to mathematics. Penrose tilings exemplify the subversive tendency of mathematics to challenge predetermined notions, in this case, on symmetries forbidden to tilings. We see that, while pure, these notions tangibly affect our understanding of the physical sciences, changing the definition and study of crystals. We see that mathematics has no monsters, as Kepler stated, only not-yet-discovered theory that will enrich our understanding of the universe. 
+
+
+
+
 \bibliographystyle{unsrt}
 \bibliography{bibliography}    
+
 \end{document}
