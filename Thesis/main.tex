@@ -18,16 +18,19 @@
 \tolerance=100
 \usepackage{lipsum}
 \usepackage{graphicx}
+\usepackage{pdfpages}
 \usepackage[linedheaders,parts,pdfspacing]{classicthesis}
 \usepackage{acronym}
 \usepackage{microtype}
-\usepackage[british]{babel}
+\usepackage[english]{babel}
+\usepackage[autostyle, english = american]{csquotes}
 
 \usepackage{float}
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{gensymb}
 
+\pdfpageattr{/Group << /S /Transparency /I true /CS /DeviceRGB>>} 
 
 \usepackage{amsmath,amsfonts,amsthm,amssymb}
 \usepackage[cal=cm]{mathalfa}
@@ -77,7 +80,7 @@ such that
 
 Here $\mathring{T}$ denotes the interior of tile $T$. Further, we assume that a tile is the closure of its interior, and that tiles have positive volume. These assumptions allow, for example, a line segment to be a tile in $\mathbb{E}^1$ but not in $\mathbb{E}^2$. Notice that this definition of tiling neither restricts the shape of the individual tiles nor the number of unique tiling shapes.  
 
-However, we will impose some restrictions on the tiles here. Since we are considering tilings of the plane, our tiling must satisfy the above definition for $n=2$, that is, for the Euclidean plane $\mathbb{E}^2$. Further, while the general definition does not impose any criteria on tile shape, for our purposes we will only consider n-dimensional polytopes. In the case of the plane, we consider only 2-polytopes, or polygons. To denote the facets of our tiles we will use \textbf{edges} to denote the 1-dimensional faces, and \textbf{vertices} to denote the 0-dimensional faces. 
+However, we will impose some restrictions on the tiles here. Since we are considering tilings of the plane, our tiling must satisfy the above definition for $n=2$, that is, for the Euclidean plane $\mathbb{E}^2$. Further, while the general definition does not impose any criteria on tile shape, for our purposes we will only consider n-dimensional polytopes. In the case of the plane, we consider only 2-polytopes, or polygons. To describe the facets of our tiles we will use \textbf{edges} to denote the 1-dimensional faces, and \textbf{vertices} to denote the 0-dimensional faces. 
 
 \begin{mydef}
 Let $\{T_1,T_2,\mathellipsis\}$ be the set of tiles of tiling $\mathcal{T}$, partitioned into a set of equivalence classes by criterion $\mathcal{M}$. The set, $\mathcal{P}$, of representatives of these equivalence classes is called the \textbf{protoset} for $\mathcal{T}$ with respect to $\mathcal{M}$.
@@ -88,26 +91,26 @@ For example, consider an infinite black-and-white checkerboard (Fig.\ref{fig:che
 \begin{figure}[H]
 
   \hspace*{\fill}
-\begin{subfigure}[t]{0.4\textwidth}
+\begin{subfigure}[t]{0.45\textwidth}
 	\includegraphics[width=\textwidth]{Checkerboard}
     \caption{Checkerboard}
     \label{fig:checkerboard}
 \end{subfigure}
   \hspace*{\fill}
-\begin{subfigure}[t]{0.4\textwidth}
+\begin{subfigure}[t]{0.45\textwidth}
 	\includegraphics[width=\textwidth]{CheckerboardOther}
     \caption{Different Criterion.}
     \label{fig:critchecker}
 \end{subfigure}
   \hspace*{\fill}\\
   \hspace*{\fill}
-  \begin{subfigure}[t]{0.4\textwidth}
+  \begin{subfigure}[t]{0.45\textwidth}
   	\includegraphics[width=\textwidth]{CheckerboardCircles}
       \caption{Deformed Checkerboard}
       \label{fig:deformedchecker}
   \end{subfigure}
       \hspace*{\fill} 
-\begin{subfigure}[t]{0.4\textwidth}
+\begin{subfigure}[t]{0.45\textwidth}
 	\includegraphics[width=\textwidth]{CheckerboardAperiodic}
     \caption{Sub-Periodic Checkerboard}
     \label{fig:aperiodicchecker}
@@ -121,9 +124,9 @@ For example, consider an infinite black-and-white checkerboard (Fig.\ref{fig:che
 If $\mathcal{T}$ is a tiling with protoset $\mathcal{P}$, then we say that $\mathcal{P}$ admits $\mathcal{T}$.
 \end{mydef}
 
-In the checkerboard example we say that the protoset containing black and white squares, together with the matching criterion, admits a checkerboard tiling (Fig.\ref{fig:checkerboard}). It is important to note that a protoset can admit multiple tilings given different criterion. For example, the checkerboard protoset also admits the tiling in Fig.\ref{fig:critchecker} under a different matching rule. 
+In the checkerboard example we say that the protoset containing black and white squares, together with the matching criterion, admits a checkerboard tiling (Fig.\ref{fig:checkerboard}). It is important to note that a protoset can admit multiple tilings given different criterion. For example, the checkerboard protoset also admits the tiling in Fig.\ref{fig:critchecker} under a different matching criterion. 
 
-Further, it is also worth noting that abstract criterion, such as colour-matching or directed edges, can be accomplished instead through deformation of the edges of protoset tiles such that the criterion is forced. Consider again the criterion for producing the checkerboard tiling (Fig.\ref{fig:checkerboard}), that black squares may only share edges with white squares, and vice-versa. One way to realize this criterion is to deform all black squares into circles, and to deform white squares into asteroids. As seen in Fig.\ref{fig:deformedchecker}, these deformations force a tiling such that all white tiles occupy the interstices of the black circles. In other words, the protoset of deformed tiles, the black circle and white asteroid, can only admit one unique tiling. We are able to force a checkerboard pattern without any abstract criterion such as colour-matching adjacent tiles. While it is important to understand that abstract matching criterion can be realized by edge deformations, considering simpler protosets with more complicated criterion will usually allow greater insight into the structure and patterns within a tiling than would considering a simple criterion with complicated prototiles. 
+Further, it is also worth noting that an abstract criterion, such as colour-matching or directed edges, can be accomplished instead through deformation of the edges of protoset tiles such that the criterion is forced. Consider again the criterion for producing the checkerboard tiling (Fig.\ref{fig:checkerboard}), that black squares may only share edges with white squares, and vice-versa. One way to realize this criterion is to deform all black squares into circles, and to deform white squares into asteroids. As seen in Fig.\ref{fig:deformedchecker}, these deformations force a tiling such that all white tiles occupy the interstices of the black circles. In other words, the protoset of deformed tiles --- the black circle and white asteroid --- can only admit one unique tiling. We are able to force a checkerboard pattern without an abstract criterion such as colour-matching adjacent tiles. While it is important to understand that abstract matching criterion can be realized by edge deformations, considering simpler protosets with more complicated criteria will usually allow greater insight into the structure and patterns within a tiling than would considering a simple criterion with complicated prototiles. 
 
 \begin{mydef}
 A tiling of  $\mathbb{E}^n$ is said to be \textbf{periodic} if it admits translational symmetry in $n$ linearly independent directions.
@@ -151,7 +154,7 @@ Here, `only' means that no subset of the protoset, nor the entire protoset, can 
 
 
 \section{Kepler's Monsters} 
-In 1619, Kepler discovered the third law of planetary motion which he described in his book \textit{Harmonices Mundi} (The Harmonies of the World) \cite{Kepler1997}. While patterns of plane tilings have been known to the ancients, featured widely in art and architecture, it was in Harmonices Mundi where Kepler first provided a mathematical framework with which to discuss these tiling patterns. Primarily, he shows that only 3 polygons are able to regularly tile the plane in singular protosets (Fig. \ref{fig:regular}). That is, using protosets containing only one element, only protosets of equilateral triangles, squares, and hexagons admit plane tilings. 
+In 1619, Kepler discovered the third law of planetary motion which he described in his book \textit{Harmonices Mundi} (The Harmonies of the World) \cite{Kepler1997}. While patterns of plane tilings were known to the ancients, and featured widely in art and architecture, it is in \textit{Harmonices Mundi} where Kepler first provided a mathematical framework with which to discuss these tiling patterns. Primarily, he shows that only 3 polygons are able to regularly tile the plane in singular protosets (Fig. \ref{fig:regular}). That is, using protosets containing only one element, only protosets of equilateral triangles, squares, and hexagons admit plane tilings. 
 
 \begin{figure}[H]
         \centering
@@ -177,9 +180,9 @@ In 1619, Kepler discovered the third law of planetary motion which he described 
         \caption[Regular Polygon Tilings]{Regular tiling of the plane using single polygon protosets}\label{fig:regular}
 \end{figure}
 
-As we will see, while polygons of 3-, 4-, and 6-fold symmetries, as above, admit plane tilings, 5-fold symmetry is special. In experimenting with plane tilings by regular polygons, Kepler attempted to build tilings from polygons with fivefold symmetry. Pentagons alone will not tile the plane, as the gap between two abutting pentagons will not accommodate another. So, Kepler experimented with packing irregular polygons, see Fig.\ref{fig:Experiments}. One such pattern, Aa, can be continued as a plane tiling, Fig.\ref{fig:tilingmonsters}. However, the Aa pattern made use of pentagons, pentagrams, decagons, and another polygon formed by `fusing' two decagons. Kepler called such fused decagons monsters. 
+As we will see, while polygons of 3-, 4-, and 6-fold symmetries, as above, admit plane tilings, 5-fold symmetry is special. In experimenting with plane tilings by regular polygons, Kepler attempted to build tilings from polygons with fivefold symmetry. Pentagons alone will not tile the plane, as the gap between two abutting pentagons will not accommodate another pentagon tile. So, Kepler experimented with packing irregular polygons, see Fig.\ref{fig:Experiments}. One such pattern, Aa, can be continued as a plane tiling, as shown in Fig.\ref{fig:tilingmonsters}. However, the Aa pattern makes use of pentagons, pentagrams, decagons, and another polygon formed by `fusing' two decagons. Kepler called such fused decagons monsters. 
 
-As we will see in the discovery of aperiodic tilings, five is a troublesome notion in plane tilings, whether pentagon tiles or global five-fold symmetry. However, unlike Kepler's monsters, we will see that such tilings do not damage the theory of plane tilings, but deeply enrich it.
+As we will see in the discovery of aperiodic tilings, five is a troublesome number in plane tilings, whether pentagon tiles or global fivefold symmetry. However, unlike Kepler's monsters, we will see that such tilings do not damage the theory of plane tilings, but deeply enrich it.
 
 \begin{figure}[H]
         \centering
@@ -201,9 +204,9 @@ As we will see in the discovery of aperiodic tilings, five is a troublesome noti
 \end{figure}
 
 \section{Discovering Aperiodic Tessellations} %DONE
-Studied in the mid-1900's was a class of tilings produced by spiraling deformed isosceles triangles about a central point. A method discovered by Micheal Goldberg in 1955 generates these spiral tilings readily. Further, due to their spiraling arrangement, these tilings admit no translational symmetries, so non-periodic. However, these spiral tilings are admitted by protosets which also admits periodic tilings. In fact, all other non-periodic tilings known at the time, also notably Golomb's `reptiles', were formed from protosets which also admit periodic tilings.
+In the mid-1900's, a class of tilings where studied which were generated by spiraling deformed isosceles triangles about a central point. A method discovered by Micheal Goldberg in 1955 generates these spiral tilings readily. Further, due to their spiraling arrangement, these tilings admit no translational symmetries, and thus non-periodic. However, these spiral tilings are admitted by protosets which also admit periodic tilings. In fact, all other non-periodic tilings known at the time, including most notably Golomb's `reptiles', were formed from protosets which also admit periodic tilings.
 
-\begin{figure}
+\begin{figure}[H]
 \begin{subfigure}{0.4\textwidth}
 \includegraphics[width=\textwidth]{monohedral}
 \end{subfigure}\hfill
@@ -213,55 +216,54 @@ Studied in the mid-1900's was a class of tilings produced by spiraling deformed 
 \caption[Spiral Protosets also admit Periodic Tilings]{Spiral tilings are non-periodic, but their protosets also admit periodic tilings \cite{Austin2007}.}
 \end{figure}
 
-It was conjectured that no protosets existed which allow only non-periodic tiling. That is, that no aperiodic protosets were possible. This was proved untrue when, in 1961, Hao Wang began writing on protosets composed of unit squares with coloured edges, called Wang dominoes. The matching rules for these dominoes require adjacent dominoes to share the same colour on their abutting edge, with rotation and reflection of the prototiles not allowed. Wang was concerned with questions in logic, specifically investigating algorithmic procedures for deciding whether any arbitrary set of dominoes would admit a plane tiling, called decision procedures. Wang posed a conjecture that any protoset which can admit a plane tiling will also admit a periodic tiling, and Wang showed that if this is true then there must also be an algorithmic procedure for deciding whether such a set will tile. 
+It was conjectured that no protosets exist which allow only non-periodic tiling. That is, that no aperiodic protosets were possible. This was proved to be untrue when, in 1961, Hao Wang began writing on protosets composed of unit squares with coloured edges, called Wang dominoes. The matching rules for these dominoes require adjacent dominoes to share the same colour on their abutting edge, with rotation and reflection of the prototiles not allowed. Wang was concerned with questions in logic, specifically investigating algorithmic procedures for deciding whether any arbitrary set of dominoes would admit a plane tiling, called decision procedures. Wang posed a conjecture that any protoset which can admit a plane tiling will also admit a periodic tiling, and Wang showed that if this is true then there must also be an algorithmic procedure for deciding whether such a set will tile. 
 
-In 1964, Robert Berger showed in his doctoral thesis from Harvard University that Wang's conjecture is false, that there is no algorithmic decision procedure for the tiling ability of any arbitrary protoset. The implication of Berger's work is that there must be an aperiodic protoset of Wang dominoes. Further, Berger constructed such a protoset, using 20,426 dominoes. In his later work, Berger produced a smaller protoset, requiring only 104 dominoes. Donald Knuth further reduced this number by finding an aperiodic Wang protoset of only 92 tiles.
+In 1964, Robert Berger showed in his doctoral thesis from Harvard University that Wang's conjecture is false, and that there is no algorithmic decision procedure for the tiling ability of any arbitrary protoset. The implication of Berger's work is that there must be an aperiodic protoset of Wang dominoes. Further, Berger constructed such a protoset, using 20,426 dominoes. In his later work, Berger produced a smaller protoset, requiring only 104 dominoes. Donald Knuth further reduced this number by finding an aperiodic Wang protoset of only 92 tiles.
 
-As discussed previously, tiling matching rules can be realized by deformations on the edges of the prototiles. For instance, instead of the coloured edges of the Wang dominoes, consider deforming the edges of the squares into protrusions and cavities, producing prototiles like pieces of a jigsaw puzzle. These deformations can be chosen in such a way that they permit only the same arrangements as did the coloured edges of the dominoes, however, this representation also allows for rotation and reflection of the prototiles, previously not considered by Wang. 
+As previously discussed, tiling matching rules can be realized by deformations on the edges of the prototiles. For instance, the coloured edges of the Wang dominoes can be realized by deforming the edges of the squares into protrusions and cavities, producing prototiles like pieces of a jigsaw puzzle. These deformations can be chosen in such a way that they permit only the same arrangements as did the coloured edges of the dominoes, while also allowing for rotation and reflection of the prototiles, previously not considered by Wang. 
 
-By representing the protoset as described above, in 1971 Raphael Robinson constructed an aperiodic protoset requiring only six prototiles. The prototiles used by Robinson are considered to still be in the category of `square' tiles, and whether size of an aperiodic protoset of square tiles can be reduced to fewer than six tiles is still unknown. However, it is conjectured that six is the minimum number of square tiles to produce an aperiodic protoset. This was supported in 1977 when Robert Ammann found a different aperiodic protoset of six square prototiles.
+By representing the dominoes protoset as described above, in 1971 Raphael Robinson constructed an aperiodic protoset requiring only six prototiles. Despite their deformations, the prototiles used by Robinson are considered to still be in the category of `square' tiles. Whether the size of an aperiodic protoset of square tiles can be reduced to fewer than six tiles is still unknown. However, it is still conjectured that six is the minimum number of square tiles to produce an aperiodic protoset. This was supported in 1977 when Robert Ammann found a different aperiodic protoset of six square prototiles.
 
-In 1973, Roger Penrose found an aperiodic protoset of six, non-square tiles.  Penrose continued this process of reduction and, in 1971, reduced the size of his aperiodic protoset to four tiles, and shortly after reduced them further to two tiles. There are arbitrarily many representations of these two prototiles, but two representations are considered simplest and most recognizable. 
+In 1973, Roger Penrose found an aperiodic protoset of six, non-square tiles.  Penrose continued the process of reducing protoset size and, in 1971, reduced the size of his aperiodic protoset to four tiles, and shortly after reduced them further to two tiles. There are arbitrarily many representations of these two prototiles, but two representations are considered simplest and most recognizable. 
 
-The first of these representations, the Penrose Rhombs, is a set of two rhombi with equal lengths, but different internal angles (See Fig.\ref{fig:Rhombs}). The thin rhombus, \textbf{t}, has corner angles of $\frac{\pi}{5}$ and $\frac{4 \pi}{5}$ (or $36 \degree$ and $144 \degree$). The thick rhombus, \textbf{T}, has corner angles  $\frac{2 \pi}{5}$ and $\frac{3 \pi}{5}$ (or $72 \degree$ and $108 \degree$). Both thin and thick rhombi can be produced by the composition of Robinson's Golden triangles, named for Robinson's 1975 notes on their construction. The rhombs can be produced by reflecting the isosceles Robinson triangles across their bases. The ratio of the leg and base lengths in the Robinson triangles is the Golden Ratio, \textbf{ $\phi= \frac{1+\sqrt{5}}{2}\approx 1.6180$}. This ratio will appear repeatedly throughout this discussion of Penrose tilings. 
+The first of these representations, the Penrose Rhombs, is a set of two rhombi of equal edge lengths, but with different internal angles (See Fig.\ref{fig:Rhombs}). The thin rhombus, \textbf{t}, has corner angles of $\frac{\pi}{5}$ and $\frac{4 \pi}{5}$ (or $36 \degree$ and $144 \degree$). The thick rhombus, \textbf{T}, has corner angles  $\frac{2 \pi}{5}$ and $\frac{3 \pi}{5}$ (or $72 \degree$ and $108 \degree$). Both thin and thick rhombi can be produced by the composition of Robinson's Golden triangles, named for Robinson's 1975 notes on their construction. The Rhombs can be produced by reflecting the isosceles Robinson triangles across their bases. The ratio of the leg and base lengths in the Robinson triangles is the Golden Ratio, \textbf{ $\phi= \frac{1+\sqrt{5}}{2}\approx 1.6180$}. This ratio will appear repeatedly throughout this discussion of Penrose tilings. 
 
-The other common representation of Penrose's tiles is the Kite and Dart protoset, named by John Conway. These prototiles are also produced by the composition of Robinson triangles, rather by reflection across their legs. 
+The other common representation of Penrose's tiles is the Kite and Dart protoset, named by John Conway. These prototiles are also produced by the composition of Robinson triangles, by reflection across their legs rather than by reflection across their bases. 
 
-Neither the Rhombs nor the Kites and Darts tilings were publicized until after Penrose filed for patents on the shapes, due to their commercial potential as board game puzzles. It was Martin Gardner who finally published Penrose and Conway's work on describing these tilings, as well as their method of constructing the tiling by substitution, in his 1977 ``Mathematical Games'' column in \textit{Scientific American}. 
+Neither the Rhombs nor the Kites and Darts tilings were publicized until after Penrose filed for patents for their shapes, due to their commercial potential as board game puzzles. It was Martin Gardner who finally published Penrose and Conway's work on describing these tilings, as well as their method of constructing the tiling by substitution, in his 1977 ``Mathematical Games'' column in \textit{Scientific American}. 
 
-In 1981, Dutch mathematician Nicolaas de Bruijn provided other methods of constructing the Penrose tiling, by projecting of five-dimensional cubic structure and also by infinite paths on directed graphs, which will discussed later. De Bruijn also showed the relationship between the Penrose tiling and five families of parallel lines, called the Pentagrid. De Bruijn's work represents the characterization of Penrose tilings as algebraic objects, and offers deep insight into their nature. 
+In 1981, Dutch mathematician Nicolaas de Bruijn provided other methods of constructing the Penrose tiling, by the projection of five-dimensional cubic tiling and also by infinite paths on directed graphs, which will discussed later. De Bruijn also showed the relationship between the Penrose tiling and five families of parallel lines, called the Pentagrid. De Bruijn's work represents the characterization of Penrose tilings as algebraic objects, and offers deep insight into their nature. 
 
-The practical importance of these theories on aperiodic tiling was realized in the 1980's with the discovery by materials scientist Dan Shechtman of certain aluminum-manganese alloys which produce crystallographic diffraction patterns with no translational symmetries. Shechtman was awarded the 2011 Nobel Prize in Chemistry for his discovery of these structures, known now as quasicrystals. In 2009, the first natural quasicrystal was discovered, the mineral icosahedrite, whose diffraction pattern displays fivefold symmetry previously thought impossible in crystalline structures. This past month, in March 2015, the second natural quasicrystal was discovered in a meteorite, with a diffraction pattern displaying decagonal symmetry \cite{Bindi2015}. Marjorie Senechal formalizes the relationship between aperiodic tiling and the geometry of quasicrystals in her 1995 monograph \textit{Quasicrystals and Geometry}. 
+The practical importance of these theories on aperiodic tiling was realized in the 1980's with the discovery of certain aluminum-manganese alloys which produce crystallographic diffraction patterns with no translational symmetries by materials scientist Dan Shechtman. Shechtman was awarded the 2011 Nobel Prize in Chemistry for his discovery of these structures, known now as quasicrystals. In 2009, the first natural quasicrystal was discovered --- the mineral icosahedrite --- whose diffraction pattern displays the fivefold symmetry previously thought impossible in crystalline structures. This past month, in March 2015, the second natural quasicrystal was discovered in a meteorite, with a diffraction pattern displaying decagonal symmetry \cite{Bindi2015}. Marjorie Senechal formalizes the relationship between aperiodic tiling and the geometry of quasicrystals in her 1995 monograph \textit{Quasicrystals and Geometry}. 
 
 
-\chapter{Substitution Construction}
+\chapter{Construction by Substitution}
 
 \section{Rhombs Representation of the Penrose Tiling} %DONE
-As introduced, there are multiple protoset representations that admit the Penrose tiling. However, the construction methods outlined in this section were described initially by de Bruijn, who favoured the Rhombs representation.  For this reason, we will consider only construction of the Penrose tiling by the Rhombs protoset (see Fig.\ref{fig:Rhombs}). 
+As introduced, there are multiple protoset representations that admit the Penrose tiling. However, the construction methods outlined in this section were initially described by de Bruijn, who favoured the Rhombs representation.  For this reason, we will consider only construction of the Penrose tiling by the Rhombs protoset (see Fig.\ref{fig:Rhombs}). 
 
-Since this protoset is composed of two rhombi, it might be suspected that the prototiles can be arranged to produce a periodic tiling, since rhombi can generally produce periodic tilings. Consider, for example, the tiling produced by adjacent rows of thick and thin rhombi (see Fig.\ref{fig:RhombsPeriodic}). This tiling underscores the necessity of edge-matching rules for the aperiodic protoset. 
-
-The edge-matching rules of the Penrose rhombs have been illustrated with blue and orange curves in Fig.\ref{fig:Rhombs}. If two tiles are adjacent in a tiling, then curves of the same colour must meet along the abutting edge. For example, the previously discussed periodic rhombus tiling is not permitted given this edge-matching criteria, because these curves do not meet along adjacent tiles (see Fig.\ref{fig:RhombsPeriodicRules}). Further, recall from previous description that matching criteria can be realized through prototile edge deformations (see Fig.\ref{fig:deformedchecker}). This allows us to consider the Rhombs protoset with matching rules as distinct from the Rhombs without matching rules, permitting us to describe the former as aperiodic. 
-
-
+Since this protoset is composed of two rhombi, one might suspect that the prototiles can be arranged to produce a periodic tiling, since rhombi can generally produce periodic tilings. Consider, for example, the tiling produced by adjacent rows of thick and thin rhombi (see Fig.\ref{fig:RhombsPeriodic}). This tiling underscores the necessity of edge-matching rules for the aperiodic protoset. 
 \begin{figure}[H]
-\begin{subfigure}[t]{0.4\textwidth}
+\begin{subfigure}[t]{0.45\textwidth}
 \centering
 \includegraphics[width=\textwidth]{RhombPeriodic}
 \caption{Periodic tiling of thin and thick rhombi, admitted in the absence of edge-matching rules.}
 \label{fig:RhombsPeriodic}
 \end{subfigure}\hfill
-\begin{subfigure}[t]{0.4\textwidth}
+\begin{subfigure}[t]{0.45\textwidth}
 \centering
 \includegraphics[width=\textwidth]{RhombPeriodicRules}
-\caption{Matching rules require blue and orange curves to meet along adjacent edges. Clearly, this tiling does not satisfy these matching rules.}
+\caption{Rhomb matching rules require blue and orange curves to meet along adjacent edges. Clearly, Rhomb matching rules do not admit this periodic tiling.}
 \label{fig:RhombsPeriodicRules}
 \end{subfigure}
-\caption[Rhomb Matching Rules Forcing Aperiodicity]{Periodic tiling using Penrose rhombs is only possible in the absence of edge-matching rules.}
-
+\caption[Rhomb Matching Rules Forcing Aperiodicity]{Periodic tiling using rhombi is only possible in the absence of edge-matching rules.}
 \end{figure}
+The edge-matching rules of the Penrose rhombs have been illustrated with blue and orange curves in Fig.\ref{fig:Rhombs}. If two tiles are adjacent in a tiling, then curves of the same colour must meet along their abutting edge. For example, the previously discussed periodic rhombus tiling is not permitted given this edge-matching criteria, because these curves do not meet along adjacent tiles (see Fig.\ref{fig:RhombsPeriodicRules}). Further, recall that matching criterion can be realized through prototile edge deformations (see Fig.\ref{fig:deformedchecker}). This allows us to consider the Rhombs protoset with matching rules as a distinct, different from simple rhombi without matching rules. The Rhombs protoset is aperiodic. 
 
-\begin{figure}
+
+
+
+\begin{figure}[H]
         \centering
         \begin{subfigure}[b]{\textwidth}
         \begin{subfigure}[b]{0.5\textwidth}
@@ -308,15 +310,15 @@ Now that we have seen the Penrose rhombs protoset, and the criteria which allow 
 
 
 \section{Non-Local Growth} %DONE
-Penrose tilings cannot be procedurally constructed one-tile-at-a-time, as one would tile a floor. In attempting to construct a tiling this way, there is no guarantee that any finite, valid arrangement of tiles can be continued infinitely. 
+Penrose tilings cannot be procedurally constructed one-tile-at-a-time, as one might tile a floor. In attempting to construct a tiling this way, there is no guarantee that any finite, valid arrangement of tiles can be continued infinitely. 
 
-When we construct a tiling one-tile-at-a-time, rarely are our next tile placements forced. Usually, we have the option to choose the next tile from among both thick and thin Rhombs. One might anticipate that as long as we choose our tile arrangements such that we satisfy the local matching rules, we will eventually tile the entire plane. However, it is in these choices that we encounter a problem with this one-at-a-time method, we can choose incorrectly. If we place our tiles one-at-a-time we can make mistakes.
+When we construct a tiling one-tile-at-a-time, rarely are our next tile placements forced. Usually, we have the option to choose the next tile from among both thick and thin Rhombs. One might anticipate that as long as we choose our tile arrangements that satisfy the local matching rules, we will eventually tile the entire plane. However, it is in these choices that we encounter a problem with this one-at-a-time method; we can choose incorrectly. If we place our tiles one-at-a-time we can make mistakes.
 
 \begin{mydef}
-A \textbf{mistake} is a valid placement of a tile which causes the resulting tiling to not continue infinitely to tile the plane. The manifestation of this mistake, either as an unfillable gap or overlap, is called an \textbf{error}. \cite{Penrose1989,Ross}
+A \textbf{mistake} is a valid placement of a tile which causes the resultant tiling to not continue infinitely to tile the plane. The manifestation of this mistake, either as an unfillable gap or overlap, is called an \textbf{error}. \cite{Penrose1989,Ross}
 \end{mydef}
 
-For example, consider the arrangement of tiles in Fig.\ref{fig:mistake}. As we can see from the blue and orange circle arcs, these tiles are validly arranged under the edge matching rules. However, despite the validity of this arrangement, this is a mistake. The error of this mistake manifests itself immediate, we have created an gap which cannot be filled by any valid tile arrangement. One might think that we could fill this gap with a thin Rhomb, as seen in Fig.\ref{fig:error}, but we see that such an arrangement does not satisfy the edge matching rules.
+For example, consider the arrangement of tiles in Fig.\ref{fig:mistake}. As we can see from the blue and orange circle arcs, these tiles are validly arranged under the edge matching rules. However, despite the validity of this arrangement, this is a mistake. The error of this mistake manifests itself immediately--- we have created an gap which cannot be filled by any valid tile arrangement. One might think that we could fill this gap with a thin Rhomb, as seen in Fig.\ref{fig:error}, but we see that such an arrangement does not satisfy the edge matching rules.
 
 \begin{figure}[h]
 \centering
@@ -327,14 +329,14 @@ For example, consider the arrangement of tiles in Fig.\ref{fig:mistake}. As we c
 \end{subfigure}\\
 \begin{subfigure}{0.6\textwidth}
 \includegraphics[width=\textwidth]{MistakeNext}
-\caption{The manifestation of this mistake, the error, is this gap no valid arrangement could fill.}
+\caption{The manifestation of this mistake, the error is the creation of a gap that no valid arrangement could fill.}
 \label{fig:error}
 \end{subfigure}
 \caption[A Simple Mistake]{A simple mistake results in an error which cannot be continued to produce a valid tiling of the whole plane.}
 \label{fig:mistakes}
 \end{figure}
 
-However, mistakes are often far more sinister than the one illustrated in Fig.\ref{fig:mistakes}. Here we see a mistake that manifested its error immediately. That is, the error occurs adjacent to the mistake. This is not true in general. As we will see shortly, Penrose tilings must satisfy certain substitution criteria. One effect of satisfying these substitution criteria is that Penrose tilings will have structures that must agree across arbitrarily large distances. What does this mean for a one-tile-at-a-time construction method? Well, it means that the placement of a tile could be a mistake due to the placement of another tile arbitrarily far away. What's even worse? This mistake may not manifest its error for another arbitrarily large distance from either tile placements. This means that if we were trying to tile the plane one-tile-at-a-time, we could generate a mistake because of the placement of another piece arbitrarily far away from the piece we're placing, and we wouldn't even know about our mistake until arbitrarily many other pieces have been placed. This is because Penrose tilings are non-local. That is, while the matching rules describe local conditions, the substitution hierarchy we will soon discuss imposes global conditions on the tiling. Non-locality of the Penrose tiling, in short, means that the placement of tiles must globally agree with the tiling, so arrangements cannot be determined by local matching rules. For this reason, we cannot procedurally tile the Penrose tiling one-tile-at-a-time.
+However, mistakes are often far more sinister than the one illustrated in Fig.\ref{fig:mistakes}. Here we see a mistake that manifested its error immediately. That is, the error occurs adjacent to the mistake. This is not true in general. As we will see shortly, Penrose tilings must satisfy certain substitution criteria. One effect of satisfying these substitution criteria is that Penrose tilings will have structures that must agree across arbitrarily large distances. What does this mean for a one-tile-at-a-time construction method? The placement of a tile could be a mistake due to the placement of another tile arbitrarily far away. Even worse is that this mistake may not manifest its error for another arbitrarily large distance from either tile placements. If we were trying to tile the plane one-tile-at-a-time, by placing a piece we could generate a mistake because of the placement of another piece arbitrarily far away, and we wouldn't even know about our mistake until arbitrarily many other pieces have been placed. This is because Penrose tilings are non-local. That is, while the matching rules describe local conditions, the substitution hierarchy we will soon discuss imposes global conditions on the tiling. Non-locality of the Penrose tiling, in short, means that the placement of tiles must globally agree with the tiling, so arrangements cannot be determined by local matching rules alone. For this reason, we cannot procedurally tile the Penrose tiling one-tile-at-a-time.
 
 
 \section{Deflation and Inflation} %DONE
@@ -481,7 +483,7 @@ This substitution process can be used to generate arbitrarily large Penrose tili
 	\end{figure}
 	
 
-Notice that even after successive applications of the deflation substitution, the resulting tiling is still valid under the initial matching rules. Again, in Figures \ref{fig:ThickDeflate} and \ref{fig:ThinDeflate} this is illustrated by the continuity of the orange and blue edge-matching curves.
+Notice that even after successive applications of the deflation substitution, the resulting tiling is still valid under the initial matching rules. Again, in Figures \ref{fig:ThickDeflate} and \ref{fig:ThinDeflate} this is illustrated by the continuity of the orange and blue edge-matching arcs.
 
 \section{Extension Theorem}
 This substitution method is also called the deflation/inflation method, for the complementary processes described above. Where deflation applies successive substitutions to the Rhombs, and inflation scales the Rhombs back to their original size.
@@ -497,7 +499,7 @@ The Penrose Rhombs protoset admits tilings of the plane.
 \end{mycor}
 
 \begin{proof}
-Under each iteration of the deflation, the substitution Rhombs are scaled by a factor of $\frac{1}{\phi}$. Consider the largest closed disk tiled completely by an arrangement of Rhombs. Under deflation each tile is scaled by  $\frac{1}{\phi}$, so the complementary inflation process will scale each tile by a factor of $\phi$. Therefore, the largest disk tiled completely by our substituted tiles will scale its diameter by at least a factor of $\phi$. For $n$ substitutions, the largest tiled disk will increase in diameter by at least $n\phi$. Therefore, deflation/inflation method can generate valid Penrose tilings of an arbitrary large disks in the plane.\\
+Under each iteration of the deflation, the substitution Rhombs are scaled by a factor of $\frac{1}{\phi}$. Consider the largest closed disk tiled completely by an arrangement of Rhombs. Under deflation each tile is scaled by  $\frac{1}{\phi}$, so the complementary inflation process will scale each tile by a factor of $\phi$. Therefore, the largest disk tiled completely by our substituted tiles will scale its diameter by at least a factor of $\phi$. For $n$ substitutions, the largest tiled disk will increase in diameter by at least $n\phi$. Therefore, the deflation/inflation method can generate valid Penrose tilings of arbitrarily large disks in the plane.\\
 $\therefore$ by Extension Theorem, the Penrose Rhombs admit tilings of the plane. 
 \end{proof}
 
@@ -507,12 +509,9 @@ $\therefore$ by Extension Theorem, the Penrose Rhombs admit tilings of the plane
 
 \chapter{Up-Down Construction} %DONE
 
-In his 1990 paper \textit{Updown generation of Penrose patterns}, de Bruijn describes a construction method attributed to Conway by which tilings are generated by infinite sequences of steps along a directed graph \cite{DeBruijn1990}. The Up-Down generation process borrows some concepts from the substitution method, namely that we build tilings by \textbf{decomposing} tiles with constituent tiles, as per substitution rules. The key difference, however, is that we build a tiling instead by considering the relationship between a constituent tile and its inflation, that is, how constituent tiles \textbf{compose} parent tiles. As the name suggests, Up-Down generation constructs tilings through two processes: composition and decomposition or Up and Down.
+In his 1990 paper \textit{Updown generation of Penrose patterns}, de Bruijn describes a construction method attributed to Conway by which tilings are generated by infinite sequences of steps along a directed graph \cite{DeBruijn1990}. The Up-Down generation process borrows some concepts from the substitution method, namely that we build tilings by \textbf{decomposing} tiles with constituent tiles, as per substitution rules. The key difference, however, is that we build a tiling by considering the relationship between a constituent tile and its inflation, that is, how constituent tiles \textbf{compose} parent tiles. As the name suggests, Up-Down generation constructs tilings through two processes: composition and decomposition or Up and Down.
 
-In introducing this construction method, we must consider again the Robinson triangles. As with the substitution method, decomposition of these triangles is dependent on their orientation. Unlike substitution, the influence of triangle orientation under the Up-Down method is subtle and not automatic. Moving forward, we must be explicit with the triangle orientation, see Fig.\ref{fig:OrientedRob}. Further, recall from the substitution method that oriented Robinson triangles, arranged according to those matching rules, will determine a Penrose tiling of the plane by Penrose Rhombs. Robinson triangles can be transformed into Penrose Rhombs by reflection about their base, see Fig.\ref{fig:Rhombs}. As such, while the Up-Down method describes the process to construct a tiling of the plane by the oriented Robinson triangles of Fig.\ref{fig:OrientedRob}, we are also indirectly constructing a Penrose tiling by Rhombs. The relationship between these representations will be discussed in greater detail later, with the discussion of mutual local derivability. 
-
- 
-
+In introducing this construction method, we must again consider the Robinson triangles. As with the substitution method, decomposition of these triangles is dependent on their orientation. Unlike substitution, the influence of triangle orientation under the Up-Down method is subtle and not automatic. Moving forward, we must be explicit with the triangle orientation, as seen in Fig.\ref{fig:OrientedRob}. Further, recall from the substitution method that oriented Robinson triangles, arranged according to those matching rules, will determine a Penrose tiling of the plane by Penrose Rhombs. Robinson triangles can be transformed into Penrose Rhombs by reflection about their base, see Fig.\ref{fig:Rhombs}. As such, while the Up-Down method describes the process to construct a tiling of the plane by the oriented Robinson triangles of Fig.\ref{fig:OrientedRob}, we are also indirectly constructing a Penrose tiling by Rhombs. The relationship between these representations will be discussed in greater detail later, with the discussion of mutual local derivability. 
 \begin{figure}[H]
         \begin{subfigure}[t]{0.4\textwidth}
                 \includegraphics[width=\textwidth]{TFRob}
@@ -534,9 +533,7 @@ In introducing this construction method, we must consider again the Robinson tri
         \caption[Oriented Robinson Triangles]{Oriented Robinson triangles. Thick or Obtuse Robinson Triangle is denoted with T. Thin or acute Robinson triangle is denoted with t. Reversed orientation is denoted with '. Arrowed edges illustrate Up-Down matching rules.}  
         \label{fig:OrientedRob}                    
 \end{figure}
-
-The matching rules under the substitution method behave slightly differently than the matching rules in the Up-Down method, illustrated with arrowed edges in Fig.\ref{fig:OrientedRob}. Here, the rules will indicate type and direction of edges, which must agree along abutting tiles. Additionally, the edge type and direction will satisfy decomposition rules according to the relationship between a triangle and it's constituent triangles, see Fig.\ref{fig:EdgeRules}. 
-
+The matching rules under the substitution method behave slightly differently than the matching rules in the Up-Down method, illustrated with arrowed edges in Fig.\ref{fig:OrientedRob}. Here, the rules indicate type and direction of edges, which must agree along abutting tiles. Additionally, the edge type and direction will satisfy decomposition rules according to the relationship between a triangle and its constituent triangles, see Fig.\ref{fig:EdgeRules}. 
 \begin{figure}[H]
         \begin{subfigure}[t]{0.4\textwidth}
                 \includegraphics[width=\textwidth]{a1}
@@ -568,9 +565,6 @@ The matching rules under the substitution method behave slightly differently tha
         \caption[Edge Composition Rules]{Parent edges (Left) and their constituent edges (Right)}     
         \label{fig:EdgeRules}
 \end{figure} 
-
-
-\pagebreak
 Consider again the substitution rules on the Robinson triangles described in Fig.\ref{fig:RobSubs}. This substitution is also employed in the Up-Down method. However, in this case we will label the constituent triangles of the substitution. We do this so we can explicitly describe how a constituent triangle composes a parent triangle. We label this composition relationship using mapping functions, given by lowercase Greek letters: $\alpha, \beta, \delta, \gamma$. We see the oriented Robinson triangles, substituted with relationship labels, in Fig.\ref{fig:OrientedSub}.
 
 Composition relationships can be considered as mappings from a constituent triangle to its parent triangle. These composition mappings are as follows:
@@ -603,7 +597,7 @@ Again, composition mappings are also labeled in Fig.\ref{fig:OrientedSub}. For a
         \label{fig:OrientedSub}                     
 \end{figure}
 
-From these mappings we can see why the explicit description of triangle orientation is necessary here. Otherwise, for instance, it would be ambiguous which constituent thick triangle, \textbf{T} or \textbf{T'}, we are describing inside a parent \textbf{T}.
+From these mappings we can see why the explicit description of triangle orientation is necessary here. Without this, for instance, it would be ambiguous which constituent thick triangle --- \textbf{T} or \textbf{T'} --- we are describing inside a parent \textbf{T}.
 
 We can alternatively visualize the mappings in Equations (\ref{eq:maps}) as directed graphs embedding constituent triangles into parent triangles, see Fig.\ref{fig:functionmap}. 
 
@@ -625,7 +619,7 @@ We can alternatively visualize the mappings in Equations (\ref{eq:maps}) as dire
         \label{fig:functionmap}                    
 \end{figure}
 
-We are now ready to introduce the Up process. Realizing that composition mappings from Equations (\ref{eq:maps}) will place constituent triangles inside parent triangles, we see that each application of a mapping will generate a larger finite region of the tiling. Think of this process as the opposite of substitution, we are starting from a constituent and composing a  parent triangle. Just as substitution generated a finite section of a tiling, by mapping a constituent to a parent triangle we have similarly generated a finite section.
+We are now ready to introduce the Up process. Realizing that composition mappings from Equations (\ref{eq:maps}) will place constituent triangles inside parent triangles, we see that each application of a mapping will generate a larger finite region of the tiling. Think of this process as the opposite of substitution: we are starting from a constituent and composing a  parent triangle. Just as substitution generated a finite section of a tiling, by mapping a constituent to a parent triangle we have similarly generated a finite section.
 
 Further, just as with the substitution method, the end result of each mapping is an oriented Robinson triangle. That is, the image of every mapping will be the domain of other mappings. This allows us to form compositions of the mappings, from the image of one to the domain of another. To illustrate how these mappings can be composed from another, we have a cyclic directed graph in Fig.\ref{fig:UpDownGraph}.
 
@@ -636,11 +630,11 @@ Further, just as with the substitution method, the end result of each mapping is
 \label{fig:UpDownGraph}
 \end{figure}
 
-Paths along this directed graph represent compositions of the mappings. This is what is involved under the Up process, defining a sequence of the mappings. A finite sequence of mappings will directly correspond to a finite subregion of a Penrose tiling. Each sequential application of a mapping will describe a larger region of the tiling, and how the previous region composes into it. We can think of this process as hierarchically defining larger and larger regions by each sequential mapping.
+Paths along this directed graph represent compositions of the mappings. This is the function of the Up process: defining a sequence of the mappings. A finite sequence of mappings will directly correspond to a finite subregion of a Penrose tiling. Each sequential application of a mapping will describe a larger region of the tiling, and how the previous region composes into it. We can think of this process as hierarchically defining larger and larger regions by each sequential mapping.
 
 The generation of the tiling region from the sequence of mappings is the Down process. Think of the Up process as producing a tiling instruction manual, and the Down process as following these instructions to produce a tiling. 
 
-The Down process can describe a tiling region from the Up sequence because the mappings explicitly describe the relationship among decomposed triangles. Even though each mapping only directly describes the relationship between a constituent triangle and its parent, we have also uniquely determined the placement of the other constituent oriented Robinson triangles composing the parent. Further, the substitution rules from Fig.\ref{fig:OrientedRob} explicitly described the substitutions of the other constituent triangles. With this in mind, we can see how the Down process generates tiling regions from the Up process instructions. Essentially, the sequence of composition mappings from the Up process describes a sequence of decompositions, the Down process preforms these decompositions.
+The Down process can describe a tiling region from the Up sequence because the mappings explicitly describe the relationship between decomposed triangles. Even though each mapping only directly describes the relationship between a constituent triangle and its parent, we have also uniquely determined the placement of the other constituent oriented Robinson triangles composing the parent. Further, the substitution rules from Fig.\ref{fig:OrientedRob} explicitly described the substitutions of the other constituent triangles. With this in mind, we can see how the Down process generates tiling regions from the Up process instructions. Essentially, the sequence of composition mappings from the Up process describes a sequence of decompositions, which are then preformed by the Down process.
 
 For an example of a finite sequence of the Up-Down process, consider the Up sequence from the graph path $\delta'\gamma\epsilon$ which defines the composition $\epsilon \circ \gamma \circ \delta'$. From the graph in Fig.\ref{fig:UpDownGraph} we can see that this Up sequence takes a \textbf{t} triangle and eventually embeds it into a \textbf{T} triangle. The Down process, given by this composition, then, will substitute that \textbf{T} triangle according to the composition sequence. This substitution ends once we've generated the initial \textbf{t} triangle. 
 
@@ -663,7 +657,7 @@ For an example of a finite sequence of the Up-Down process, consider the Up sequ
 \end{table}
 
 
-Infinite sequences of the Up-Down process, corresponding to infinite paths along the directed graph, will generate Penrose tilings of the plane, half-plane, or $\frac{\pi}{5}$-plane wedge, depending on the sequence. Generating $\frac{\pi}{5}$-plane wedges are the result of repeated mappings into thin Robinson triangles, this occurs when the limit of the sequence generates a thin Robinson triangle. Effectively, wedges are when the `top' of the Up-Down process is an infinite \textbf{t} or \textbf{t'} triangle, and the Down process infinitely substitutes into this. Of course, under infinite sequences, the Up-Down process will have no `top' triangle, but we can see that certain arbitrarily long sequences can generate an arbitrarily large thin Robinson triangle tiling, and as such the limit of this process is the Penrose tiling of an infinite $\frac{\pi}{5}$-plane wedge. This is not a problem, however, in generating Penrose tilings of the entire plane, because these plane wedges can be extended to tilings of the plane by reflection along their edges. Reflections on the sides of wedges is valid under the edge matching rules, to illustrate this with finite thin Robinson triangles see Fig.\ref{fig:WedgeWheel}.  Penrose plane tilings generated by $\frac{\pi}{5}$-plane wedge reflection will exhibit fivefold rotational symmetry centered at the point of the wedge. As we will discuss later, five-fold rotational symmetry is only possible in aperiodic tilings, so this is a remarkable feature of Penrose tilings generated from plane wedges. Similarly, half-plane tilings occur when the limit of the process is an arbitrarily large thick Robinson triangle. Half-plane tilings can also be extended to full plane tilings by reflection across the base.
+Infinite sequences of the Up-Down process, corresponding to infinite paths along the directed graph, will generate Penrose tilings of the plane, half-plane, or $\frac{\pi}{5}$-plane wedge, depending on the sequence. Generating $\frac{\pi}{5}$-plane wedges are the result of repeated mappings into thin Robinson triangles, this occurs when the limit of the sequence generates a thin Robinson triangle. Effectively, wedges are formed when the `top' of the Up-Down process is an infinite \textbf{t} or \textbf{t'} triangle, and the Down process infinitely substitutes into this. Of course, under infinite sequences, the Up-Down process will have no `top' triangle, but we can see that certain arbitrarily long sequences can generate an arbitrarily large thin Robinson triangle tiling, and as such the limit of this process is the Penrose tiling of an infinite $\frac{\pi}{5}$-plane wedge. This is not a problem, however, in generating Penrose tilings of the entire plane, because these plane wedges can be extended to tilings of the plane by reflection along their edges. Further, reflections on the sides of wedges is valid under the edge matching rules, to illustrate this with finite thin Robinson triangles see Fig.\ref{fig:WedgeWheel}.  Penrose plane tilings generated by $\frac{\pi}{5}$-plane wedge reflection will exhibit fivefold rotational symmetry centered at the point of the wedge. As we will discuss later, fivefold rotational symmetry is only possible in aperiodic tilings, and thus the ability of Penrose tilings generated from wedges to admit fivefold symmetry is remarkable. Similarly, half-plane tilings occur when the limit of the process is an arbitrarily large thick Robinson triangle. Half-plane tilings can also be extended to full plane tilings by reflection across the base.
 
 \begin{figure}
 \centering
@@ -713,7 +707,7 @@ Two composition sequences generate the same Penrose tiling if and only if they a
 \begin{proof}
 Let $\rho_1$ and $\rho_2$ be composition sequences defining $\mathcal{T}_1$ and $\mathcal{T}_2$ respectively. \\[10pt]
 If $\rho_1 = \rho_2$ then $\mathcal{T}_1 = \mathcal{T}_2$, and they are trivially cofinal.\\[10pt]
-If $\rho_1$ and $\rho_2$ are cofinal, then, after, $n$, finitely many terms, the sequences agree.\\
+If $\rho_1$ and $\rho_2$ are cofinal then, after $n$ finitely many terms, the sequences agree.\\
 Consider composition sequence, $\rho^*$, which begins where $\rho_1$ and $\rho_2$ agree.\\
 $\rho^*$ defines a Penrose tiling  $\mathcal{T}^*$.\\
 This implies that, at some hierarchal level, level $n$ in the Up process, $\rho_1$ and $\rho_2$ begin describing the same tiling.\\
@@ -760,7 +754,7 @@ C(\rho')=\{\rho'_1,\rho'_2,\rho'_3,\mathellipsis\}
 By definition of cofinality and inspection, $\rho$ and $\rho'$ are cofinal if and only if $C(\rho)$ and $C(\rho')$ are cofinal.
 \end{proof}
 
-Further, $C(\rho)$ allows us to address a common misconception regarding Penrose tilings. When looking at a graphical representation of a tiling, especially when considering their construction by substitution, it is easy to assume that the Penrose tiling is self-similar. We can easily show this is not the case in general.
+Also, $C(\rho)$ allows us to address a common misconception regarding Penrose tilings. When looking at a graphical representation of a tiling, especially when considering their construction by substitution, it is easy to assume that the Penrose tiling is self-similar. We can easily show this is not the case in general.
 
 \begin{mylem}
 Penrose tilings are, in general, not self-similar.
@@ -814,7 +808,7 @@ For example, consider the hexagonal tiling and its orthogonal dual tiling in Fig
 \label{fig:Hexagons}
 \end{figure}
 
-Consider that the equilateral triangle tiling is given by three families of equally spaced lines, superimposed and rotated by $\frac{\pi}{3}$, which we will call the trigrid (see Fig.\ref{fig:trifam}). As we've seen in Fig.\ref{fig:Hexagons}, the equilateral triangle tiling is the orthogonal dual of the hexagonal tiling. We, then, can consider the hexagonal tiling to be completely determined by the points of intersection of the trigrid. 
+Consider that the equilateral triangle tiling is given by three families of equally spaced lines, superimposed and rotated by $\frac{\pi}{3}$, which we will call the trigrid (see Fig.\ref{fig:trifam}). As we've seen in Fig.\ref{fig:Hexagons}, the equilateral triangle tiling is the orthogonal dual of the hexagonal tiling. As such, we can consider the hexagonal tiling to be completely determined by the points of intersection of the trigrid. 
 
 \begin{figure}[H]
 \centering
@@ -823,19 +817,19 @@ Consider that the equilateral triangle tiling is given by three families of equa
 \label{fig:trifam}
 \end{figure}
 
-It is important to note that this is an idealized example for the visualization of tiling duals. We are able to superimpose the hexagonal tiling and the equilateral triangle tiling in a meaningful way. However, from our definition of dual, this is not a requirement. To understand how tilings can be duals, without being superimposable, consider Fig.\ref{fig:hexsmall}. Here we see a hexagonal tile placed at each intersection point of the trigrid. The six rays of the trigrid from each intersection point meet the edges of the hexagon orthogonally. Further, the intersections of the trigrid uniquely determine the configuration of the hexagonal tiles. Observe in Fig.\ref{fig:hexsmall} that each triangle face contains three hexagonal vertices. Since these are dual tilings, those three hexagonal vertices must correspond to the same vertex in a hexagonal tiling. Likewise, notice that each equilateral triangle edge meets two hexagonal tile edges, therefore those two hexagons must abut in a hexagonal tiling.  We see that the trigrid completely determines the hexagonal tiling. 
+It is important to note that this is an idealized example for the visualization of tiling duals. We are able to superimpose the hexagonal tiling and the equilateral triangle tiling in a meaningful way. However, from our definition of dual, this is not a requirement. To understand how tilings can be duals, without being superimposable, consider Fig.\ref{fig:hexsmall}. Here we see a hexagonal tile placed at each intersection point of the trigrid. The six rays of the trigrid from each intersection point meet the edges of the hexagon orthogonally. Further, the intersections of the trigrid uniquely determine the configuration of the hexagonal tiles. Observe in Fig.\ref{fig:hexsmall} that each triangle face contains three hexagonal vertices. Since these are dual tilings, those three hexagonal vertices must correspond to the same vertex in a hexagonal tiling. Likewise, notice that each equilateral triangle edge meets two hexagonal tile edges, therefore those two hexagons must abut in a hexagonal tiling.  We can therefore see that the trigrid completely determines the hexagonal tiling. 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.6\textwidth]{HexagonDualSmall}
-\caption[Hexagons Defined by Trigrid Intersections]{A hexagonal tiling is completely determined by the intersections of the trigrid in Fig.\ref{fig:trifam}. We can see how each intersection uniquely describes a hexagonal tile, with the lines orthogonally meeting the edges of the tile. Notice that each triangle face contains three hexagonal vertices, example highlighted in red. By the definition of dual, these vertices must meet at a single vertex in the hexagonal tiling. Likewise, each triangle edge meets with two hexagon edges, an example of this is shown in red. Therefore, these edges must correspond to a single edge of the hexagonal tiling. Thus, the trigrid uniquely determine the configuration of the hexagon tiles.}
+\caption[Hexagons Defined by Trigrid Intersections]{A hexagonal tiling is completely determined by the intersections of the trigrid in Fig.\ref{fig:trifam}. We can see how each intersection uniquely describes a hexagonal tile, with the lines orthogonally meeting the edges of the tile. Notice that each triangle face contains three hexagonal vertices (example highlighted in red). By the definition of a dual, these vertices must meet at a single vertex in the hexagonal tiling. Likewise, each triangle edge meets with two hexagon edges (an example of this is shown in red). Therefore, these edges must correspond to a single edge of the hexagonal tiling. Thus, the trigrid uniquely determines the configuration of the hexagon tiles.}
 \label{fig:hexsmall}
 \end{figure}
 
 It is useful to construct tilings by their duals in this way if, as above, the duals can be given as intersecting families of lines. Constructing tilings in this way equips us with tools from other fields of mathematics, especially projective and algebraic methods.
 
 \section{Regular Pentagrids}
-Here we will describe a pentagrid, constructed similarly to the trigrid, but with five families of parallel lines. Consider, first, the fifth roots of unity, vectors pointing to the vertices of a regular pentagon (see Fig.\ref{fig:rootsunity}):
+Here we will describe a pentagrid, constructed similarly to the trigrid, but with five families of parallel lines. Consider, first, the fifth roots of unity, or vectors pointing to the vertices of a regular pentagon (see Fig.\ref{fig:rootsunity}):
 \begin{equation*}
 \vec{\epsilon}_i= e^{\frac{2 \pi \mathrm{i}}{5}} \qquad \qquad i=\{0,1,2,3,4\}\\
 \end{equation*}
@@ -880,7 +874,7 @@ De Bruijn proved that a pentagrid will be regular if its shift factors satisfy a
 \label{eq:sumcondition}
 \end{equation}
 
-Recall from our definition of regular that each intersection of such a pentagrid will occur only between two lines. Further, we can see that these intersections only occur at angles of $\frac{\pi}{5}$ or $\frac{2\pi}{5}$, see Fig.\ref{fig:intersections}.
+Recall from our definition of regular pentagrids that each intersection of such a pentagrid will occur only between two lines. Further, we can see that these intersections only occur at angles of $\frac{\pi}{5}$ or $\frac{2\pi}{5}$, see Fig.\ref{fig:intersections}.
 
 \begin{figure}[H]
 \centering
@@ -908,7 +902,7 @@ Notice, first, that the the edges of the rhombus tiles of the Penrose Rhombs til
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\textwidth]{RhombRibbons}
-\caption[Ribbons of Rhombs]{Rhombus edges are given by two sets of parallel lines, and abutting tiles in a Penrose tiling share these edges. We can consider ribbons of tiles whose abutting edges are all parallel to each other. Therefore, the parallel edges of these ribbons are all perpendicular to the same ribbon line. As illustrated, the horizontal edges of the red rhombuses are all perpendicular to the vertical red ribbon line. Further, since each rhombus is given by two sets of parallel lines, each rhombus uniquely occurs at the intersection of two ribbons.}
+\caption[Ribbons of Rhombs]{Rhombus edges are given by two sets of parallel lines, and abutting tiles in a Penrose tiling share these edges. We can consider ribbons to be lines of tiles whose abutting edges are all parallel to each other. Therefore, the parallel edges of these ribbons are all perpendicular to the same ribbon line. As illustrated, the horizontal edges of the red rhombuses are all perpendicular to the vertical red ribbon line. Further, since each rhombus is given by two sets of parallel lines, each rhombus uniquely occurs at the intersection of two ribbons.}
 \label{fig:rhombribbons}
 \end{figure}
 
@@ -964,7 +958,7 @@ As seen in Fig.\ref{fig:intersectionsnorms}, the possible directions for normal 
 
 Here we see how the regular pentagrids can be used to construct Penrose tilings. If we consider a region of the pentagrid, the intersections of the grid lines uniquely determine the type and configuration of Penrose Rhombs, see Fig.\ref{fig:pentagridconstruction}. 
 
-The regular pentagrid is itself a tiling of the plane, where tile faces are given by regions enclosed by the grid lines, edges by grid lines, and vertices by intersections. As a tiling, the regular pentagrid is the orthogonal dual to the Penrose tiling. As seen in Fig.\ref{fig:pentagridconstruction}, the pentagrid dual completely determines the Penrose tiling. Recall from our discussion of the hexagon dual, that it is not a requirement that duals be superimposable (see Fig.\ref{fig:hexsmall}). This is the case with the pentagrid dual. As such, there is no meaningful way to scale the pentagrid and superimpose it over the Penrose tiling. 
+The regular pentagrid is itself a tiling of the plane, where tile faces are given by regions enclosed by the grid lines, edges by grid lines, and vertices by intersections. As a tiling, the regular pentagrid is the orthogonal dual to the Penrose tiling. As seen in Fig.\ref{fig:pentagridconstruction}, the pentagrid dual completely determines the Penrose tiling. Recall from our discussion of the hexagon dual that it is not a requirement that duals be superimposable (see Fig.\ref{fig:hexsmall}). This is the case with the pentagrid dual. As such, there is no meaningful way to scale the pentagrid and superimpose it over the Penrose tiling. 
 
 
 \begin{figure}[H]
@@ -986,7 +980,7 @@ The regular pentagrid is itself a tiling of the plane, where tile faces are give
 \includegraphics[width=0.3\textwidth]{RhombConstructed}
 \caption{As duals, this uniquely determines the Rhomb configuration}
 \end{subfigure}
-\caption[Construction of Penrose Tiling from Pentagrids]{Each intersection of the regular pentagrid corresponds to a unique Penrose Rhomb. The pentagrid is itself a tiling, and is an orthogonal dual to the Penrose Rhombs. As such, all Rhomb vertices inside a pentagrid face must correspond to the same vertex in a Penrose tiling. In this way, the regular uniquely determines the configuration of Penrose Rhombs.}
+\caption[Construction of Penrose Tiling from Pentagrids]{Each intersection of the regular pentagrid corresponds to a unique Penrose Rhomb. The pentagrid is itself a tiling, and is an orthogonal dual to the Penrose Rhombs. As such, all Rhomb vertices inside a pentagrid face must correspond to the same vertex in a Penrose tiling. In this way, the regular pentagrid uniquely determines the configuration of Penrose Rhombs.}
 \label{fig:pentagridconstruction}
 \end{figure}
 
@@ -1002,22 +996,23 @@ By understanding the construction of Penrose tilings from their regular pentagri
 
 \chapter{Features of the Penrose Tiling}
 \section{Mutual Local Derivability of Representations} %DONE
-As we've seen, tilings by Penrose Rhombs can be uniquely defined from tilings by oriented Robinson triangles simply by deleting the triangle bases. This relationship is also reciprocal, by adding a diagonal along the long edge of thick Rhombs and along the short edge of thin Rhombs we will generate the respective Robinson triangle tiling. Tilings with this property are said to be mutually locally derivable.
+As we've seen, tilings by Penrose Rhombs can be uniquely defined by tilings of oriented Robinson triangles simply by deleting the triangle bases. This relationship is also reciprocal: by adding a diagonal along the long edge of thick Rhombs and along the short edge of thin Rhombs we will generate the respective Robinson triangle tiling. Tilings with this property are said to be mutually locally derivable.
 
 \begin{mydef}
 Two tilings are \textbf{mutually locally derivable} if each is uniquely defined by the other by local rules. 
 \end{mydef}
 
-We've described local rule for uniquely deriving Penrose Rhombs tilings from oriented Robinson triangle tilings and vice versa. This allows us to consider equivalence classes of mutually locally derivable tilings. In other words, given a Penrose tiling by Rhombs, we can consider the unique complementary Penrose tiling by Robinson triangles to be equivalent under mutually local derivability. That is, we can consider both tilings to be different representations of the same Penrose tiling.
+We've described local rules for uniquely deriving Penrose Rhombs tilings from oriented Robinson triangle tilings and vice versa. This allows us to consider equivalence classes of mutually locally derivable tilings. In other words, given a Penrose tiling by Rhombs, we can consider the unique complementary Penrose tiling by Robinson triangles to be equivalent under mutually local derivability. That is, we can consider both tilings to be different representations of the same Penrose tiling.
 
-In the introduction we described another famous representation of Penrose's tiling, the Kites and Darts representation. These prototiles are generated also by Robinson triangles, but reflected across their legs instead of bases, see Fig.\ref{fig:kitedart}.
+In the introduction we described another famous representation of Penrose's tiling, the Kites and Darts representation. These prototiles are also generated by Robinson triangles, but reflected across their legs instead of bases, see Fig.\ref{fig:kitedart}.
 
-\begin{figure}
-\begin{subfigure}[t]{0.37\textwidth}
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.25\textwidth}
 \includegraphics[width=\textwidth]{kite}
 \caption{A Kite}
-\end{subfigure}\hfill
-\begin{subfigure}[t]{0.3\textwidth}
+\end{subfigure}\quad\quad\quad
+\begin{subfigure}[t]{0.2\textwidth}
 \includegraphics[width=\textwidth]{dart}
 \caption{A Dart}
 \end{subfigure}
@@ -1029,7 +1024,7 @@ Recall from the introduction that we elected to consider only the Rhombs represe
 
 Consider the local rules illustrated in Fig.\ref{fig:kitedartrules}. To derive Kites and Darts from Rhombs we draw edges along the right edges of the thin Rhombs and along the long diagonal of the thick Rhombs. Recall, these Rhombs are oriented so the `right' edges of the thin Rhombs are well-defined. 
 
-\begin{figure}
+\begin{figure}[H]
 \begin{subfigure}[t]{0.4\textwidth}
 \centering
 \includegraphics[width=0.4\textwidth]{ThinKiteRule}
@@ -1043,18 +1038,18 @@ Consider the local rules illustrated in Fig.\ref{fig:kitedartrules}. To derive K
 \label{fig:kitedartrules}
 \end{figure}
 
-Applying these local rules to a Penrose tiling by Rhombs will derive the a Kites and Darts tiling as seen in Fig.\ref{fig:KiteRules}. Notice that each Kite and Dart is composed of the same arrangements of thin Rhombs and thick half-Rhombs, so there is a unique mapping back to a Rhombs tiling. Therefore, the two are mutually locally derivable. Further, we could have also easily shown that these are both mutually locally derivable with the Robinson triangles. Since these are equivalence relations, that also implies they are mutually locally derivable with each other.
+Applying these local rules to a Penrose tiling by Rhombs will derive the Kites and Darts tiling as seen in Fig.\ref{fig:KiteRules}. Notice that each Kite and Dart is composed of the same arrangements of thin Rhombs and thick half-Rhombs, so there is a unique mapping back to a Rhombs tiling. Therefore, the two are mutually locally derivable. Further, we could have also easily shown that these are both mutually locally derivable with the Robinson triangles. Since these are equivalence relations, this also implies they are mutually locally derivable with each other.
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{KiteRules}
 \caption[Kites and Darts from Rhombs]{Kites and Darts tiling (red) mutually locally derived from Rhombs tiling (grey). Kites and Darts are derived according to local rules in Fig.\ref{fig:kitedartrules}. Conversely, we see that Kites can derive one thin Rhomb, and halves of two thick Rhombs. While Darts also allow us to derive two halves of thick Rhombs. We see this since each Kite and Dart is composed of the same arrangements of Rhombs.}
 \label{fig:KiteRules}
 \end{figure}
 
-Also, when introducing the historical development of aperiodic protosets, we mentioned that Penrose had discovered an aperiodic protoset with six members. This protoset consisted of three, differently oriented pentagons, a pentagram, a "boat" or "jester's cap", and a thin rhombus. This protoset, called the Penrose's pentagonal protoset, or P1, is also mutually locally derivable from the Rhombs. As such, all four of these protosets, the Rhombs, Kites and Darts, pentagonal, and Robinson triangles, form Penrose tilings which are mutually locally derivable, as such we can consider tilings in these representations equivalent. 
+Further, when introducing the historical development of aperiodic protosets, we mentioned that Penrose had discovered an aperiodic protoset with six members. This protoset consisted of three, differently oriented pentagons, a pentagram, a "boat" or "jester's cap", and a thin rhombus. This protoset, called Penrose's pentagonal protoset, or P1, is also mutually locally derivable from the Rhombs. As such, all four of these protosets, the Rhombs, Kites and Darts, pentagonal, and Robinson triangles, form Penrose tilings which are mutually locally derivable, and as such we can consider tilings in these representations equivalent. 
 \section{Local Isomorphism}
- We've seen that within a Penrose tiling a pattern, tiling configuration, or finite subregion, will repeat itself infinitely many times throughout the plane with impressive density. There is, also, another notion of repeatability, describing how patterns repeat across all Penrose tilings.
+ We've seen that within a Penrose tiling a pattern, a tiling configuration or finite subregion will repeat itself infinitely many times throughout the plane with impressive density. There is also another notion of repeatability, describing how patterns repeat across all Penrose tilings.
  
  \begin{mydef}
  Two tilings are said to belong to the same \textbf{local isomorphism class} if they are super-imposable over arbitrarily large regions. That is, if every bounded tile configuration in one also appears in the other. \cite{Senechal1996}
@@ -1085,13 +1080,13 @@ Also, when introducing the historical development of aperiodic protosets, we men
  $\therefore$ All Penrose tilings belong to the same isomorphism class. 
  \end{proof}
  
- We've shown here that any bounded region inside one Penrose tiling appears infinitely often in every other Penrose tiling! Therefore, even though there are uncountably many different Penrose tilings, we could never know which one we are looking at by considering an arbitrarily large finite subregion. The difference between all the uncountably many Penrose tilings only occurs globally, at their infinite limits. Further, since the Penrose tilings are non-periodic, even though every finite region repeats infinitely many times, the entire tiling itself is not determined by infinitely repeating finite subregions. This means that if we choose any arbitrarily large finite region, we are guaranteed to find infinitely many non-trivial translations which will superimpose that region over an identical repetition. However, the entire tiling will not superimpose itself under any non-trivial translation.
+ We've shown here that any bounded region inside one Penrose tiling appears infinitely often in every other Penrose tiling. Therefore, even though there are uncountably many different Penrose tilings, we could never know which one we are looking at by considering an arbitrarily large finite subregion. The difference between all the uncountably many Penrose tilings only occurs globally, at their infinite limits. Further, since the Penrose tilings are non-periodic, even though every finite region repeats infinitely many times, the entire tiling itself is not determined by infinitely repeating finite subregions. This means that if we choose any arbitrarily large finite region, we are guaranteed to find infinitely many non-trivial translations which will superimpose that region over an identical repetition. However, the entire tiling will not superimpose itself under any non-trivial translation.
  
 \section{Worms} 
 
-We've seen that bounded regions of the Penrose tiling repeat themselves infinitely often. So, if we choose a finite subregion and we superimpose a Penrose tiling over itself, we can always preform a non-trivial translation to exactly match the superposition with this finite subregion. However, despite this overlap, there will always be regions elsewhere in the plane tiling which mismatch with the superimposed tiling. Some instances of these mismatches occur along interesting structures inside Penrose tilings: worms.
+We've seen that bounded regions of the Penrose tiling repeat themselves infinitely often. So, if we choose a finite subregion and we superimpose a Penrose tiling over itself, we can always perform a non-trivial translation to exactly match the superposition with this finite subregion. However, despite this overlap, there will always be regions elsewhere in the plane tiling which mismatch with the superimposed tiling. Some instances of these mismatches occur along interesting structures inside Penrose tilings: worms.
 
-To visualize the process of superimposing a tiling and translating, see Fig.\ref{fig:translations}. Here we take a star-shaped region of a Penrose tiling, coloured purple, and superimpose a copy of itself, coloured yellow. We then translate the yellow tiling over the purple tiling, sliding it to the right. In Fig.\ref{fig:far} that some finite subregions of the tiling agree with the translated superimposed copy, as demonstrated by the purple tiling being completely obfuscated by the yellow tiling. However, we also see that there are regions which do not agree under translation, mismatching with the superimposed copy. In the figure, this is seen as purple peeking out from below the yellow. Notice that in this example these mismatches occur along ribbons. These structures, called worms, travel along the entire length of the Penrose tiling. Notice that they all travel in only one of five directions, and only intersect each other at angles of $\frac{2\pi}{5}$. In Fig.\ref{fig:close}, we can see how these worms disagree with the superimposed tiling.
+To visualize the process of superimposing a tiling and translating, see Fig.\ref{fig:translations}. Here we take a star-shaped region of a Penrose tiling, coloured purple, and superimpose a copy of itself, coloured yellow. We then translate the yellow tiling over the purple tiling, sliding it to the right. In Fig.\ref{fig:far} we see that some finite subregions of the tiling agree with the translated superimposed copy, as demonstrated by the purple tiling being completely obfuscated by the yellow tiling. However, we also see that there are regions which do not agree under translation, mismatching with the superimposed copy. In the figure, this is seen as purple peeking out from below the yellow. Notice that in this example these mismatches occur along ribbons. These structures, called worms, travel along the entire length of the Penrose tiling. Notice that they all travel in only one of five directions, and only intersect each other at angles of $\frac{2\pi}{5}$. In Fig.\ref{fig:close}, we can see how these worms disagree with the superimposed tiling.
 
 \begin{figure}[H]
 \centering
@@ -1111,9 +1106,6 @@ To visualize the process of superimposing a tiling and translating, see Fig.\ref
 \end{figure}
 
 We can see an examples of a finite worms in Fig.\ref{fig:worm}. Worms can be oriented either upwards or downwards. The mismatching which occurred in Fig.\ref{fig:translations} is the result of upwards oriented worms overlapping downwards oriented worms. 
-
-Worms are composed of either sequences of long and short segments, where the long segment is $\phi$ times as long as the short segment.
-
 \begin{figure}[H]
 \centering
 \begin{subfigure}{\textwidth}
@@ -1131,7 +1123,7 @@ Worms are composed of either sequences of long and short segments, where the lon
 \caption{Oriented Worms}
 \label{fig:worm}
 \end{figure}
-
+Worms are composed of either sequences of long and short segments, where the long segment is $\phi$ times as long as the short segment.
 \begin{figure}[H]
 \centering
 \begin{subfigure}[b]{0.4\textwidth}
@@ -1147,7 +1139,6 @@ Worms are composed of either sequences of long and short segments, where the lon
 \caption{Worm segments}
 \label{fig:wormparts}
 \end{figure}
-
 As discussed previously, the Penrose tiling is non-locally constructed. That is, placement of tiles must agree with global placement conditions. As we've seen with the Up-Down method, these global conditions are determined by hierarchies of how tilings compose larger parent tiles. Worms are very apparent communicators of this global agreement information. The placement of tiles continuing the worms in either direction must correspond to valid compositions of hierarchical parent tiles. For an example of how worms can communicate non-local mistakes, see Fig.\ref{fig:wormmistakes}. For detailed descriptions of how worms communicate mistakes over arbitrarily large distances, see David Austin's AMS Feature Column \textit{Penrose Tiles Talk Across Miles} \cite{Austin2007} or Elissa Ross's Master's thesis \textit{Non-Local Growth of Penrose Tilings} \cite{Ross}.
 
 \begin{figure}[H]
@@ -1208,9 +1199,9 @@ Gardner refers to these patterns as `towns' \cite{Gardner1997}. He describes a s
 No point in a Penrose tiling is more than $\frac{\sqrt[3]{\phi}}{2}d$ away from a pattern with diameter $d$.
 \end{mycor}
 
-Consider, again, Gardner's towns. If we are transported from our home town to another region in our tiling. Or worse yet, if we are transported wholly into another Penrose tiling altogether. We know from Conway's upper bound, and from the local isomorphism of all Penrose tilings, that we are no more than a relatively short walk from a town which exactly matches our familiar hometown.
+Consider again Gardner's towns. What would happen if we are transported from our home town to another region in our tiling, or worse yet, if we are transported into a different Penrose tiling altogether. We know from Conway's upper bound, and from the local isomorphism of all Penrose tilings, that we are no more than a relatively short walk from a town which exactly matches our familiar hometown.
 
-Gardner provides us with another analogy to emphasize the remarkable density of the repeating tiles  \cite{Gardner1997}. Consider, for contrast, the digits of an unpatterned number like $\pi$. It is conjectured that if we choose an arbitrarily long, finite sequence of digits, that we will find it somewhere within $\pi$. Consider, for simplicity, a sequence of only 10 digits long. If we begin searching for such a sequence within the digits $\pi$ we suspect that we will eventually find it. However, this process has no upper bound, so we could be searching for an arbitrarily long amount of time. If these digits behaved like Penrose tiles, we would be guaranteed to find a our finite sequence within some relatively small distance from any random starting location in the decimal expansion. Further, we would also be guaranteed to have that sequence repeat again within another relatively short distance. Of course, this distance depends on the length of the finite sequence we're considering.
+Gardner provides us with another analogy to emphasize the remarkable density of the repeating tiles  \cite{Gardner1997}. Consider, for contrast, the digits of an unpatterned number like $\pi$. It is conjectured that if we choose an arbitrarily long, finite sequence of digits, that we will find it somewhere within $\pi$. Consider, for simplicity, a sequence of only 10 digits long. If we begin searching for such a sequence within the digits $\pi$ we suspect that we will eventually find it. However, this process has no upper bound, so we could be searching for an arbitrarily long amount of time. If these digits behaved like Penrose tiles, we would be guaranteed to find our finite sequence within some relatively small distance from any random starting location in the decimal expansion. Further, we would also be guaranteed to have that sequence repeat again within another relatively short distance. Of course, this distance depends on the length of the finite sequence we're considering.
 
 So while it is impressive that patterns within Penrose tiles are guaranteed to repeat themselves, what's truly remarkable is the density of these repetitions. 
 \section{Five-Fold Rotational Symmetry} %DONE
@@ -1222,7 +1213,7 @@ No tiling can have more than one center of fivefold rotational symmetry.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.4\textwidth]{proof}
-    \caption[Proof of No Periodic Five-fold Symmetry]{Barlow's Proof that no tiling can have more than one center of fivefold symmetry. \cite{Gardner1997}}
+    \caption[Proof of No Periodic Fivefold Symmetry]{Barlow's Proof that no tiling can have more than one center of fivefold symmetry. \cite{Gardner1997}}
     \label{fig:fivefoldproof}
 \end{figure}
 
@@ -1240,7 +1231,7 @@ This contradicts hypothesis that $A$ and $B$ are nearest centers of fivefold sym
 $\therefore$ By contradiction, $\mathcal{T}$ can only have one center of fivefold symmetry.
 \end{proof}
 
-We've shown that no tiling can have more than one center of fivefold symmetry. Using this theorem we can show, further, that even one center of fivefold symmetry is impossible if the tiling is periodic. First, consider these properties of periodic tilings:
+We've shown that no tiling can have more than one center of fivefold symmetry. Using this theorem we can further show that even one center of fivefold symmetry is impossible if the tiling is periodic. First, consider these properties of periodic tilings:
 
 \begin{myprop}
 A periodic tiling can be subdivided into countably infinitely many regions, $\mathcal{R}$, which are congruent by translation such that
@@ -1265,7 +1256,7 @@ $\therefore$ By contradiction, periodic tilings have no centers of fivefold symm
 
 We have shown that fivefold symmetry is incompatible with periodic tilings. For this reason, the admittance of a single center fivefold symmetry is related to the aperiodicity of a tiling. As we will see, centers of fivefold symmetry are possible in Penrose tilings. 
 
-As previously stated, tilings of the $\frac{\pi}{5}$-wedge generated by the Up-Down method can be extended to Penrose tilings of the plane by reflection over the edges of the wedge. Such tilings will have five-fold rotational symmetry about the wedge point. Tilings generated by deflation/inflation will have a center of five-fold symmetry if they originated from an initial arrangement of tiles with five-fold symmetry. The center of symmetry for such a tiling will share the center of symmetry with its initial arrangement.  
+As previously stated, tilings of the $\frac{\pi}{5}$-wedge generated by the Up-Down method can be extended to Penrose tilings of the plane by reflection over the edges of the wedge. Such tilings will have fivefold rotational symmetry about the wedge point. Tilings generated by deflation/inflation will have a center of fivefold symmetry if they originated from an initial arrangement of tiles with fivefold symmetry. The center of symmetry for such a tiling will share the center of symmetry with its initial arrangement.  
 
 
 
@@ -1365,30 +1356,35 @@ To determine the ratio of Thick triangles to Thin triangles in an arbitrarily la
 F_{2n+1} & F_{2n} \\
 F_{2n} & F_{2n-1}
 \end{bmatrix}
+\label{eq:fib}
 \end{equation}
 Where $F_n$ is the $n^{\text{th}}$ Fibonacci number.\\
 Alternatively, we can describe the limiting behaviour of the $n^{\text{th}}$ power of the substitution matrices by considering its eigenvectors. The characteristic polynomial of the substitution matrix is:
 \begin{equation}
 \lambda^2-3\lambda+1
 \end{equation}
-With eigenvalues
+With eigenvalues:
 \begin{align}
 \lambda_1=\phi^2 &\quad
 &\lambda_2=\frac{1}{\phi^2}
 \end{align}
-The eigenvectors of these eigenvalues are:
+These eigenvalues satisfy the Perron-Frobenius theorem which guarantees the existence of a dominant eigenvalue:
+
+\begin{mythm}
+Every matrix with positive entries has a real eigenvalue such that $|\lambda_1|>|\lambda_j|$,$j=2\mathellipsis,k$ where $\lambda_2,\mathellipsis,\lambda_k$ are the algebraic conjugates of $\lambda_1$.
+\end{mythm}
+Therefore, the eigenvalue with the largest magnitude, $\lambda_1$, is the dominant eigenvalue. \\
+In linear models of population growth, positive dominant eigenvalues with $|\lambda_1|>1$ describes an unstable equilibrium, and the population from any non-zero initial condition will grow without bound. Further, the population will grow asymptotically towards a multiple of the dominant eigenvector, that is, the eigenvector associated with the dominant eigenvalue. \\
+The dominant eigenvector of the substitution matrix is:
 \begin{align}
 v_1= \begin{bmatrix}
 \phi \\
 1
 \end{bmatrix}
-&\quad&
-v_2= \begin{bmatrix}
-1 \\
--\phi
-\end{bmatrix}
 \end{align}
-These eigenvectors are orthogonal, and each with positive eigenvalue, and are unstable equilibria, Therefore, we see that the limiting behaviour the linear equation in Eq.\ref{eq:subeq} cause all initial conditions to attract to approach one of these eigenvectors away from the origin. Likewise, it is a well know fact that the ratio between two consecutive numbers in the Fibonacci sequence is $\phi$. Therefore, we see that the ratio of Thick to Thin triangles, and therefore Rhombs, is $\phi$.
+In this case, our linear system describes a population of Thick and Thin triangles.\\
+
+Therefore, we see that the limiting behaviour the linear equation in Eq.\ref{eq:subeq} causes all initial conditions to attract to the eigenvector $v_1$ away from the origin. Likewise, it is a well know fact that the ratio between two consecutive numbers in the Fibonacci sequence as in Eq.\ref{eq:fib} is $\phi$. Therefore, by both methods, we see that the ratio of Thick to Thin triangles, and therefore Rhombs, is $\phi$.
 
 One might have initially anticipated that there would be more Thin Rhombs than Thick, perhaps because we can envision Thin Rhombs filling in smaller gaps. However, we see that this is not the case.
 
@@ -1397,13 +1393,14 @@ More surprisingly, however, is that this ratio is irrational. This provides deep
 \section{Introduction and Definition}
 In 1990, Drs. Toru Ogawa and Robert Collins published a short paper in \textit{Quasicrystals} of the Springer Series in Solid-State Sciences introducing the concept of graphical geodesics over two-dimensional triangular meshes and applying them to triangulated Penrose tilings \cite{Ogawa1999}. 
 
-To construct graphical geodesics, we consider a triangular mesh. That is, a tiling by triangles whose vertices and edges are shared with their abutting triangles. For each triangle in the mesh, we inscribe another triangle whose vertices are given by the midpoints of the three edges. We will call the edges of these inscribed triangles the \textit{inscribed mesh}, see Fig.\ref{fig:inscribedmesh}.
+To construct graphical geodesics, we consider a triangular mesh--- a tiling by triangles whose vertices and edges are shared with their abutting triangles. For each triangle in the mesh, we inscribe another triangle whose vertices are given by the midpoints of the three edges. We will call the edges of these inscribed triangles the \textit{inscribed mesh}, see Fig.\ref{fig:inscribedmesh}.
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{InscribedMesh}
+\includegraphics[width=0.65\textwidth]{InscribedMesh}
 \caption[Inscribed Mesh]{The triangular mesh of the Penrose Rhombs are generated by drawing an edge along the short diagonal of each rhombus. The inscribed mesh is generated by inscribing triangles at the midpoints of the triangles in the triangular mesh. Here the triangular mesh is coloured grey.}
 \label{fig:inscribedmesh}
 \end{figure}
+
 Now we begin our graphical geodesic by choosing a midpoint and starting direction along one edge of the inscribed mesh. 
 \begin{figure}[H]
 \centering
@@ -1418,7 +1415,7 @@ Following this edge we arrive at another vertex on the inscribed mesh, remember 
 \caption[Next Step of Geodesic]{The next step of the geodesic we choose the handedness. From the second vertex (teal) there will be two edges belonging to the next inscribed triangle. The right edge (blue) and the left edge (orange) will uniquely determine two different graphical geodesics.}
 \label{fig:nextstep}
 \end{figure}
-To determine the next edge of our graphical geodesic, we choose either left or right. This choice will completely determine the rest of the graphical geodesic, we call this initial choice the \textit{handedness} of the graphical geodesic. To summarize, to initiate a graphical geodesic, we choose an initial point, an initial direction, and an initial handedness (left or right).
+To determine the next edge of our graphical geodesic, we choose either left or right. This choice will completely determine the rest of the graphical geodesic, we call this initial choice the \textit{handedness} of the graphical geodesic. To summarize, to initiate a graphical geodesic we choose an initial point, an initial direction, and an initial handedness (left or right).
 
 To continue the graphical geodesic, we follow the chosen edge to the next vertex in our inscribed mesh. From here we determine the next turn direction by alternating hands. That is, if we previously turned left, we now turn right. We continue this process of following edges and alternating turn directions. 
 \begin{figure}[H]
@@ -1427,7 +1424,7 @@ To continue the graphical geodesic, we follow the chosen edge to the next vertex
 \caption[Continued Geodesic]{Once handedness is chosen, subsequent steps alternate between left and right turns. This uniquely determines the rest of the geodesic. From the choice in Fig.\ref{fig:nextstep} we chose right handedness.}
 \label{fig:geocontinued}
 \end{figure}
-The graphical geodesic terminates if we either reach the end of the mesh or begin overlapping the path. The first case will not occur if the mesh is a tiling of the plane, we call such graphical geodesics \textit{open}. Further, it is important to distinguish between overlapping and simply crossing. A graphical geodesic can cross itself, as we will see, and we call such geodesics \textit{self-crossing}. However, since geodesics are completely determined from a point, direction, and handedness, if we arrive at a previous point on our geodesic, with the same incoming direction and handedness, then this continuation process will overlap infinitely. We call such geodesics \textit{self-closing}.
+The graphical geodesic terminates if we either reach the end of the mesh or begin overlapping the identical path. The former case will not occur if the mesh is a infinite tiling of the plane, we call such graphical geodesics \textit{open}. Further, it is important to distinguish between overlapping and simply crossing. A graphical geodesic can cross itself, as we will see, and we call such geodesics \textit{self-crossing}. However, since geodesics are completely determined from a point, direction, and handedness, if we arrive at a previous point on our geodesic, with the same incoming direction and handedness, then this continuation process will overlap infinitely. We call such geodesics \textit{self-closing}.
 
 The \textit{length} of a geodesic refers to the number of edges the path travels. In any finite mesh, we can determine the total length of every geodesic in the mesh. 
 
@@ -1436,14 +1433,14 @@ It is appropriate to borrow the vocabulary `geodesic' here because, as we see, t
 \section{Types of Paths}
 To construct graphical geodesics on a Penrose tiling, we must first construct the triangular mesh. From the Penrose Rhombs, we construct the triangles by drawing an edge along the short edge of each rhombus. 
 
-Once triangulated, we can construct graphical geodesics as described above. The results of Ogawa and Collins is that all graphical geodesics on a triangulated Penrose tiling will be one of the following types based on the characteristics of their global meandering: chains, rings, peanuts, or flowers.
+Once triangulated, we can construct graphical geodesics as described above. The result of Ogawa and Collins is that all graphical geodesics on a triangulated Penrose tiling will be one of the following types based on the characteristics of their global meandering: chains, rings, peanuts, or flowers.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{Chains}
 \caption[Chains]{Chains travel in one of five directions.}
 \end{figure}
-\textbf{Chains} are characterized by their globally straight meandering. Like Rhomb ribbons and worms, chains only travel in one of five directions. However, chains do not run along either ribbons or worms, so it is surprising that they also express this directionality. Further, the distance between two adjacent chains, two parallel chains with no chains between them, can only be one of two widths. The ratio between the large distance and the short distance is $\phi$. One third of the total length of all graphical geodesics in an (arbitrarily large) region of a Penrose tiling are chains. Chains are the only open geodesic on the Penrose tiling.
+\textbf{Chains} are characterized by their globally straight meandering. Like Rhomb ribbons and worms, chains only travel in one of five directions. However, chains do not run along either ribbons or worms, so it is surprising that they also express this directionality. Further, the distance between two adjacent chains --- two parallel chains with no chains between --- can only be one of two widths. The ratio between the long width and the short width is $\phi$. One third of the total length of all graphical geodesics in an (arbitrarily large) region of a Penrose tiling are chains. Chains are the only open geodesic on the Penrose tiling.
 
 \begin{figure}[H]
 \centering
@@ -1457,22 +1454,22 @@ Once triangulated, we can construct graphical geodesics as described above. The 
 \end{subfigure}
 \caption[Rings]{Three types of Rings}
 \end{figure}
-\textbf{Rings} are approximately circular, self-closing geodesics. Rings can be only one of three lengths: 40, 60, 80. A 60-ring encloses a configuration of Rhombs with five-fold symmetry about its center. 40- and 80-rings enclose decagons without five-fold symmetries. 42.75\% of the total length of geodesics in a Penrose tiling are rings.
+\textbf{Rings} are approximately circular, self-closing geodesics. Rings can be only one of three lengths: 40, 60, or 80. A 60-ring encloses a configuration of Rhombs with fivefold symmetry about its center. 40- and 80-rings enclose decagons without fivefold symmetries. 42.75\% of the total length of geodesics in a Penrose tiling are rings.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.6\textwidth]{Peanut}
 \caption[Peanut]{Peanuts are only of length 48.}
 \end{figure}
-\textbf{Peanuts} are self-closing geodesics of length 48. Only 6.50\% of the total length of geodesics in Penrose tilings are rings. 
+\textbf{Peanuts} are self-closing geodesics of length 48. Only 6.50\% of the total length of geodesics in Penrose tilings are peanuts. 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.6\textwidth]{FlowerPart}
 \caption[Flower Part]{Part of a Flower}
 \end{figure}
-\textbf{Flowers} are self-closing and self-crossing geodesics. They are five-fold symmetric about their center. There are two types of flowers: stars and pentagons. 17.41\% of total geodesic length in a Penrose tiling are flowers. 
+\textbf{Flowers} are self-closing and self-crossing geodesics. They are fivefold symmetric about their center. There are two types of flowers: stars and pentagons. 17.41\% of total geodesic length in a Penrose tiling are flowers. 
 
-Due to computational complexity and inefficiencies in my path generation code which blows up for larger Penrose tilings, I was unable to search full large enough regions to find either full flowers or 60-rings. Dr. Rob Collins' son, Stephen Collins, has created a more efficient software, which he named Bob after his father. Using this software, the flowers in Fig.\ref{fig:collinsflowers} were found.
+Due to computational complexity and inefficiencies in the current path generation code, which blows up for larger Penrose tilings, I was unable to search full large enough regions to find either full flowers or 60-rings. Dr. Rob Collins' son, Stephen Collins, has created a more efficient software, which he named Bob after his father. Using this software, the flowers in Fig.\ref{fig:collinsflowers} were found.
 \begin{figure}[H]
 \centering
 \begin{subfigure}[b]{0.45\textwidth}
@@ -1486,30 +1483,33 @@ Due to computational complexity and inefficiencies in my path generation code wh
 \caption[Rings]{Two types of Flowers, figures by Stephen Collins \cite{Collins}.}
 \label{fig:collinsflowers}
 \end{figure}
-As Stephen Collins software is vastly more efficent than mine, he was able to generate remarkably large star, which illustrates self-similarity of geodesics at different scales, see Fig.\ref{fig:Koch}. Realize that, although this star leaves the region, as a flower it will eventually self-close. 
+As Stephen Collins' software is vastly more efficent than mine, he was able to generate a remarkably large star, which illustrates self-similarity of geodesics at different scales, see Fig.\ref{fig:Koch}. Realize that, although this star leaves the region, as a flower it will eventually self-close. 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{Koch}
-\caption[Koch]{Very large star illustrating self-similarity of geodesic. The star path approaches the Koch snowflake. \cite{Collins}}
+\caption[Koch Curve Limit]{Very large star, this fragment is over 33,000 steps in length, illustrating self-similarity of geodesic. The star path approaches the Koch snowflake. \cite{Collins}}
 \label{fig:Koch}
 \end{figure}
 
 \section{Future Work}
 Future work in this area will be to address efficiency issues in my path generation algorithm. My current method requires inefficient use of database searching to find subsequent vertices. To address efficiency I will utilize the possible arrangements of edges and previously designed algorithms for meshes. 
 
-Further, I will explore alternative triangulation methods. Ogawa and Collins triangulate the Penrose Rhombs by drawing short edges. However, this does not correspond to the triangulation by Robinson triangles. I will explore how triangulation in this way affects the geodesics. Likewise, how tiling by Kites and Darts will affect these geodesics. I suspect these are actually the same question, because of mutual local derivability.
+Further, I will explore alternative triangulation methods. Ogawa and Collins triangulate the Penrose Rhombs by drawing short edges. However, this does not correspond to the triangulation by Robinson triangles. I will explore how triangulation in this way affects the geodesics. I will likewise explore how tiling by Kites and Darts will affect these geodesics. I suspect these are actually the same question, because of mutual local derivability.
 
 Finally, Ogawa and Collins make significant use of the number of edges, or degree, of each vertex in the triangulation. This was not addressed in this thesis, but there are many discussions of the valid types of vertices in Penrose tilings. I will attempt to illustrate how the degrees of the vertices enclosed by self-closing geodesics affect their shape, as the enclosing degree will determine the meandering curvature of the geodesic. 
 
 \chapter{Conclusion}
-Aperiodic tilings will draw in unsuspecting undergraduate students through beautiful graphical representations.  However, they will soon realize that underlying these tilings is rich mathematical theory from diverse disciplines. As we've seen in this thesis alone, methods from Real and Complex Analysis, Algebra, Discrete and Projective Geometry, Linear Algebra, and Graph Theory have all synthesized for this perspective of the tiling. However, this only scratches the surface of the surprising connections of mathematical fields to aperiodic tilings, including Lie theory, Ergodic theory, dynamical systems, finite-state automata, Fourier and Functional Analysis, Statistical Mechanics, and more.\\
-Penrose tilings, for their diversity in mathematical theory, allow for accessible motivation to concepts introduced at an undergraduate level. The proof for tile ratio requires only first year linear algebra. Unaccountability of Penrose tilings is a small extension from Cantor's Diagonalization Argument for the unaccountability of real numbers. The projective geometric interpretation of the pentagrid problem, finding a plane which won't intersect the hypercube tiling at any vertex, edge, or face, could be introduced in an undergraduate algebra course. Applying this breadth of mathematical tools here is very rewarding, demonstrating the interconnectedness of mathematics and the diversity of undergraduate mathematics curriculum.\\
-Finally, we can't ignore the aesthetic value of pursuing this area. The graphical representations of these tilings excite students, mathematicians, and strangers to mathematics. Penrose tilings exemplify the subversive tendency of mathematics to challenge predetermined notions, in this case, on symmetries forbidden to tilings. We see that, while pure, these notions tangibly affect our understanding of the physical sciences, changing the definition and study of crystals. We see that mathematics has no monsters, as Kepler stated, only not-yet-discovered theory that will enrich our understanding of the universe. 
+Aperiodic tilings will draw in unsuspecting undergraduate students through beautiful graphical representations.  However, they will soon realize that underlying these tilings is rich mathematical theory from diverse disciplines. As we've seen in this thesis alone, methods from Real and Complex Analysis, Algebra, Discrete and Projective Geometry, Linear Algebra, and Graph Theory have all been synthesized for this perspective of the tiling. However, this only scratches the surface of the surprising connections of mathematical fields to aperiodic tilings, including Lie theory, Ergodic theory, dynamical systems, finite-state automata, Fourier and Functional Analysis, Statistical Mechanics, and more.\\
+Penrose tilings, for their diversity in mathematical theory, allow for accessible motivation to concepts introduced at an undergraduate level. The proof for the tile ratio requires only first year linear algebra. Unaccountability of Penrose tilings is a small extension from Cantor's Diagonalization Argument for the unaccountability of real numbers. The projective geometric interpretation of the pentagrid problem, finding a plane which won't intersect the hypercube tiling at any vertex, edge, or face, could be introduced in an undergraduate algebra course. Applying this breadth of mathematical tools here is very rewarding, demonstrating the interconnectedness of mathematics and the diversity of undergraduate mathematics curriculum.\\
+Finally, we can't ignore the aesthetic value of pursuing this area. The graphical representations of these tilings excite students, mathematicians, and strangers to mathematics alike. Penrose tilings exemplify the subversive tendency of mathematics to challenge predetermined notions, in this case, of symmetries forbidden to tilings. We see that, while pure, these notions tangibly affect our understanding of the physical sciences, changing the definition and study of crystals. We see that mathematics has no monsters, as Kepler stated, only not-yet-discovered theory that will enrich our understanding of the universe. 
 
 
 
 
 \bibliographystyle{unsrt}
 \bibliography{bibliography}    
+
+\includepdf{FullPageTiling.pdf}
+
 
 \end{document}
