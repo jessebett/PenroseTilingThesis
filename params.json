@@ -1,0 +1,6 @@
+{
+  "name": "Penrose Tiling Thesis",
+  "tagline": "Undergraduate Thesis in Mathematics at McMaster University on the topic of Penrose Plane Tiling",
+  "body": "Repository for undergradate thesis in Integrated Sciences at McMaster University under the supervision of Dr. Miroslav Lovric.\r\n\r\nThesis document is available [here](Thesis/Bettencourt_Penrose_Tiling_Thesis_2015.pdf).\r\n\r\nThesis presentation is available [here](Presentation/SynthesisPresentation.pdf)\r\n\r\n\r\nLaTeX source for both document andpresentation are available on this repository.",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
